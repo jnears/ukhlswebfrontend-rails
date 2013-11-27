@@ -1,0 +1,245 @@
+p, pre {
+  @include rem-fallback(margin, 0, 0, 1.5, 0);
+  font-style: normal;
+  &.subheading {
+    @include rem-fallback(font-size, 1.25);
+    font-weight: 200;
+  }
+  &.highlight {
+    position: relative;
+    font-weight: normal;
+    @include green_gradient;
+    @include rounded;
+    font-family: ChevinLight;
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(padding, 1.5);
+    width: 30%;
+    float: right;
+    color: $white;
+    @include rem-fallback(margin, 0, 0.5, 0, 1);
+    & a {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+      color: $white;
+      text-decoration: none;
+      }
+    } 
+  }
+}
+
+.callout {
+  overflow: hidden;
+  @include callout($blue);
+  zoom: 1;
+  @include rem-fallback(padding, 0.75);
+  border-left: 6px solid $blue;
+  @include rounded;
+  @include rem-fallback(margin, 0, 0, 1.5, 0);
+  &.success {
+    @include callout($green);
+  }
+  &.alert {
+    @include callout($red);
+  }
+}
+
+
+
+.body {
+  font-family: $body_font;
+}
+
+h1 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 2);
+  @include rem-fallback(line-height, 3);
+  @include rem-fallback(margin, 0, 0, 1.5);
+  text-rendering: optimizelegibility;
+  &:first-child {
+    @include rem-fallback(margin, 0, 0, 1.5);
+  }
+  span {
+    display: block;
+    color: $dark-grey;
+    @include rem-fallback(font-size, 1.5);
+    @include rem-fallback(line-height, 1.5);
+    font-weight: normal;
+    font-style: normal;
+    &.inline {
+    display: inline
+    }
+  }
+}
+
+
+h2 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 1.75);
+  @include rem-fallback(line-height, 3);
+  @include rem-fallback(margin, 0, 0, 1.5);
+  text-rendering: optimizelegibility;
+  &:first-child {
+    @include rem-fallback(margin, 0, 0, 0, 1.5);
+  }
+}
+
+h3 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 1.5);
+  @include rem-fallback(line-height, 1.875);
+  @include rem-fallback(margin, 0, 0, 1.125);
+  text-rendering: optimizelegibility;
+}
+
+h4 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 1.375);
+  @include rem-fallback(line-height, 1.5);
+  margin: 0;
+  text-rendering: optimizelegibility;
+}
+
+h5 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 1.125);
+  @include rem-fallback(line-height, 1.5);
+  margin:0;
+  text-rendering: optimizelegibility;
+}
+
+h6 {
+  display: block;
+  font-family: $heading_font;
+  @include rem-fallback(font-size, 1);
+  @include rem-fallback(line-height, 1.5);
+  margin:0;
+  text-rendering: optimizelegibility;
+}
+
+small {
+  @include rem-fallback(font-size, 0.75);
+  @include rem-fallback(line-height, 0.75);
+}
+
+b, strong {
+font-weight: bold;
+}
+
+i, cite, em, var, address, dfn {
+font-style: italic;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+.text-left {
+text-align: left;
+}
+
+.text-center  {
+text-align: center;
+}
+
+.text-right {
+text-align: right;
+}
+
+.text-muted {
+  color: $grey;
+}
+.text-success {
+  color: $green;
+}
+.text-info {
+  color: $blue;
+}
+.text-warning {
+  color: $yellow;
+}
+.text-danger {
+  color: $red;
+}
+
+
+// links
+a:link, a:visited {
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $hover;
+  color: $black;
+  text-decoration: underline;
+}
+
+
+time {
+  @include rem-fallback(font-size, 0.875);
+  margin: 0;
+  color: $dark_grey;
+}
+
+
+
+a#show-grid {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+blockquote {
+  font-family: ChevinLight;
+  @include rem-fallback(font-size, 1.25);
+  @include rem-fallback(margin, 0.75, 2.5);  
+  & small {
+    color: $dark_grey;
+  }
+  &.pullquote {
+    position: relative;
+    font-weight: normal;
+    @include green_gradient;
+    @include rounded;
+    font-family: ChevinLight;
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(padding, 1.5);
+    width: 30%;
+    float: right;
+    color: $white;
+    @include rem-fallback(margin, 0, 0, 1.5, 1.5);
+    &.left {
+      float: left;
+      @include rem-fallback(margin, 0, 1.5, 1.5, 0);
+    }
+    & a {
+      color: $white;
+      text-decoration: underline;
+      &:hover {
+      color: $white;
+      text-decoration: none;
+      }
+    } 
+  }
+}
+
+
+
+
+hr {
+  clear: both;
+  display: block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  border-bottom: 1px solid $light_grey;
+  @include rem-fallback(padding-top, (($baseline - 1) / $base_font_size));
+  @include rem-fallback(margin-bottom, 1.5);
+  @include rem-fallback(line-height, 1.5);
+  }

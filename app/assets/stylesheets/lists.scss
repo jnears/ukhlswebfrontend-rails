@@ -1,0 +1,35 @@
+ul {
+  list-style-item: disc;
+}
+
+ul, ol {
+  @include rem-fallback(padding, 0, 0, 0, 2.5);
+  @include rem-fallback(margin, 0, 0, 1.5, 0);
+  list-style-position: inside;
+ }
+
+ul, ol, dl {
+  @include rem-fallback(margin, 1.5, 0);
+}
+
+ul ul,
+ol ol {
+  @include rem-fallback(margin, 0, 0, 0, 0)
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    @include rem-fallback(margin, 0, 0, 0, 2);
+  }
+}   
+
+ol.tag-list {
+  li {
+    list-style-type: none;
+    float: left;
+    @include rem-fallback(margin, 0.2);
+    }
+  }

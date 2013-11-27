@@ -1,0 +1,58 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+td, th {
+  display: table-cell;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+}
+
+.table {
+    @include rem-fallback(margin, ($baseline / $base_font_size), 0);
+    &>tbody>tr>td, &>thead>tr>th, &>tbody>tr>th, &>tfoot>tr>th  {
+    @include rem-fallback(line-height, 1.5);
+	  @include rem-fallback(padding, 0.75);
+	  vertical-align: middle;
+  }
+  &.grid {
+  table-layout: fixed;
+  }
+  &.bordered {
+    border: 1px solid $mid_grey;
+    @include rem-fallback(margin, (($baseline - 2) / $base_font_size), 0);
+    &>thead>tr>th {
+      border: 1px solid $mid_grey;
+    }
+    &>tbody>tr>td, &>tfoot>tr>td {
+    border: 1px solid $mid_grey;
+    @include rem-fallback(line-height, (($baseline - 1) / $base_font_size));
+    vertical-align: middle;
+    }
+  }
+  &.divided {
+    &>tbody>tr>td {
+      border-top: 1px solid $mid_grey;
+      @include rem-fallback(line-height, (($baseline - 1) / $base_font_size));
+    }
+  }
+  &.zebra>tbody>tr:nth-child(odd) {
+      background-color: $light_grey;
+  }
+}
+
+
+
+
+
+
+
