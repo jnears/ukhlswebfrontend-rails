@@ -1,0 +1,67 @@
+footer[role=contentinfo]
+{
+  clear: both;
+  background: $black;
+  color: $light_black;
+  position: relative;
+  margin-top: 130px;
+  @include respond-to(large_desktop) { margin-top: 155px; }
+  @include respond-to(tablet) { margin-top: 90px; }
+  @include respond-to(handheld) { margin-top: 0; }
+  padding: 0;
+
+  i.icon
+  {
+    position: absolute;
+    display: block;
+    height: 105px;
+    top: -105px;
+    width: 945px;
+    background: transparent url(asset_path('peeps.gif')) no-repeat 0 0;
+    @include respond-to(large_desktop) { top: -131px; height: 131px; width: 1185px; background-image: url(asset_path('peeps-large.gif')); }
+    @include respond-to(tablet) { height: 83px; top: -83px; width: 685px; width: 745px; background-image: url(asset_path('peeps-tablet.gif')); }
+    @include respond-to(handheld) { display: none; }
+  }
+
+  a.esrc-link
+  {
+    display: block;
+    height: 66px;
+    width: 80px;
+    background: transparent url(asset_path('esrc-logo.gif')) no-repeat 0 0;
+    @include image-2x(asset_path('esrc-logo2x.gif'), 80px, 66px);
+    text-indent: -3000em;
+    overflow: hidden;
+  }
+
+  nav.utility
+  {
+    ol
+    {
+      float: right;
+      margin-top: 2em;
+      @include respond-to(handheld) { float: none; margin-top: 0em; padding-left: 0; }
+      li
+      {
+        //@include font14;
+        @include rem-fallback(font-size, 0.83);
+        list-style-type: none;
+        display: inline;
+        margin: 0 #{$gutter}px;
+        @include respond-to(handheld) { 
+          //@include font12; 
+          @include rem-fallback(font-size, 0.75);
+          margin: 0 #{$gutter / 2}px 0 0; 
+        }
+        a
+        {
+          color: $light_black;
+          &:hover
+          {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

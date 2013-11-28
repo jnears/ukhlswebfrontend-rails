@@ -1,0 +1,143 @@
+figure.home-banner
+{
+  position: relative;
+  width: 945px;
+  height: 250px;
+  display: block;
+  background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
+  @include respond-to(large_desktop) {
+   width: 1185px;
+   background-image: url(asset_path('banner-large.jpg')); }
+  @include respond-to(tablet) {
+    width: 745px;
+    background-image: url(asset_path('banner-small.jpg'));
+    @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
+  }
+  @include respond-to(handheld) {
+    width: auto;
+    margin-bottom: 160px;
+    height: 150px;
+    width: auto;
+    background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
+    background-size: cover;
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    //@include font20;
+    @include rem-fallback(font-size, 1.25);
+    margin: 0;
+    top: 15px;
+    width: 27em;
+    @include rounded;
+    left: 15px;
+    padding: 0.5em;
+    @include translucent_white;
+    @include respond-to(large_desktop) { 
+      width: 29em; 
+      //@include font22;
+      @include rem-fallback(font-size, 1.35); 
+    }
+    @include respond-to(tablet) { width: 18em; }
+    @include respond-to(handheld) { 
+      position: relative; 
+      text-align: center; 
+      padding: 0em; 
+      bottom: 5px; 
+      top: 155px; 
+      left: 5px; 
+      right: 5px; 
+      //@include font18;
+      @include rem-fallback(font-size, 1.2); 
+      line-height: normal; 
+      width: auto; 
+      }
+    a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+}
+
+.box
+{
+  overflow: auto;
+  @include rounded;
+  @include respond-to(large_desktop) {  }
+  h1,h2,h3,h4,h5
+  {
+    margin-top: 0;
+  }
+  h3
+  {
+    //@include font20;
+    @include rem-fallback(font-size, 1.25);
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  h2
+  {
+    margin-bottom: 0em;
+  }
+  p.call-to-action
+  {
+    font-family: $chevin_light;
+    font-style: normal;
+    //@include font18;
+    @include rem-fallback(font-size, 1.2);
+    margin-bottom: 0px;
+  }
+  ul
+  {
+    margin-top: 0em;
+    padding-left: 2em;
+    li
+    {
+      //@include font18;
+      @include rem-fallback(font-size, 1.2);
+      margin: 0;
+      font-family: $chevin_light;
+      list-style-type: none;
+    }
+  }
+}
+
+.pad
+{
+  padding: 1em;
+}
+
+.space
+{
+  margin-bottom: #{$gutter}px;
+}
+
+.box.feature
+{
+  @include transparent($blue, 0.2);
+  ul
+  {
+    padding-left: 0em;
+    li
+    {
+
+      margin-bottom: #{$gutter}px;
+      span
+      {
+        //font-family: $default_font;
+        //@include font16;
+        @include rem-fallback(font-size, 1); 
+        display: block;
+      }
+    }
+  }
+}

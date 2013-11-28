@@ -32,3 +32,13 @@ html{
 @import "nav.scss";
 @import "tables.scss";
 @import "font-awesome";
+
+
+//legacy
+@import "legacy/_grid.scss";
+@import "legacy/handheld.scss";
+@import "legacy/header.scss";
+@import "legacy/home.scss";
+@import "legacy/main.scss";
+@import "legacy/footer.scss";
+@import "legacy/blog.scss";

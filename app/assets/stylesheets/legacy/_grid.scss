@@ -1,0 +1,106 @@
+$columns: 20;
+
+$column_width: 33;
+$gutter: 15;
+
+$tablet_column_width: 23;
+$tablet_gutter: 15;
+
+$large_desktop_column_width: 45;
+$large_desktop_gutter: 15;
+
+@mixin respond-to($media) {
+  @if $media == handheld {
+    @media only screen and (max-width: 747px) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (max-width: 950px) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: 951px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == large_desktop {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}
+
+.container
+{
+  position: relative;
+  margin: 0 auto;
+  width: #{($columns * $column_width) + (($columns - 1) * $gutter)}px;
+  @include respond-to(tablet) { width: #{($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter)}px;;}
+  @include respond-to(large_desktop) { width: #{($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter)}px; }
+  @include respond-to(handheld) { width: auto; padding: #{$tablet_gutter / 2}px; }
+}
+
+body:not(.home) .container[role=main]
+{
+  padding-top: #{40 + $gutter}px;
+  @include respond-to(handheld) { padding-top: 0px };
+}
+
+body.nobreadcrumb .container[role=main]
+{
+  padding-top: 0px;
+}
+
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: #{$gutter}px;
+  @include respond-to(tablet) { margin-left: #{$tablet_gutter}px; }
+  @include respond-to(large_desktop) { margin-left: #{$large_desktop_gutter}px; }
+  @include respond-to(handheld) { float: none; margin-left: 0px; }
+}
+
+@for $i from 1 through $columns {
+  .span#{$i} { width: #{($column_width * $i) + ($gutter * ($i - 1))}px; }
+  @include respond-to(tablet) { .span#{$i} { width: #{($tablet_column_width * $i) + ($tablet_gutter * ($i - 1))}px; } }
+  @include respond-to(large_desktop) { .span#{$i} { width: #{($large_desktop_column_width * $i) + ($large_desktop_gutter * ($i - 1))}px; } }
+  @include respond-to(handheld) { .span#{$i} { width: auto; } }
+}
+
+@for $i from 1 through $columns {
+  .offset#{$i} { margin-left: #{($column_width * $i) + ($gutter * ($i + 1))}px; }
+  @include respond-to(tablet) { .offset#{$i} { margin-left: #{($tablet_column_width * $i) + ($tablet_gutter * ($i + 1))}px; } }
+  @include respond-to(large_desktop) { .offset#{$i} { margin-left: #{($large_desktop_column_width * $i) + ($large_desktop_gutter * ($i + 1))}px; } }
+  @include respond-to(handheld) { .offset#{$i} { margin-left: 0px; } }
+}
+
+.row {
+  margin-top: #{$gutter}px;
+  margin-left: #{$gutter * -1}px;
+  @include respond-to(tablet) { margin-left: $tablet_gutter * -1px; margin-top: #{$tablet_gutter}px; }
+  @include respond-to(large_desktop) { margin-left: $large_desktop_gutter * -1px; margin-top: #{$large_desktop_gutter}px; }
+  @include respond-to(handheld) { margin-left: 0px; margin-top: 0px; }
+  *zoom: 1;
+  &:first-of-type, &.next
+  {
+    margin-top: 0px;
+  }
+}
+
+.lt-ie9 .row
+{
+  &:first-child
+  {
+    margin-top: 0px;
+  }
+}
+
+// .row * .row
+// {
+//   margin-top: 0px;
+// }
+
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.row:after {
+  clear: both;
+}

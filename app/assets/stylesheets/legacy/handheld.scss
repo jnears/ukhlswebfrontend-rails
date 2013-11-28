@@ -1,0 +1,106 @@
+div.handheld-menu {
+  display: none;
+  @include mid_grey_gradient;
+  border-bottom: 1px solid #CCCCCC;
+  @include respond-to(tablet) { display: block;}
+}
+
+div.handheld-menu ul {
+    margin: 0;
+    overflow: auto;
+    padding-left: 0;
+}
+
+
+div.handheld-menu ul li {
+    float: left;
+    padding: 7.5px;
+    list-style:none;
+}
+
+div.handheld-menu ul li a {
+    background-size: cover;
+    color: #333333;
+    display: block;
+    font-family: $chevin_light;
+    height: 25px;
+    overflow: hidden;
+    text-indent: -3000em;
+    text-shadow: 1px 1px #FAFAFA;
+    width: 25px;
+    &.search
+    {
+      @include respond-to(tablet) { display: none };
+      @include respond-to(handheld) { display: block };
+    }
+}
+
+
+
+
+/*Add the icons*/
+
+div.handheld-menu ul li a.home, div.handheld-menu ul li a.search, div.handheld-menu ul li a.menu {
+  background: url(asset_path("handheld-icons-sprite.png")) no-repeat;
+  height: 25px;
+  width: 25px;
+}
+
+/*home*/
+
+div.handheld-menu ul li a.home {
+  background-position: 0 0; /*dont need to specify this */
+}
+
+/*search*/
+
+div.handheld-menu ul li a.search {
+  background-position: -29px 0;
+}
+
+/*menu*/
+
+div.handheld-menu ul li a.menu {
+  background-position: -58px 0;
+  }
+
+
+/*
+
+fomula for background size =
+high res image width / target image width = x
+original sprite width / x = background-size width
+http://www.studiopress.com/design/css-background-size-graphics.htm
+*/
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+
+div.handheld-menu ul li a.home, div.handheld-menu ul li a.search, div.handheld-menu ul li a.menu {
+  background: url(asset_path("handheld-icons-spritex2.png")) no-repeat;
+  background-size: 84px auto;
+  height: 25px;
+  width: 26px;
+}
+
+div.handheld-menu ul li a.home {
+  background-position: 0 0; /*dont need to specify this */
+}
+
+/*menu*/
+
+div.handheld-menu ul li a.search {
+  background-position: -29px 0;
+}
+
+/*search*/
+
+div.handheld-menu ul li a.menu {
+  background-position: -58px 0; /*dont need to specify this */
+}
+
+
+}
