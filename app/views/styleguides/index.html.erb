@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Understanding Society - Styleguide</title>
+<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
 <header role="banner">
 <nav role="navigation">
 <ol>
@@ -14,6 +23,7 @@
 <div class="container" role="main">
 <section class="guide">
 <h1>Typography</h1>
+Font awesome works: <i class="fa fa-camera-retro"></i>
 <hr>
 <h2>Headings</h2>
 <h1>h1.heading</h1>
@@ -40,7 +50,7 @@ consequat. Duis aute irure dolor in reprehenderit</p>
 <h2>Body Copy</h2>
 <p class="subheading">P SUBHEADING Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. <a href="#">Duis aute irure dolor</a> in reprehenderit.</p> 
+consequat. <a href="#">Duis aute irure dolor</a> in reprehenderit.</p>
 
 <p class="italic">P ITALIC Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -51,7 +61,7 @@ cillum dolore eu fugiat nulla pariatur.</p>
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <p class="subheading lead">Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -116,7 +126,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 <h3>Pull quote</h3>
 <blockquote class="pullquote">
   <p>“Ligula egestas leo, <a href="#">fugiat nulla pariatur</a> at interdum leo ante ut risus.”
-  <b>—Joe Bloggs</b></p> 
+  <b>—Joe Bloggs</b></p>
 </blockquote>
 
 <p>“quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -137,7 +147,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 
 <blockquote class="pullquote left">
   <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In accumsan diam itae velit. Aliquam vehicula”<br />
-  <b>—Joe Bloggs</b></p> 
+  <b>—Joe Bloggs</b></p>
 </blockquote>
 
 <p>“quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -176,7 +186,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
   <li>List item 2</li>
   <li>List item 3</li>
   <li>List item 4</li>
-  <li>List item 5 
+  <li>List item 5
     <ol>
       <li>Typography</li>
       <li>Grids</li>
@@ -188,7 +198,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 
 <h4>Definition</h4>
 <p>Description lists associate specific names and their values within a list, for example items in an ingredient list and their descriptions, article metadata such as authors and categories and their values, or competition winners and the years in which they won.</p>
-      
+
 <dl>
   <dt>milk</dt>
   <dd>A white, liquid dairy product.</dd>
@@ -203,7 +213,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 
 <h2>Forms</h2>
 
-   
+
 
       <form>
        <fieldset>
@@ -223,7 +233,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
             <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
             <input type="text" name="shoe" required />
           </div>
- 
+
           <div class="field large">
             <label for="comment">Comments</label>
             <textarea></textarea>
@@ -252,7 +262,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
               <option value="Antarctica">Antarctica</option>
             </select>
           </div>
-   
+
           <fieldset class="options">
           <legend>Checkbox <abbr title="Required">*</abbr></legend>
               <p>Default checkbox</p>
@@ -263,9 +273,9 @@ cillum dolore eu fugiat nulla pariatur.”</p>
               <label for="inlinecheckbox1" class="checkbox inline"><input id="inlinecheckbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
               <label for="inlinecheckbox2" class="checkbox inline"><input id="inlinecheckbox2" name="checkbox" type="checkbox"> Choice B</label>
               <label for="inlinecheckbox3" class="checkbox inline"><input id="inlinecheckbox3" name="checkbox" type="checkbox"> Choice C</label>
-         
+
           </fieldset>
-  
+
           <fieldset class="options">
             <legend>Radios <abbr title="Required">*</abbr></legend>
               <p>Default radios</p>
@@ -280,7 +290,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 
           <div class="field control">
             <input type="submit" value="Save" class="btn btn-blue" /><a href="#">cancel</a>
-          </div> 
+          </div>
 
        </fieldset>
       </form>
@@ -485,7 +495,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 <button type="button" class="btn fluid">Fluid Button</button>
 
 <p><i class="fa fa-user  fa-lg"></i> fa-camera-retro</p>
-<a href="#" id="show-grid">Toggle grid</a>
+
 </section>
 <aside class="nav styles">
   <nav class="nav guide">

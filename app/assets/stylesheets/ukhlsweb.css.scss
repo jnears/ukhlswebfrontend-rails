@@ -3,8 +3,8 @@
 @import "fonts";
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
  }
 
@@ -21,7 +21,7 @@ html{
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   &.grid {
-    background: url(../images/grid.png) center 0px repeat $white;
+    background: image-url("grid.png") center 0px repeat transparent;
    }
  }
 
@@ -31,14 +31,4 @@ html{
 @import "forms.scss";
 @import "nav.scss";
 @import "tables.scss";
-
-@import "path";
-@import "core";
-@import "larger";
-@import "fixed-width";
-@import "list";
-@import "bordered-pulled";
-@import "spinning";
-@import "rotated-flipped";
-@import "stacked";
-@import "icons";
+@import "font-awesome";

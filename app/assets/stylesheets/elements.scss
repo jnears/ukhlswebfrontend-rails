@@ -24,7 +24,7 @@ p, pre {
       color: $white;
       text-decoration: none;
       }
-    } 
+    }
   }
 }
 
@@ -53,6 +53,7 @@ p, pre {
 h1 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 2);
   @include rem-fallback(line-height, 3);
   @include rem-fallback(margin, 0, 0, 1.5);
@@ -77,6 +78,7 @@ h1 {
 h2 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 1.75);
   @include rem-fallback(line-height, 3);
   @include rem-fallback(margin, 0, 0, 1.5);
@@ -89,6 +91,7 @@ h2 {
 h3 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 1.5);
   @include rem-fallback(line-height, 1.875);
   @include rem-fallback(margin, 0, 0, 1.125);
@@ -98,6 +101,7 @@ h3 {
 h4 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 1.375);
   @include rem-fallback(line-height, 1.5);
   margin: 0;
@@ -107,6 +111,7 @@ h4 {
 h5 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 1.125);
   @include rem-fallback(line-height, 1.5);
   margin:0;
@@ -116,6 +121,7 @@ h5 {
 h6 {
   display: block;
   font-family: $heading_font;
+  font-weight: normal;
   @include rem-fallback(font-size, 1);
   @include rem-fallback(line-height, 1.5);
   margin:0;
@@ -198,7 +204,7 @@ a#show-grid {
 blockquote {
   font-family: ChevinLight;
   @include rem-fallback(font-size, 1.25);
-  @include rem-fallback(margin, 0.75, 2.5);  
+  @include rem-fallback(margin, 0.75, 2.5);
   & small {
     color: $dark_grey;
   }
@@ -225,7 +231,7 @@ blockquote {
       color: $white;
       text-decoration: none;
       }
-    } 
+    }
   }
 }
 
