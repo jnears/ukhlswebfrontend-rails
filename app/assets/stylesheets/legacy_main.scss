@@ -2,7 +2,8 @@ figure.home-banner
 {
   position: relative;
   width: 945px;
-  height: 250px;
+  //height: 250px;
+  @include rem-fallback(height, 16);
   display: block;
   background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
   @include respond-to(large_desktop) {
@@ -16,7 +17,8 @@ figure.home-banner
   @include respond-to(handheld) {
     width: auto;
     margin-bottom: 160px;
-    height: 150px;
+    //height: 150px;
+    @include rem-fallback(height, 9);
     width: auto;
     background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
     background-size: cover;
@@ -140,4 +142,35 @@ figure.home-banner
       }
     }
   }
+}
+
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }

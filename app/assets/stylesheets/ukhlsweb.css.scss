@@ -1,3 +1,4 @@
+@import "_legacy_grid.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "fonts";
@@ -29,16 +30,16 @@ html{
 @import "buttons.scss";
 @import "lists.scss";
 @import "forms.scss";
-@import "nav.scss";
+@import "header.scss";
 @import "tables.scss";
 @import "font-awesome";
-
+@import "patterns";
+@import "home.scss";
 
 //legacy
-@import "legacy/_grid.scss";
-@import "legacy/handheld.scss";
-@import "legacy/header.scss";
-@import "legacy/home.scss";
-@import "legacy/main.scss";
-@import "legacy/footer.scss";
-@import "legacy/blog.scss";
+@import "legacy_handheld.scss";
+@import "legacy_header.scss";
+
+@import "legacy_main.scss";
+@import "legacy_footer.scss";
+@import "legacy_blog.scss";

@@ -187,10 +187,12 @@ a:hover {
 }
 
 
+
 time {
   @include rem-fallback(font-size, 0.875);
   margin: 0;
-  color: $dark_grey;
+  color: $grey;
+  line-height: normal;
 }
 
 

@@ -1,0 +1,173 @@
+body header[role=banner]  {
+ 
+  form#search {
+    position: absolute;
+    right: 0px;
+    top: 58px;
+
+    @include respond-to(tablet) { 
+      top: -38px;
+    }
+
+    @include respond-to(handheld) { 
+      display: none; left: 0; 
+      top: 0; @include mid_grey_gradient; 
+      border-bottom: 1px solid #cccccc;
+    }
+
+    input[type="search"] {
+      @include rem-fallback(min-height, 1);
+      padding-left: 28px;
+      
+      @include respond-to(handheld) { 
+        width: 85%; 
+      }
+    }
+
+    input[type="submit"]
+    {
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      @include rem-fallback(width, 1);
+      @include rem-fallback(height, 1);
+      background: transparent url(asset_path('search-icon.png')) no-repeat 0 0 ;
+      border-style: none;
+      display: block;
+      cursor: pointer;
+      text-indent: -3000em;
+      overflow: hidden;
+      @include respond-to(handheld) { 
+        top: 17px; 
+        left: 14px;
+      }
+    } 
+  }
+
+h1 {
+  margin: 0;
+  @include rem-fallback(padding, 0.75, 0);
+  @include respond-to(handheld) { 
+    padding: 0; 
+  }
+  
+  a {
+    text-indent: -3000em;
+    overflow: hidden;
+    background: $white url(asset_path('ukhls-logo.gif')) no-repeat 0 0;
+    @include image-2x(asset_path('ukhls-logo2x.gif'), 288px, 120px);
+    display: block;
+    width: 288px;
+    height: 120px;
+    @include respond-to(handheld) {
+      width: 192px;
+      height: 80px;
+      margin: 0 auto;
+      background: $white url(asset_path('ukhls-logo-handheld.gif')) no-repeat 0 0;
+      @include image-2x(asset_path('ukhls-logo-handheld2x.gif'), 192px, 80px);
+    }
+  }
+}
+  
+  nav[role=navigation] {
+    margin-top: 0px;
+    z-index: 3;
+
+    @include respond-to(tablet) {
+      @include mid_grey_gradient;
+      top: 0;
+      left: 0;
+      right: 0;
+      position: relative;
+      z-index: 999999;
+    }
+
+    &.container {
+      @include respond-to(tablet) { 
+        display: none; width: 100%;
+      }
+    }
+
+    @include respond-to(handheld) {
+      padding: 0px;
+    }
+
+    ol {
+      position: absolute;
+      overflow: auto;
+      z-index:3;
+      @include rem-fallback(margin, 0.25, 0, 0, 0); //4px
+      list-style-type: none;
+      right: 0;
+      @include respond-to(tablet) {
+        position: relative;
+        @include mid_grey_gradient;
+        padding: 0px;
+        left: 0;
+        right: 0;
+        margin-top: 0px;
+      };
+      @include respond-to(handheld) { 
+        padding: 0px 
+      };
+
+      li {
+        float: left;
+        font-weight:normal;
+        margin:0;
+        list-style-type: none;
+        @include rem-fallback(font-size, 0.8);
+        @include respond-to(tablet) { 
+          float: none;
+          @include rem-fallback(font-size, 1);
+          margin: 0; 
+        }
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type a {
+          margin-right: 0;
+          @include respond-to(tablet) { 
+            border-bottom: none; 
+          }
+          @include respond-to(handheld) { 
+            border-bottom: none; 
+          }
+        }
+
+        a{
+          text-decoration:none;
+          display:block;
+          @include rounded;
+          @include rem-fallback(padding, 0, 0.75);
+          @include rem-fallback(margin, 0, 0.25); 
+          border-radius: $radius;
+          @include respond-to(tablet) { 
+            border-right: none; 
+            border-bottom: 1px solid #cccccc;
+            @include rem-fallback(padding, 0.5, 1.25);
+          }
+          @include respond-to(tablet) {  
+            @include not_rounded; 
+          }
+          @include respond-to(handheld) { 
+            margin: 0px;
+          }
+          &:hover {
+            background: $light_grey;
+          }
+          &.active {
+            background: $dark_blue;
+            color: $white;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+     

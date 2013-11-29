@@ -20,11 +20,11 @@ form {
     font-weight: normal;
     display:block;
     &.inline {
-    display: inline;
-    @include rem-fallback(line-height, 1.5);
-    float: left;
-    padding-right: 1em;
-    text-align: right;
+      display: inline;
+      @include rem-fallback(line-height, 1.5);
+      float: left;
+      padding-right: 1em;
+      text-align: right;
   }
 }
 
