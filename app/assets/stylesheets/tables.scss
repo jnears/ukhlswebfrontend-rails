@@ -50,6 +50,18 @@ caption {
   }
 }
 
+//legacy
+table.numeric
+{
+  tr
+  {
+
+    td:not(:first-of-type), th:not(:first-of-type)
+    {
+      text-align: right;
+    }
+  }
+}
 
 
 

@@ -1,0 +1,80 @@
+
+div.locator
+{
+  padding-top: #{36 + $gutter}px;
+}
+
+article.question
+{
+  @include rounded;
+  border: 1px solid $mid_grey;
+  padding: #{$gutter}px;
+  margin-bottom: #{$gutter}px;
+  position: relative;
+  overflow: auto;
+
+
+  a.top-right
+  {
+    position: absolute;
+    right: #{$gutter}px;
+    top: #{$gutter}px;
+  }
+
+  dl
+  {
+    display: block;
+    overflow: auto;
+    margin-bottom: 1.5em;
+    display: table;
+    dt
+    {
+      float: left;
+      width: 180px;
+      text-align: right;
+      clear: left;
+
+      font-weight: bold;
+      @include respond-to(handheld) { float: none; display: block; width: auto; text-align: left; }
+    }
+    dd
+    {
+      margin-left: 200px;
+      @include respond-to(handheld) { margin-left: 0 };
+    }
+
+  }
+
+  h5
+  {
+    @include font16;
+    font-weight: bold;
+    font-family: $default_font;
+  }
+
+}
+
+td.r
+{
+  text-align: right;
+}
+
+table.frequency
+{
+  $background: $white;
+  tr
+  {
+    border-bottom: 1px solid $white;
+  }
+  th
+  {
+    background: $light_grey;
+    padding: 10px 4px;
+  }
+  td
+  {
+    background: $light_grey;
+    padding: 4px;
+    border-top: none;
+  }
+}

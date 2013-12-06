@@ -1,81 +1,129 @@
-form {
-  abbr[title="Required"] {
-    border: none;
-    color: $red;
+form 
+{
+  abbr[title="Required"] 
+  {
+  border: none;
+  color: $red;
   }
-  fieldset {
+    fieldset 
+    {
     border: 1px solid $mid_grey;
     @include rem-fallback(margin,  (($baseline - 1) / $base_font_size), 0);
     @include rem-fallback(padding,  0.75, 1);
     border-radius: $radius;
-    &.options ul {
-       @include rem-fallback(margin,  0.75, 0);
-      li {
+      &.options ul 
+      {
+      @include rem-fallback(margin,  0.75, 0);
+        li 
+        {
         list-style-type: none;
         @include rem-fallback(min-height,  3);
         }
       }
     }
-  label {
-    font-weight: normal;
-    display:block;
-    &.inline {
-      display: inline;
-      @include rem-fallback(line-height, 1.5);
-      float: left;
-      padding-right: 1em;
-      text-align: right;
+  label 
+  {
+  font-weight: normal;
+  display:block;
+    &.inline 
+    {
+    display: inline;
+    @include rem-fallback(line-height, 1.5);
+    float: left;
+    padding-right: 1em;
+    text-align: right;
+    }
+  }
+
+  legend 
+  {
+  @include rem-fallback(font-size, 1.2);
+  @include rem-fallback(line-height, 1.5);
+  font-family: $chevin_light;
   }
 }
 
-  legend {
-    @include rem-fallback(font-size, 1.2);
-    @include rem-fallback(line-height, 1.5);
-    font-family: $chevin_light;
-   }
-}
-
-div.field {
-  @include rem-fallback(min-height, ($baseline * 2) / $base_font_size);
-  @include rem-fallback(margin-bottom, 0);
-  @include rem-fallback(min-height, 4.5);
-  &.inline{
+div.field 
+{
+@include rem-fallback(min-height, ($baseline * 2) / $base_font_size);
+@include rem-fallback(margin-bottom, 0);
+@include rem-fallback(min-height, 4.5);
+  &.inline
+  {
   @include rem-fallback(margin-bottom, 1.5);
   @include rem-fallback(min-height, 4.5);
   }
-  &.large {
+  &.large 
+  {
   @include rem-fallback(min-height, 6);
   @include rem-fallback(height, 9);
   }
 }
 
-
 input[type=text],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  textarea,
-  select {
-    border: 1px solid $mid_grey;
-    border-radius: $radius;
-    width: 75%;
-    @include rem-fallback(padding, 0.5);
-    @include rem-fallback(margin-bottom, 0.75);
-    @include rem-fallback(min-height, 2.2);
-    &.large {
-      @include rem-fallback(min-height, ($baseline * 5) / $base_font_size);
-    }
+input[type=number],
+input[type=password],
+input[type=search],
+textarea,
+select 
+{
+border: 1px solid $mid_grey;
+border-radius: $radius;
+width: 75%;
+@include rem-fallback(padding, 0.5);
+@include rem-fallback(margin-bottom, 0.75);
+@include rem-fallback(min-height, 2.2);
+  &.large 
+  {
+  @include rem-fallback(min-height, ($baseline * 5) / $base_font_size);
+  }
 }
 
-textarea {
-  @include rem-fallback(height, 6);
+textarea 
+{
+@include rem-fallback(height, 6);
 }
 
-checkbox inline {
-  display: inline-block;
-      vertical-align: middle;
+checkbox inline 
+{
+display: inline-block;
+vertical-align: middle;
 }
 
-form input:invalid, form textarea:invalid, form select:invalid {
+form input:invalid, form textarea:invalid, form select:invalid 
+{
 outline: 3px solid #ce001f;
+}
+
+//legacy
+
+form.inline-search 
+{
+float: right;
+margin-bottom: 0;
+  fieldset 
+  {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+    legend 
+    {
+    display: none;
+    }
+    label 
+    {
+    display: inline;
+    }
+  }
+}
+
+form.documentation-search 
+{
+position: absolute;
+right: 0;
+top: 40px;
+  @include respond-to(handheld) 
+  { 
+  display: none; 
+  }
 }

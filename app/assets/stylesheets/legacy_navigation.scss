@@ -1,0 +1,339 @@
+div#guide-top
+{
+  position: absolute;
+  top: 3px;
+  width: 100px;
+  height: 10px;
+  left:0;
+}
+
+h1.guide
+{
+  padding: 0.5em 0 0 0 ;
+}
+
+aside.g
+{
+  @include respond-to(handheld) { display: none; }
+}
+nav.guide
+{
+  width: #{($column_width * 5) + ($gutter * (5 - 1))}px;
+  @include respond-to(tablet) { width: #{($tablet_column_width * 5) + ($gutter * (5 - 1))}px; }
+  @include respond-to(large_desktop) { width: #{($large_desktop_column_width * 5) + ($gutter * (5 - 1))}px; }
+  &.affix
+  {
+    top: 54px;
+  }
+  &.affix-bottom
+  {
+    position: absolute;
+    bottom: 0px;
+  }
+  ul
+  {
+    padding-left: 0;
+    margin: 0;
+    li
+    {
+      list-style-type: none;
+      background: $white;
+      border-bottom: 1px solid $mid_grey;
+      &.active
+      {
+        background: $light_grey;
+      }
+      a
+      {
+        font-family: $chevin_medium;
+        text-decoration: none;
+        display: block;
+        @include font20;
+        padding: 1em 0.5em;
+        margin: 0;
+        span
+        {
+          font-family: $default_font;
+          color: $grey;
+          font-size: 14px;
+          display: block;
+          text-transform: uppercase;
+        }
+        &:hover
+        {
+          background: $light_grey;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+section.casestudy,
+section.guide
+{
+  // margin-top: -#{$gutter}px;
+  h2
+  {
+    &[id^='part']
+    {
+      clear: both;
+      padding-top: 50px;
+      border-bottom: 4px solid $blue;
+      line-height: 28px;
+      // @include font36;
+      // padding-left: 1em;
+    }
+    span
+    {
+      color: $grey;
+      display: block;
+      font-size: 20px;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &:first-of-type
+    {
+      border-top: none;
+      margin-top: 0;
+      // padding-top: 0em;
+      margin-top: -50px;
+    }
+  }
+}
+
+h2.section
+{
+  border-bottom: 4px solid $blue;
+  margin-top: 1em;
+  line-height: 28px;
+  span
+  {
+    color: $grey;
+    display: block;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  &:first-of-type
+  {
+    margin-top: 0;
+  }
+}
+
+a#going-up
+{
+  display: block;
+  display: none;
+  width: 60px;
+  height: 60px;
+  background: transparent url(asset_path('top-btn.png')) no-repeat 0 0;
+  text-indent: -3000em;
+  overflow: hidden;
+  margin-left: 80px;
+  margin-top: #{$gutter * 5}px;
+  @include rounded;
+  &:hover
+  {
+    -moz-box-shadow:    0px 0px 6px 0px $grey;
+    -webkit-box-shadow: 0px 0px 6px 0px $grey;
+    box-shadow:         0px 0px 6px 0px $grey;
+  }
+}
+
+
+figure.guide-banner
+{
+  position: relative;
+  margin-bottom: 1em;
+  margin-top: -#{$gutter}px;
+  min-height: 245px;
+  @include respond-to(tablet) {  min-height: 160px; }
+  @include respond-to(handheld) {  min-height: 60px; }
+  img
+  {
+    @include rounded;
+  }
+
+  figcaption
+  {
+    position: absolute;
+    font-family: $chevin_light;
+    @include font24;
+    margin: 0;
+    bottom: 60px;
+    text-indent: #{$gutter}px;
+    left: 0;
+    right: 0px;
+    padding: 0.25em 0;
+    @include translucent_white;
+    @include respond-to(large_desktop) { font-size: 36px; }
+    @include respond-to(tablet) {  font-size: 18px; }
+    // @include respond-to(handheld) { @include font36; }
+    span
+    {
+      @include font16;
+      font-size: 18px;
+      @include respond-to(large_desktop) { font-size: 22px; }
+      @include respond-to(tablet) {  font-size: 16px; }
+      @include respond-to(handheld) {  }
+    }
+  }
+}
+
+//right nav for news type, etc
+nav.related {
+  @include light_grey_gradient;
+  @include rounded;
+  border: 1px solid $light_grey;
+  font-family: $chevin_medium;
+  margin-bottom: #{$gutter}px;
+  h4 {
+    border-bottom: 2px solid $light_grey;
+    @include font18;
+    margin: 0 0 0.25em 0;
+    }
+  ul {
+    padding-left: 0;
+    @include font18;
+    margin: 0;
+    ul {
+      margin-left: 1.5em;
+      }
+      li {
+        a {
+          padding: 0.5em 1em;
+          display: block;
+          text-decoration: none;
+          @include respond-to(handheld) {  padding: 0.25em 1em; @include font14; margin: 0; }
+          &:hover {
+            background: $white;
+            text-decoration: underline;
+          }
+          &.active {
+            background: $white;
+          }
+          span {
+            @include font14;
+          }
+        }
+      }
+
+      li:first-of-type {
+        a {
+          &:hover, &.active {
+            -webkit-border-top-left-radius: $radius;
+            -webkit-border-top-right-radius: $radius;
+            -moz-border-radius-topleft: $radius;
+            -moz-border-radius-topright: $radius;
+            border-top-left-radius: $radius;
+            border-top-right-radius: $radius;
+          }
+        }
+      }
+
+      li:last-of-type {
+        a {
+          &:hover, &.active  {
+            -webkit-border-bottom-left-radius: $radius;
+            -webkit-border-bottom-right-radius: $radius;
+            -moz-border-radius-bottomleft: $radius;
+            -moz-border-radius-bottomright: $radius;
+            border-bottom-left-radius: $radius;
+            border-bottom-right-radius: $radius;
+          }
+        }
+      }
+
+      li:not(:last-of-type) {
+        border-bottom: 1px solid $light_grey;
+      }
+  }
+}
+
+.lt-ie9 nav.related {
+  font-family: $default_font;
+  ul {
+    @include font14;
+  }
+}
+
+html.lt-ie8 nav.related {
+  background: none;
+}
+
+
+nav.inline
+{
+  @include blue_gradient;
+  @include rounded;
+  border: 1px solid $grey;
+  overflow: auto;
+  margin-bottom: 1.5em;
+  ul
+  {
+    padding: 0;
+    margin: 0;
+    li
+    {
+      font-family: $chevin_medium;
+      @include font18;
+      margin: 0;
+      float: left;
+      border-right: 1px solid $grey;
+      @include respond-to(tablet) {  @include font16; margin: 0; }
+      @include respond-to(handheld) {  float: none; @include font14; margin: 0;}
+      
+      a
+      {
+        display: block;
+        color: $white;
+        padding: 0.35em 1em;
+        @include respond-to(tablet) {  padding: 0.25em 0.5em; }
+        text-decoration: none;
+        -webkit-transition: none;
+        -webkit-transition: none;
+        &:hover, &.active
+        {
+          color: $black;
+          @include mid_grey_gradient;
+        }
+      }
+    }
+  }
+}
+
+.lt-ie9 nav.inline
+{
+  ul
+  {
+    li
+    {
+      @include font14;
+      font-family: $default_font;
+      a
+      {
+        padding: 0.25em 1em;
+      }
+    }
+  }
+}
+
+nav.topics
+{
+  ul
+  {
+    padding-left: #{$gutter}px;
+    padding-left: 0px;
+  }
+  li
+  {
+    font-family: $chevin_light;
+  }
+  p
+  {
+    margin: 0;
+  }
+}

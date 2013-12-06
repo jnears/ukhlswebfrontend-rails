@@ -1,0 +1,36 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: $default_font;
+  @include respond-to(handheld) {  font-family: $chevin_light; }
+}
+
+.lt-ie9 body
+{
+  font-size: 14px;
+}
+
+.inline
+{
+  display: inline;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

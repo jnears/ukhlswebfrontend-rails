@@ -1,73 +1,207 @@
-figure.home-banner
-{
-  position: relative;
-  width: 945px;
-  //height: 250px;
-  @include rem-fallback(height, 16);
-  display: block;
-  background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
-  @include respond-to(large_desktop) {
-   width: 1185px;
-   background-image: url(asset_path('banner-large.jpg')); }
-  @include respond-to(tablet) {
-    width: 745px;
-    background-image: url(asset_path('banner-small.jpg'));
-    @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
-  }
-  @include respond-to(handheld) {
-    width: auto;
-    margin-bottom: 160px;
-    //height: 150px;
-    @include rem-fallback(height, 9);
-    width: auto;
-    background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
-    background-size: cover;
-  }
+html,
+button,
+input,
+select,
+textarea {
+  color: $black;
+}
 
-  // @include respond-to(handheld) { background-image: none; }
-  @include rounded;
+h1.i
+{
+  span
+  {
+    display: inline;
+    margin-left: 0.75em;
+  }
+}
+
+ul.block
+{
+  padding-left: 0;
+  li
+  {
+    list-style-type: none;
+    margin-bottom: 1em;
+  }
+}
+
+
+
+
+blockquote {
+  margin: 1em 40px;
+  @include respond-to(handheld) { margin: 1em #{$gutter / 2}px; }
+}
+
+
+
+figure.featured
+{
+  float: left;
+  padding: 0 2em 1em 0;
+  img
+  {
+    @include rounded;
+  }
 
   figcaption
   {
-    position: absolute;
-    color: $black;
-    font-family: $chevin_light;
-    //@include font20;
-    @include rem-fallback(font-size, 1.25);
-    margin: 0;
-    top: 15px;
-    width: 27em;
-    @include rounded;
-    left: 15px;
-    padding: 0.5em;
-    @include translucent_white;
-    @include respond-to(large_desktop) { 
-      width: 29em; 
-      //@include font22;
-      @include rem-fallback(font-size, 1.35); 
-    }
-    @include respond-to(tablet) { width: 18em; }
-    @include respond-to(handheld) { 
-      position: relative; 
-      text-align: center; 
-      padding: 0em; 
-      bottom: 5px; 
-      top: 155px; 
-      left: 5px; 
-      right: 5px; 
-      //@include font18;
-      @include rem-fallback(font-size, 1.2); 
-      line-height: normal; 
-      width: auto; 
-      }
-    a
+    font-style: italic;
+    max-width: 300px;
+    @include font14;
+    p
     {
-      font-family: $chevin_medium;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      display: block;
+      margin: 0em;
     }
   }
+}
+
+
+section.body
+{
+  margin-left: #{($column_width * 4) + ($gutter * (4 + 1))}px; }
+  @include respond-to(tablet) { .offset#{4} { margin-left: #{($tablet_column_width * 4) + ($tablet_gutter * (4 + 1))}px; } }
+  @include respond-to(large_desktop) { .offset#{4} { margin-left: #{($large_desktop_column_width * 4) + ($large_desktop_gutter * (4 + 1))}px; } }
+  @include respond-to(handheld) { .offset#{4} { margin-left: 0px; }
+}
+
+figure.pull-left
+{
+  margin-left: -#{($column_width * 4) + ($gutter * (4 + 1))}px;
+  padding: 0 1em 0 0;
+}
+
+
+figure.regular
+{
+  img
+  {
+    @include rounded;
+  }
+  figcaption
+  {
+    font-style: italic;
+    max-width: 300px;
+
+  }
+}
+
+
+.affix
+{
+  position: fixed;
+  @include respond-to(handheld) { position: relative; }
+}
+
+.affix-bottom
+{
+  position: absolute;
+  bottom: 50px;
+}
+
+blockquote
+{
+  font-family: $chevin_light_italic;
+  @include font22;
+}
+
+nav.topics_grid
+{
+  font-family: $chevin_light;
+  @include font22;
+}
+
+nav.features
+{
+  [class*="span"] {
+    @include respond-to(tablet) { float: none; width: auto; }
+  }
+  h3
+  {
+    @include font22;
+
+    margin: 0 0 1em 0;
+  }
+  .box
+  {
+    min-height: 200px;
+    @include respond-to(large_desktop) {  min-height: 200px; }
+    @include respond-to(tablet) { min-height: 1px; margin-bottom: 1em; }
+    @include respond-to(handheld) { min-height: 1px; }
+  }
+  img
+  {
+    float: left;
+    @include rounded;
+    margin-bottom: 1em;
+    margin-right: 1.5em;
+  }
+  p
+  {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebox
+{
+  @include rounded;
+  background: $white;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  border: 1px solid $mid_grey;
+  padding: 1em;
+  position: relative;
+  margin-top: 2em;
+  h3
+  {
+    position: absolute;
+    top: -1em;
+    left: #{$gutter}px;
+    padding: 0 0.25em;
+    background: $white;
+  }
+}
+
+
+.pad
+{
+  padding: #{$gutter / 2}px;
+  padding: 1em;
+}
+
+.space
+{
+  margin-bottom: #{$gutter}px;
+}
+
+.rounded
+{
+  @include rounded;
 }
 
 .box
@@ -81,8 +215,7 @@ figure.home-banner
   }
   h3
   {
-    //@include font20;
-    @include rem-fallback(font-size, 1.25);
+    @include font20;
     margin-top: 0;
     margin-bottom: 0.25em;
   }
@@ -94,8 +227,7 @@ figure.home-banner
   {
     font-family: $chevin_light;
     font-style: normal;
-    //@include font18;
-    @include rem-fallback(font-size, 1.2);
+    @include font18;
     margin-bottom: 0px;
   }
   ul
@@ -104,23 +236,12 @@ figure.home-banner
     padding-left: 2em;
     li
     {
-      //@include font18;
-      @include rem-fallback(font-size, 1.2);
+      @include font18;
       margin: 0;
       font-family: $chevin_light;
       list-style-type: none;
     }
   }
-}
-
-.pad
-{
-  padding: 1em;
-}
-
-.space
-{
-  margin-bottom: #{$gutter}px;
 }
 
 .box.feature
@@ -135,15 +256,330 @@ figure.home-banner
       margin-bottom: #{$gutter}px;
       span
       {
-        //font-family: $default_font;
-        //@include font16;
-        @include rem-fallback(font-size, 1); 
+        font-family: $default_font;
+        @include font16;
         display: block;
       }
     }
   }
 }
 
+.blue_gradient
+{
+  @include blue_gradient;
+  color: $white;
+  a:link, a:visited, a:active
+  {
+    color: $white;
+    //text-decoration: none;
+    &:hover
+    {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.grey_gradient
+{
+  @include light_grey_gradient;
+  a:link, a:visited, a:active
+  {
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+}
+
+.yellow_gradient
+{
+  @include yellow_gradient;
+  color: $white;
+  a:link, a:visited, a:active
+  {
+    // text-decoration: none;
+    color: $white;
+    &:hover
+    {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.green_gradient
+{
+  @include green_gradient;
+  color: $white;
+  a:link, a:visited, a:active
+  {
+    color: $white;
+    &:hover
+    {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.pink_gradient
+{
+  @include pink_gradient;
+  color: $white;
+  a:link, a:visited, a:active
+  {
+    color: $white;
+    &:hover
+    {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+html.lt-ie8 .blue_gradient, html.lt-ie8 .grey_gradient, html.lt-ie8 .yellow_gradient, html.lt-ie8 .green_gradient, html.lt-ie8 .pink_gradient
+{
+  background: none;
+}
+
+
+
+
+
+p.lead-in
+{
+  color: $pink;
+  @include font24;
+  font-family: $chevin_light;
+}
+
+p.debug
+{
+  background: #fffff6;
+  padding: 1em;
+  border: 4px solid $pink;
+  font-family: monospace;
+  color: $pink;
+}
+
+.ie9 p.subheading, .lt-ie9 p.subheading
+{
+  @include font16;
+  font-weight: normal;
+}
+
+p.call-to-action
+{
+  @include font20;
+  margin-top: 0;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.ie9 p.call-to-action, .lt-ie9 p.call-to-action
+{
+  @include font16;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+div.key-message
+{
+  @include blue_gradient;
+  color: $white;
+  font-family: $chevin_light;
+  line-height: normal;
+  @include rounded;
+  @include font18;
+  h3
+  {
+    @include font18;
+    line-height: normal;
+    font-family: $chevin_medium;
+  }
+  div.padder
+  {
+    padding: 1em;
+  }
+
+}
+
+h3.meta
+{
+  clear: both;
+  border-top: 3px solid $pink;
+  margin-top: 3em;
+  padding-top: 0.5em;
+}
+
+p.padder
+{
+  height: 300px;
+}
+
+p.highlight
+{
+  @include rounded;
+  @include green_gradient;
+  position: relative;
+  margin-right: -100px;
+  color: $white;
+  float: right;
+  width: 30%;
+  font-family: $chevin_light_italic;
+  @include font20;
+  margin: 0 0 0 1em;
+  padding: 1em;
+  font-weight: normal;
+  @include respond-to(handheld) { width: 35%; @include font18; }
+
+  &.l
+  {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+
+  a
+  {
+    color: $white;
+    &:hover
+    {
+      color: $white;
+    }
+  }
+}
+
+html.lt-ie8 p.highlight
+{
+  background: none;
+}
+
+
+
+
+p.call-to-action.lead
+{
+  margin-top: 0em;
+}
+
+p.meta
+{
+  @include font13;
+}
+
+p.standfirst
+{
+  @include callout($blue);
+  @include font20;
+  font-weight: 200;
+}
+
+p.edit-link
+{
+  position: fixed;
+  right: 10px;
+  top: 15px;
+  z-index: 1111;
+}
+
+p.note
+{
+  margin-top: 0em;
+}
+
+p.control
+{
+  clear: both;
+  @include rounded;
+  @include light_grey_gradient;
+  padding: #{$gutter / 2}px 0;
+  text-align: center;
+}
+
+html.lt-ie8 p.control
+{
+  background: none;
+}
+
+p.plain_control
+{
+  padding: #{$gutter}px 0 0 0 ;
+  text-align: center;
+}
+
+p.cookie-notice
+{
+  width: 100%;
+  // @include font18;
+  margin: 0;
+  padding: 0.25em 0 0.4em 0;
+  line-height: normal;
+  @include green_gradient;
+  font-family: $chevin_medium;
+  color: #dff1de;
+  text-align: center;
+  a
+  {
+    color: $white;
+    &:hover
+    {
+      color: $white;
+    }
+  }
+
+  a.close
+  {
+    margin-left: 1em;
+    text-decoration: none;
+    color: $black;
+    padding: 0 0.45em 0.25em 0.45em;
+    background: transparentize($black, 0.95);
+    line-height: normal;
+    @include rounded;
+    -moz-box-shadow: inset 0 0 4px transparentize($black, 0.7);
+    -webkit-box-shadow: inset 0 0 4px transparentize($black, 0.7);
+    box-shadow: inset 0 0 4px transparentize($black, 0.7);
+
+    &:hover
+    {
+      -moz-box-shadow: inset 0 0 4px transparentize($black, 0.5);
+      -webkit-box-shadow: inset 0 0 4px transparentize($black, 0.5);
+      box-shadow: inset 0 0 4px transparentize($black, 0.5);
+      background: transparentize($black, 0.85);
+    }
+  }
+}
+
+html.lt-ie8 p.cookie-notice
+{
+  background: none;
+}
+
+#loading
+{
+  display: block;
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: #{$gutter /2}px;
+  width: 24px;
+  height: 24px;
+  background: transparent url(asset_path('loading.gif')) no-repeat 0 0;
+  overflow: hidden;
+  text-indent: -3000em;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
 
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
@@ -174,3 +610,89 @@ figure.home-banner
     position: static;
     width: auto;
 }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+
+
+a.i img
+{
+  vertical-align: middle;
+}
+
+
+
+
+.flash
+{
+  @include transparent($green, 0.2);
+  text-align: center;
+  border-bottom: 2px solid $green;
+  padding: 0.25em 0;
+  &.error
+  {
+    @include transparent($pink, 0.2);
+    border-bottom: 2px solid $pink;
+  }
+}
+
+.callout
+{
+  overflow: hidden;
+  @include callout($green);
+  margin-bottom: 1em;
+  h2:first-of-type
+  {
+    @include font24;
+    margin-top: 0;
+  }
+  h3:first-of-type
+  {
+    margin-top: 0;
+  }
+  p.subheading:first-of-type
+  {
+    margin-top: 0;
+  }
+}
+
+.callout.alert, div.alert
+{
+  @include callout($pink);
+}
+
+.callout.info
+{
+  @include callout($blue);
+}
+
+.callout.note
+{
+  @include callout($grey);
+}
+
+.callout.highlight
+{
+  @include callout($yellow);
+}
+
+a.thumb
+{
+  display: block;
+  float: left;
+  width: 125px;
+  padding-right: 1em;
+}
+
+div.errors
+{
+  margin-bottom: 1em;
+}
+

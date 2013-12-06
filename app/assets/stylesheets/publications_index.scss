@@ -1,0 +1,27 @@
+article.publication
+{
+  padding: 0.5em 0;
+  p
+  {
+    margin: 0.25em 0;
+    color: $grey;
+    .series
+    {
+      font-style: italic;
+    }
+  }
+
+  h4
+  {
+    margin: 0 0 0.4em 0;
+  }
+}
+
+
+div.year article.publication
+{
+  &:not(:last-of-type)
+  {
+    border-bottom: 1px solid $light_grey;
+  }
+}

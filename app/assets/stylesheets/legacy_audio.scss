@@ -1,0 +1,98 @@
+.player
+{
+  display: block;
+  position: relative;
+  width: 100%;
+  background: #e2e1e0;
+  height: 60px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 1.5em 0;
+}
+
+#gutter
+{
+  position: relative;
+  margin: 0 60px;
+  top: 26px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #b5b4b3;
+  height: 6px;
+  padding: 2px;
+  display: block;
+  -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+#handle
+{
+  position: absolute;
+  top: -3px;
+  left: 0;
+  margin-left: -8px;
+  display: block;
+  background: transparent url(asset_path('audio-sprite.png')) no-repeat -100px 0px;
+  width: 17px;
+  height: 17px;
+}
+
+#handle:hover
+{
+  cursor: pointer;
+}
+
+#playtoggle
+{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  color: #444;
+  background: transparent url(asset_path('audio-sprite.png')) no-repeat 11px 6px ;
+  background: url(asset_path('audio-sprite.png')) no-repeat 11px 6px, -webkit-gradient(linear, left top, left bottom, from(#e2e1e0), to(#f4f3f1)) ;
+  background: url(asset_path('audio-sprite.png')) no-repeat 11px 6px, -moz-linear-gradient(top, #e2e1e0, #f4f3f1) ;
+  background: url(asset_path('audio-sprite.png')) no-repeat 11px 6px, linear-gradient(top, #e2e1e0, #f4f3f1) ;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid #c6c5c4;
+  -webkit-box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #f4f3f1;
+  -moz-box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #f4f3f1;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #f4f3f1;
+  text-shadow: 0 -1px 0 #fff;
+  cursor: pointer;
+}
+
+#playtoggle:hover
+{
+  -moz-box-shadow: #c6c5c4 0 0 5px 0;
+  -webkit-box-shadow: #c6c5c4 0 0 5px 0, inset 1px 1px 0 #fff, inset -1px -1px 0 #f4f3f1;
+  -o-box-shadow: #c6c5c4 0 0 5px 0;
+  box-shadow: #c6c5c4 0 0 5px 0, inset 1px 1px 0 #fff, inset -1px -1px 0 #f4f3f1;
+}
+
+#playtoggle.playing
+{
+  background: transparent url(asset_path('audio-sprite.png')) no-repeat -40px 6px ;
+}
+
+#timeleft
+{
+  font-family: arial, "Helvetica Neue", helvetica, sans-serif;;
+  color: #444;
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  height: 30px;
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: bold;
+}

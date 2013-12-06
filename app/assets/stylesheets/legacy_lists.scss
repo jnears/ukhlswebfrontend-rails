@@ -1,0 +1,66 @@
+article.search-result
+{
+  padding: #{$gutter / 2}px 0;
+  border-bottom: 1px solid $light_grey;
+  cite
+  {
+    font-style: normal;
+    color: $grey;
+    @include font12;
+  }
+  h4
+  {
+    margin: 0;
+  }
+  p
+  {
+    @include font14;
+    margin: -0.35em 0 0 0;
+  }
+}
+
+nav ul, nav ol {
+list-style: none;
+list-style-image: none;
+}
+
+
+article.event
+{
+  padding: 1em 0 0 10em;
+  border-bottom: 1px solid $light_grey;
+  position: relative;
+  &:last-of-type
+  {
+    margin-bottom: 1em;
+  }
+  p.start_at
+  {
+    position: absolute;
+    left: 0;
+    top: 1em;
+    background: #457aa6;
+    color: $white;
+    @include rounded;
+    @include font18;
+    padding: 0.75em;
+    font-family: $chevin_medium;
+    text-align: center;
+  }
+
+}
+
+ol.people
+  {
+    padding: 0;
+    margin: 0.25em 0;
+    li
+    {
+      list-style-type: none;
+      display: inline;
+      &:not(:last-of-type):after
+      {
+        content: ", ";
+      }
+    }
+  }

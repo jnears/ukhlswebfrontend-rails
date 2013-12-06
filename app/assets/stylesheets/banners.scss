@@ -1,0 +1,303 @@
+figure.home-banner
+{
+  position: relative;
+  width: 945px;
+  height: 250px;
+  display: block;
+  background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
+  @include respond-to(large_desktop) {
+   width: 1185px;
+   background-image: url(asset_path('banner-large.jpg')); }
+  @include respond-to(tablet) {
+    width: 745px;
+    background-image: url(asset_path('banner-small.jpg'));
+    @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
+  }
+  @include respond-to(handheld) {
+    width: auto;
+    margin-bottom: 160px;
+    height: 150px;
+    width: auto;
+    background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
+    background-size: cover;
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    @include font20;
+    margin: 0;
+    top: 15px;
+    width: 27em;
+    @include rounded;
+    left: 15px;
+    padding: 0.5em;
+    @include translucent_white;
+    @include respond-to(large_desktop) { width: 29em; @include font22;  }
+    @include respond-to(tablet) { width: 18em; }
+    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include font18; line-height: normal; width: auto; }
+
+
+    a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+}
+
+.participants-banner-wrapper{
+
+background: $light_grey;
+border: 1px solid $light_grey;
+@include rounded;
+ @include respond-to(handheld) { margin-bottom: 8px; }
+
+figure.participants-banner
+{
+  position: relative;
+  width: 943px;
+  height: 330px;
+  display: block;
+  background: transparent url(asset_path('banner-medium-features.jpg')) no-repeat 0 0;
+  @include respond-to(large_desktop) {
+   width: 1183px;
+   background-image: url(asset_path('banner-large-features.jpg')); }
+  @include respond-to(tablet) {
+    width: 743px;
+    background-image: url(asset_path('banner-small-features.jpg'));
+    @include image-2x(asset_path('banner-small-retina-features.jpg'), 745px, 250px);
+  }
+  @include respond-to(handheld) {
+    display:none;
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    @include font20;
+    line-height: normal; 
+    margin: 0;
+    top: 250px;
+    width: 100%;
+    text-align: center;
+    @include rounded;
+    padding-top: 0.5em;
+    @include respond-to(large_desktop) { @include font22;  }
+    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include font18; width: auto; }
+
+
+    a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+
+    span
+    {
+    font-family: $chevin_medium;
+    color: $blue;
+    }
+  }
+
+}
+
+ figure.participants-banner-mobile
+  {
+  display:none;
+  @include respond-to(large_desktop) { display:none;}
+  @include respond-to(desktop) { display:none;}
+  @include respond-to(tablet) { display:none;}
+  @include respond-to(handheld) { display:block;}
+  position: relative;
+  max-width: 100%;
+  background: none;
+  }
+
+  img 
+  {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-radius-topleft: 5px;
+    radius-topright: 5px;
+    width:100%;
+  }
+
+  .call-to-action  
+  {
+    color: $blue;
+    font-family: $chevin_medium;
+    @include font18;
+    line-height: normal;
+    margin: 0;
+    top: 250px;
+    width: 100%;
+    text-align: center;
+    @include rounded;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    display:none;
+    @include respond-to(large_desktop) { display:none;}
+    @include respond-to(desktop) { display:none;}
+    @include respond-to(tablet) { display:none;}
+    @include respond-to(handheld) { display:block;}
+   a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  } 
+}
+
+figure.contact-banner
+{
+  width: 235px;
+  width: 225px;
+  display: block;
+  position: relative;
+  @include respond-to(large_desktop) {  width: 285px; }
+  @include respond-to(tablet) {  width: 160px; }
+  @include respond-to(handheld) { display: none; }
+  img
+  {
+    @include rounded;
+  }
+}
+
+figure.about-banner
+{
+  position: relative;
+  margin-bottom: 1em;
+  width: 985px;
+  height: 250px;
+  display: block;
+  @include respond-to(large_desktop) {  width: 1185px; }
+  @include respond-to(tablet) {  width: 685px; }
+  @include respond-to(handheld) { display: none; }
+  img
+  {
+    @include rounded;
+    height: 250px;
+  }
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    @include font20;
+    margin: 0;
+    top: 15px;
+    width: 29em;
+    @include rounded;
+    left: 15px;
+    padding: 0.5em;
+    @include translucent_white;
+    @include respond-to(large_desktop) { @include font22; margin: 0; }
+    @include respond-to(handheld) { @include font18; width: 300px; }
+    a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      display: block;
+    }
+  }
+}
+
+figure.research-banner
+{
+  position: relative;
+  margin-bottom: 1em;
+  width: 685px;
+  width: 657px;
+
+  height: 250px;
+  display: block;
+  @include respond-to(large_desktop) {  width: 825px; }
+  @include respond-to(tablet) {  width: 475px; width: 517px;}
+  @include respond-to(handheld) { display: none; }
+  img
+  {
+    @include rounded;
+    height: 250px;
+  }
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    @include font22;
+    margin: 0;
+    top: 15px;
+    width: 15em;
+    @include rounded;
+    left: 15px;
+    padding: 0.5em;
+    @include translucent_white;
+    @include respond-to(large_desktop) { width: 19em; margin: 0; }
+    @include respond-to(handheld) { @include font18; width: 300px; }
+    span
+    {
+      font-family: $chevin_light;
+      font-size: 20px;
+      line-height: 30px;
+      display: block;
+    }
+    a
+    {
+      font-family: $chevin_medium;
+      margin-top: 0.5em;
+      display: block;
+    }
+  }
+}
+
+figure.banner
+{
+  position: relative;
+  margin-bottom: 1em;
+  img
+  {
+    @include rounded;
+  }
+
+  figcaption
+  {
+    position: absolute;
+    color: $white;
+    font-family: $chevin_light;
+    @include font22;
+    margin: 0;
+    bottom: 25px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    padding: 0.5em 0;
+    @include green_gradient;
+  }
+}
+
+html.lt-ie8 figure.banner
+{
+  figcaption
+  {
+    background: none;
+  }
+}

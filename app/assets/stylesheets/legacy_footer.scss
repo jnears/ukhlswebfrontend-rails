@@ -43,16 +43,11 @@ footer[role=contentinfo]
       @include respond-to(handheld) { float: none; margin-top: 0em; padding-left: 0; }
       li
       {
-        //@include font14;
-        @include rem-fallback(font-size, 0.83);
+        @include font14;
         list-style-type: none;
         display: inline;
         margin: 0 #{$gutter}px;
-        @include respond-to(handheld) { 
-          //@include font12; 
-          @include rem-fallback(font-size, 0.75);
-          margin: 0 #{$gutter / 2}px 0 0; 
-        }
+        @include respond-to(handheld) { @include font12; margin: 0 #{$gutter / 2}px 0 0; }
         a
         {
           color: $light_black;

@@ -26,10 +26,15 @@ dl {
   }
 }   
 
-ol.tag-list {
-  li {
+ol.tag-list 
+{
+  li 
+  {
     list-style-type: none;
     float: left;
     @include rem-fallback(margin, 0.2);
-    }
   }
+}
+
+
+

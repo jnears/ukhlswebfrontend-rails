@@ -248,3 +248,102 @@
   background: linear-gradient(to bottom,  rgba(255,255,255,0.85) 0%,rgba(255,255,255,0.95) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', endColorstr='#f2ffffff',GradientType=0 ); /* IE6-8 */
 }
+
+// Provides a single cross-browser CSS box shadow for Webkit, Gecko, and CSS3.
+// Includes default arguments for color, horizontal offset, vertical offset, blur length, spread length, and inset.
+@mixin single-box-shadow(
+  $color  : $default-box-shadow-color,
+  $hoff   : $default-box-shadow-h-offset,
+  $voff   : $default-box-shadow-v-offset,
+  $blur   : $default-box-shadow-blur,
+  $spread : $default-box-shadow-spread,
+  $inset  : $default-box-shadow-inset
+) {
+  @if not ($inset == true or $inset == false or $inset == inset) {
+    @warn "$inset expected to be true or the inset keyword. Got #{$inset} instead. Using: inset";
+  }
+
+  @if $color == none {
+    @include box-shadow(none);
+  } @else {
+    $full   : $hoff $voff;
+    @if $blur   { $full: $full $blur;   }
+    @if $spread { $full: $full $spread; }
+    @if $color  { $full: $full $color;  }
+    @if $inset  { $full: inset $full;   }
+    @include box-shadow($full);
+  }
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+@mixin font48
+{
+  font-size: $base_font_size * 4;
+}
+
+@mixin font40
+{
+  font-size: $base_font_size * 2.5;
+}
+
+@mixin font36
+{
+  font-size: $base_font_size * 2.25;
+}
+
+@mixin font32
+{
+  font-size: 2rem;
+  //line-height: $base_line_height_value * 1.5;
+}
+
+@mixin font28
+{
+  font-size: $base_font_size * 1.75;
+}
+
+@mixin font24
+{
+  font-size: $base_font_size * 1.5;
+}
+
+@mixin font22
+{
+  font-size: $base_font_size * 1.375;
+}
+
+@mixin font20
+{
+  font-size: $base_font_size * 1.25;
+}
+
+@mixin font18
+{
+  font-size: $base_font_size * 1.125;
+}
+
+@mixin font16
+{
+  font-size: $base_font_size;
+}
+
+@mixin font14
+{
+  font-size: $base_font_size * 0.875;
+}
+
+@mixin font13
+{
+  font-size: $base_font_size * 0.8125;
+}
+
+@mixin font12
+{
+  font-size: $base_font_size * 0.75;
+}

@@ -1,0 +1,34 @@
+div.handheld-menu {
+  display: none;
+  @include mid_grey_gradient;
+  border-bottom: 1px solid $mid_grey;
+  @include respond-to(tablet) { display: block;}
+  & ul 
+  {
+    margin: 0;
+    overflow: auto;
+    padding-left: 0;
+    @include rem-fallback(height, 3); 
+    & li 
+    {
+      float: left;
+      @include rem-fallback(padding, 0.5);
+      list-style:none;
+      & a 
+      {
+        background-size: cover;
+        color: $grey;
+        display: block;
+        overflow: hidden;
+        padding-right: 5px;
+        &.search
+        {
+          @include respond-to(tablet) { display: none };
+          @include respond-to(handheld) { display: block };
+        }
+      }
+    }
+  }
+}
+
+
