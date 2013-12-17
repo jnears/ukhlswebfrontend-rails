@@ -1,0 +1,13 @@
+#loading
+{
+  display: block;
+  display: none;
+  position: absolute;
+  top: 7px;
+  @include rem-fallback(right, 1);
+  width: 24px;
+  height: 24px;
+  background: transparent url(asset_path('loading.gif')) no-repeat 0 0;
+  overflow: hidden;
+  text-indent: -3000em;
+}

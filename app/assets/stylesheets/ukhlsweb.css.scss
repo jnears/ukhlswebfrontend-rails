@@ -26,6 +26,15 @@ html{
    }
  }
 
+html,
+button,
+input,
+select,
+textarea 
+{
+  color: $black;
+}
+
 //library
 @import "banners.scss";
 @import "breadcrumb.scss";
@@ -35,14 +44,18 @@ html{
 @import "handheld.scss";
 @import "header.scss";
 @import "images.scss";
+@import "index_event.scss";
+@import "index_search.scss";
+@import "items.scss";
 @import "layout.scss";
 @import "lists.scss";
+@import "loader.scss";
 @import "navigation.scss";
 @import "tables.scss";
 @import "patterns";
 
 //legacy
-@import "posts_index.scss";
+@import "index_posts.scss";
 @import "publications_index.scss";
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";
@@ -50,7 +63,6 @@ html{
 @import "legacy_documentation.scss";
 @import "legacy_footer.scss";
 @import "legacy_header.scss";
-@import "legacy_lists.scss";
 @import "legacy_main.scss";
 @import "legacy_navigation.scss";
 @import "legacy_tabs.scss";

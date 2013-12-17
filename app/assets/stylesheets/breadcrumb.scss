@@ -2,56 +2,40 @@ ol.breadcrumb
 {
   @include light_grey_gradient;
   @include rounded;
-  font-family: "ChevinMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $chevin_medium;
   padding-left: #{$gutter}px;
-  @include font18;
+  @include rem-fallback(font-size, 1.125);
   margin: 0 0 #{$gutter}px 0;
-  @include respond-to(handheld) { @include font14; padding-left: #{$gutter / 2}px; margin: 0 0 #{$gutter / 2}px 0; }
-  // overflow: hidden;
+  @include respond-to(handheld) { @include rem-fallback(font-size, 0.875); padding-left: #{$gutter / 2}px; margin: 0 0 #{$gutter / 2}px 0; }
   z-index: 1000;
-
   width: #{(($columns * $column_width) + (($columns - 1) * $gutter + 15)) - $gutter}px;
   @include respond-to(tablet) { width: #{(($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter + 15)) - $gutter}px;}
   @include respond-to(large_desktop) { width: #{(($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter + 15)) - $gutter}px; }
   @include respond-to(handheld) { width: auto; }
-
   li
   {
     list-style-type: none;
     float: left;
     padding: 0.35em 0.2em;
     color: $grey;
-    &:not(:nth-last-of-type(-n+2))::after {
+    &:not(:nth-last-of-type(-n+2))::after 
+    {
       content: " \2192";
     }
-    a:link, a:visited, a:active
-    {
-      // color: $white;
-    }
   }
-
-
   &.affix
   {
     margin: 0;
     top: 0;
-
   }
   &.affix-top
   {
-    // position: absolute;
     position: relative;
     margin-bottom: -40px;
     top: -55px;
     overflow: hidden;
-    // width: 100%;
-    // left: 0;
-    // right: 0;
-    // top: 0;
     @include respond-to(handheld) { position: relative; top: 0; margin-bottom: 0px; }
   }
-
-
 }
 
 html.lt-ie8 ol.breadcrumb
@@ -62,8 +46,7 @@ html.lt-ie8 ol.breadcrumb
 .lt-ie9 ol.breadcrumb
 {
   font-family: $default_font;
-  @include font14;
-
+  @include rem-fallback(font-size, 1.125);
   li
   {
     margin-right: 0.5em;
@@ -72,5 +55,4 @@ html.lt-ie8 ol.breadcrumb
       content: " >";
     }
   }
-
 }

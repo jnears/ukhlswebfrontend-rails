@@ -1,0 +1,4 @@
+.item 
+{
+  @include rem-fallback(padding, 1.5);
+}

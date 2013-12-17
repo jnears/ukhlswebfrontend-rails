@@ -1,0 +1,23 @@
+article.event
+{
+  @include rem-fallback(padding, 0, 0, (($baseline - 1) / $base_font_size), 10);
+  border-bottom: 1px solid $light_grey;
+  position: relative;
+  &:last-of-type
+  { 
+    @include rem-fallback(margin-bottom, 1.5);
+  }
+  p.start_at
+  {
+    position: absolute;
+    left: 0;
+    @include rem-fallback(top, 1);
+    background: $dark_blue;
+    color: $white;
+    @include rounded;
+    @include rem-fallback(font-size, 1.125);
+    @include rem-fallback(padding, 0.75);
+    font-family: $chevin_medium;
+    text-align: center;
+  }
+}

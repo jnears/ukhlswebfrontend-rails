@@ -10,11 +10,39 @@ ul, ol {
 
 ul, ol, dl {
   @include rem-fallback(margin, 1.5, 0);
+  &.inline
+  {
+    li
+    {
+      list-style-type: none;
+      display: inline;
+    }
+  }
+  &.comma-separated
+  {
+    li
+    {
+      &:not(:last-of-type):after
+      {
+        content: ", ";
+      }
+    }
+  }
 }
 
 ul ul,
 ol ol {
   @include rem-fallback(margin, 0, 0, 0, 0)
+}
+
+ul.block
+{
+  padding-left: 0;
+  li
+  {
+    list-style-type: none;
+    @include rem-fallback(margin-bottom, 1.5);
+  }
 }
 
 dl {
@@ -36,5 +64,8 @@ ol.tag-list
   }
 }
 
-
-
+nav ul, nav ol 
+{
+list-style: none;
+list-style-image: none;
+}

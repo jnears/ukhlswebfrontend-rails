@@ -1,40 +1,3 @@
-html,
-button,
-input,
-select,
-textarea {
-  color: $black;
-}
-
-h1.i
-{
-  span
-  {
-    display: inline;
-    margin-left: 0.75em;
-  }
-}
-
-ul.block
-{
-  padding-left: 0;
-  li
-  {
-    list-style-type: none;
-    margin-bottom: 1em;
-  }
-}
-
-
-
-
-blockquote {
-  margin: 1em 40px;
-  @include respond-to(handheld) { margin: 1em #{$gutter / 2}px; }
-}
-
-
-
 figure.featured
 {
   float: left;
@@ -99,11 +62,6 @@ figure.regular
   bottom: 50px;
 }
 
-blockquote
-{
-  font-family: $chevin_light_italic;
-  @include font22;
-}
 
 nav.topics_grid
 {
@@ -142,32 +100,6 @@ nav.features
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .sidebox
 {
   @include rounded;
@@ -199,10 +131,7 @@ nav.features
   margin-bottom: #{$gutter}px;
 }
 
-.rounded
-{
-  @include rounded;
-}
+
 
 .box
 {
@@ -264,21 +193,7 @@ nav.features
   }
 }
 
-.blue_gradient
-{
-  @include blue_gradient;
-  color: $white;
-  a:link, a:visited, a:active
-  {
-    color: $white;
-    //text-decoration: none;
-    &:hover
-    {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
-}
+
 
 .grey_gradient
 {
@@ -292,41 +207,28 @@ nav.features
   }
 }
 
+.blue_gradient
+{
+  @include blue_gradient;
+}
+
 .yellow_gradient
 {
   @include yellow_gradient;
-  color: $white;
-  a:link, a:visited, a:active
-  {
-    // text-decoration: none;
-    color: $white;
-    &:hover
-    {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
 }
 
 .green_gradient
 {
   @include green_gradient;
-  color: $white;
-  a:link, a:visited, a:active
-  {
-    color: $white;
-    &:hover
-    {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
 }
-
 
 .pink_gradient
 {
   @include pink_gradient;
+}
+
+.blue_gradient, .green_gradient, .pink_gradient, .yellow_gradient
+{
   color: $white;
   a:link, a:visited, a:active
   {
@@ -419,46 +321,6 @@ p.padder
 {
   height: 300px;
 }
-
-p.highlight
-{
-  @include rounded;
-  @include green_gradient;
-  position: relative;
-  margin-right: -100px;
-  color: $white;
-  float: right;
-  width: 30%;
-  font-family: $chevin_light_italic;
-  @include font20;
-  margin: 0 0 0 1em;
-  padding: 1em;
-  font-weight: normal;
-  @include respond-to(handheld) { width: 35%; @include font18; }
-
-  &.l
-  {
-    float: left;
-    margin: 0 1em 0 0;
-  }
-
-  a
-  {
-    color: $white;
-    &:hover
-    {
-      color: $white;
-    }
-  }
-}
-
-html.lt-ie8 p.highlight
-{
-  background: none;
-}
-
-
-
 
 p.call-to-action.lead
 {
@@ -558,20 +420,6 @@ html.lt-ie8 p.cookie-notice
   background: none;
 }
 
-#loading
-{
-  display: block;
-  display: none;
-  position: absolute;
-  top: 7px;
-  right: #{$gutter /2}px;
-  width: 24px;
-  height: 24px;
-  background: transparent url(asset_path('loading.gif')) no-repeat 0 0;
-  overflow: hidden;
-  text-indent: -3000em;
-}
-
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
@@ -647,7 +495,6 @@ a.i img
 {
   overflow: hidden;
   @include callout($green);
-  margin-bottom: 1em;
   h2:first-of-type
   {
     @include font24;

@@ -337,3 +337,14 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+  img, object
+{
+  max-width: 100%;
+/*  margin-bottom: -5px;  /* huh ? PG 2010-09-13 */
+}
+
+.ie9 *
+{
+  filter: none !important;
+}

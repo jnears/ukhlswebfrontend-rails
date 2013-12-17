@@ -11,7 +11,7 @@
   }
 }
 
-
+//this can be removed
 @mixin rem($property, $px_values) {
     $baseline_rem: ($base_font_size / 1rem);
     #{$property}: $px_values;
@@ -39,6 +39,7 @@
   @return $num / ($num * 0 + 1);
 }
 
+//provides a fallback from rem values to pixels for older browsers
 @mixin rem-fallback($property, $values...) {
   $max: length($values);
   $pxValues: '';
@@ -73,6 +74,15 @@
   -webkit-border-radius: $radius;
 }
 
+@mixin rounded_top {
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  -moz-border-radius-topright: $radius;
+  border-radius-topleft: $radius;
+  radius-topright: $radius;
+}
+
 @mixin not_rounded{
   border-radius: 0;
   -moz-border-radius: 0;
@@ -99,7 +109,6 @@
   background: -ms-linear-gradient(top,  #f2f2f2 0%,#fafafa 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #f2f2f2 0%,#fafafa 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#fafafa',GradientType=0 ); /* IE6-8 */
-  border-bottom: 2px solid $light_grey;
 }
 
 @mixin mid_grey_gradient

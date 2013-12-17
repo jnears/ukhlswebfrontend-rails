@@ -10,16 +10,18 @@ font-style: normal;
   &.highlight 
   {
     position: relative;
+    margin-right: -100px;
     font-weight: normal;
     @include green_gradient;
     @include rounded;
-    font-family: ChevinLight;
+    font-family: $chevin_light_italic;
     @include rem-fallback(font-size, 1.25);
     @include rem-fallback(padding, 1.5);
     width: 30%;
     float: right;
     color: $white;
-    @include rem-fallback(margin, 0, 0.5, 0, 1);
+    @include rem-fallback(margin, 0, 0, 1, 1);
+      @include respond-to(handheld) { width: 35%; @include rem-fallback(font-size, 1.125); }
       & a 
       {
         color: $white;
@@ -29,11 +31,30 @@ font-style: normal;
         text-decoration: none;
       }
     }
+    &.left
+    {
+      float: left;
+      @include rem-fallback(margin, 0, 1, 1, 0);
+    }
   }
   &.lead {
     font-weight: 200;
   }
 }
+
+
+html.lt-ie8 p.highlight
+{
+  background: none;
+}
+
+
+
+
+
+
+
+
 
 .callout {
   overflow: hidden;
@@ -50,7 +71,6 @@ font-style: normal;
     @include callout($red);
   }
 }
-
 
 
 .body {
@@ -109,8 +129,8 @@ h2
 h3 
 {
 @include rem-fallback(font-size, 1.5);
-@include rem-fallback(line-height, 1.875);
-@include rem-fallback(margin, 0, 0, 1.125);
+@include rem-fallback(line-height, 1.5);
+@include rem-fallback(margin, 0, 0, 1.5);
 }
 
 h4 
@@ -238,9 +258,10 @@ right: 10px;
 
 blockquote 
 {
-font-family: ChevinLight;
+font-family: ChevinLightItalic;
 @include rem-fallback(font-size, 1.25);
 @include rem-fallback(margin, 0.75, 2.5);
+@include respond-to(handheld) { margin: 1em #{$gutter / 2}px; }
   & small 
   {
   color: $dark_grey;
@@ -251,7 +272,6 @@ font-family: ChevinLight;
   font-weight: normal;
   @include green_gradient;
   @include rounded;
-  font-family: ChevinLight;
   @include rem-fallback(font-size, 1.25);
   @include rem-fallback(padding, 1.5);
   width: 30%;
@@ -277,32 +297,31 @@ font-family: ChevinLight;
 
 hr 
 {
-clear: both;
-display: block;
-padding: 0;
-border: 0;
-margin: 0;
-border-bottom: 1px solid $light_grey;
-@include rem-fallback(padding-top, (($baseline - 1) / $base_font_size));
-@include rem-fallback(margin-bottom, 1.5);
-@include rem-fallback(line-height, 1.5);
+  clear: both;
+  display: block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  border-bottom: 1px solid $light_grey;
+  @include rem-fallback(padding-top, (($baseline - 1) / $base_font_size));
+  @include rem-fallback(margin-bottom, 1.5);
+  @include rem-fallback(line-height, 1.5);
 }
-
 
 //legacy
 
 p.esrc 
 {
-float: left;
-margin-right: #{$gutter}px;
-  @include respond-to(handheld) { float: none; }
+  float: left;
+  margin-right: #{$gutter}px;
+    @include respond-to(handheld) { float: none; }
 }
 
 p.iso
 {
-float: left;
-text-align: center;
-font-size: 12px;
-line-height: normal;
-  @include respond-to(handheld) { float: none; text-align: left }
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  line-height: normal;
+    @include respond-to(handheld) { float: none; text-align: left }
 }
