@@ -5,7 +5,10 @@ ul {
 ul, ol {
   @include rem-fallback(padding, 0, 0, 0, 2.5);
   @include rem-fallback(margin, 0, 0, 1.5, 0);
-  list-style-position: inside;
+  //list-style-position: inside;
+  &.inline {
+    @include rem-fallback(padding, 0);
+  }
  }
 
 ul, ol, dl {
@@ -68,4 +71,20 @@ nav ul, nav ol
 {
 list-style: none;
 list-style-image: none;
+}
+
+//legacy
+
+ol.people {
+  padding: 0;
+  @include rem-fallback(margin, 0.25, 0);
+  li 
+  {
+  list-style-type: none;
+  display: inline;
+    &:not(:last-of-type):after
+    {
+      content: ", ";
+    }
+  }
 }

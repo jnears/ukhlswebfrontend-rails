@@ -1,30 +1,27 @@
 .blog {
   article {
-    @include rem-fallback(min-height, 9);
-    @include rem-fallback(padding-bottom, 1.5);
+    @include rem-fallback(min-height, 7.5);
+    @include rem-fallback(padding, 0, 0, 0.5, 0);
     position: relative;
-    @include respond-to(tablet) { 
-      @include rem-fallback(min-height, 7);
-    }
+    @include respond-to(handheld) { min-height: #{80 + ($gutter )}px; padding: #{$gutter / 2}px 0; }
     &:last-of-type {
       border-bottom: none;
     }
-    h2 {
+    header
+    {
+      margin-top: #{$gutter}px;
+      margin-top: 0;
+    }
+    h2
+    {
       padding-left: 150px;
       @include rem-fallback(font-size, 1.5);
       margin: 0;
-      @include respond-to(tablet) { 
-        padding-left: 120px; 
-      }
-      @include respond-to(handheld) { 
-        padding-left: 90px; 
-        @include rem-fallback(font-size, 1.1);
-        line-height: normal; 
-        margin: 0;
-      }
-    p {
-      margin-bottom:0;
-    }
+      @include rem-fallback(margin, 0.75, 0);
+      @include rem-fallback(margin, 1, 0, 0.5, 0);
+      @include rem-fallback(line-height, 1.5);
+      @include respond-to(tablet) { padding-left: 120px; }
+      @include respond-to(handheld) { padding-left: 90px; line-height: normal; margin: 0; }
     }
     div.meta, p, time
     {
@@ -32,11 +29,9 @@
       @include respond-to(tablet) { padding-left: 120px; }
       @include respond-to(handheld) { padding-left: 90px; }
     }
-
-    p{
-      margin-bottom: 0;
-      margin-top: 0em;
-      @include respond-to(handheld) { margin-top: 0; }
+    p 
+    {
+      @include rem-fallback(margin-bottom, 1);
     }
     img
     {

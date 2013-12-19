@@ -1,27 +1,26 @@
 article.publication
 {
-  padding: 0.5em 0;
+  @include rem-fallback(padding, 0.75, 0);
+  @include rem-fallback(padding-bottom, (($baseline - 13) / $base_font_size));
   p
   {
-    margin: 0.25em 0;
-    color: $grey;
+    @include rem-fallback(margin, 0.25, 0);
+    color: $dark_grey;
     .series
     {
       font-style: italic;
     }
   }
-
   h4
   {
     margin: 0 0 0.4em 0;
   }
-}
-
-
-div.year article.publication
-{
+  &:last-of-type{
+    @include rem-fallback(padding-bottom, 0.75); //set the bottom padding back to 0.75rem as the 1px border does not show
+  }
   &:not(:last-of-type)
   {
     border-bottom: 1px solid $light_grey;
   }
 }
+

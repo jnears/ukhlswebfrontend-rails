@@ -12,7 +12,7 @@ body header[role=banner]  {
     @include respond-to(handheld) { 
       display: none; left: 0; 
       top: 0; @include mid_grey_gradient; 
-      border-bottom: 1px solid #cccccc;
+      border-bottom: 1px solid $mid_grey;
     }
 
     input[type="search"] {
@@ -144,7 +144,7 @@ h1 {
           border-radius: $radius;
           @include respond-to(tablet) { 
             border-right: none; 
-            border-bottom: 1px solid #cccccc;
+            border-bottom: 1px solid $mid_grey;
             @include rem-fallback(padding, 0.5, 1.25);
           }
           @include respond-to(tablet) {  

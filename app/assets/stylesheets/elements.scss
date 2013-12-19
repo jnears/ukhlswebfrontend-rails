@@ -49,32 +49,50 @@ html.lt-ie8 p.highlight
 }
 
 
-
-
-
-
-
-
-
 .callout {
   overflow: hidden;
-  @include callout($blue);
+  @include callout($green);
   zoom: 1;
   @include rem-fallback(padding, 0.75);
-  border-left: 6px solid $blue;
+  border-left: 6px solid $green;
   @include rounded;
   @include rem-fallback(margin, 0, 0, 1.5, 0);
+  h2:first-of-type
+  {
+    @include font24;
+    margin-top: 0;
+  }
+  h3:first-of-type
+  {
+    margin-top: 0;
+  }
+  p.subheading:first-of-type
+  {
+    margin-top: 0;
+  }
+  ul 
+  {
+    @include rem-fallback(margin, 0.75, 0);
+  }
   &.success {
     @include callout($green);
   }
   &.alert {
-    @include callout($red);
+    @include callout($pink);
+  }
+  &.info
+  {
+  @include callout($blue);
+  }
+  &.note
+  {
+    @include callout($grey);
   }
 }
 
-
-.body {
-  font-family: $body_font;
+div.alert
+{
+  @include callout($pink);
 }
 
 //headings
@@ -95,7 +113,6 @@ html.lt-ie8 p.highlight
     }
   }
 }
-
 
 h1 
 {
@@ -121,163 +138,163 @@ font-weight: normal;
 
 h2 
 {
-@include rem-fallback(font-size, 1.75);
-@include rem-fallback(line-height, 3);
-@include rem-fallback(margin, 0, 0, 1.5);
+  @include rem-fallback(font-size, 1.75);
+  @include rem-fallback(line-height, 3);
+  @include rem-fallback(margin, 0, 0, 1.5);
 }
 
 h3 
 {
-@include rem-fallback(font-size, 1.5);
-@include rem-fallback(line-height, 1.5);
-@include rem-fallback(margin, 0, 0, 1.5);
+  @include rem-fallback(font-size, 1.5);
+  @include rem-fallback(line-height, 1.5);
+  @include rem-fallback(margin, 0, 0, 1.5);
 }
 
 h4 
 {
-@include rem-fallback(font-size, 1.375);
-@include rem-fallback(line-height, 1.5);
-margin: 0;
+  @include rem-fallback(font-size, 1.375);
+  @include rem-fallback(line-height, 1.5);
+  margin: 0;
 }
 
 h5 
 {
-@include rem-fallback(font-size, 1.125);
-@include rem-fallback(line-height, 1.5);
-margin:0;
+  @include rem-fallback(font-size, 1.125);
+  @include rem-fallback(line-height, 1.5);
+  margin:0;
 }
 
 h6 
 {
-@include rem-fallback(font-size, 1);
-@include rem-fallback(line-height, 1.5);
-margin:0;
+  @include rem-fallback(font-size, 1);
+  @include rem-fallback(line-height, 1.5);
+  margin:0;
 }
 
 small 
 {
-@include rem-fallback(font-size, 0.75);
-@include rem-fallback(line-height, 0.75);
+  @include rem-fallback(font-size, 0.75);
+  @include rem-fallback(line-height, 0.75);
 }
 
 b, strong 
 {
-font-weight: bold;
+  font-weight: bold;
 }
 
 i, cite, em, var, address, dfn
 {
-font-style: italic;
+  font-style: italic;
 }
 
 abbr[title] 
 {
-border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 .text-left 
 {
-text-align: left;
+  text-align: left;
 }
 
 .text-center  
 {
-text-align: center;
+  text-align: center;
 }
 
 .text-right 
 {
-text-align: right;
+  text-align: right;
 }
 
 .text-muted 
 {
-color: $grey;
+  color: $grey;
 }
 
 .text-success 
 {
-color: $green;
+  color: $green;
 }
 
 .text-info 
 {
-color: $blue;
+  color: $blue;
 }
 
 .text-warning
 {
-color: $yellow;
+  color: $yellow;
 }
 
 .text-danger
 {
-color: $red;
+  color: $red;
 }
 
 
 // links
 a:link, a:visited 
 {
-color: $link;
-text-decoration: none;
+  color: $link;
+  text-decoration: none;
 }
 
 a:hover 
 {
-color: $hover;
-text-decoration: underline;
+  color: $hover;
+  text-decoration: underline;
 }
 
 a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif]
 {
-text-decoration: none;
-border: 0 none;
+  text-decoration: none;
+  border: 0 none;
 }
 
 .hidelink a:link, .hidelink a:visited, .hidelink a:active
 {
-color: $black;
-text-decoration: none;
+  color: $black;
+  text-decoration: none;
 }
 
 time 
 {
-@include rem-fallback(font-size, 0.875);
-margin: 0;
-color: $grey;
-line-height: normal;
+  @include rem-fallback(font-size, 0.875);
+  margin: 0;
+  color: $grey;
+  line-height: normal;
 }
 
 a#show-grid 
 {
-position: fixed;
-bottom: 10px;
-right: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 blockquote 
 {
-font-family: ChevinLightItalic;
-@include rem-fallback(font-size, 1.25);
-@include rem-fallback(margin, 0.75, 2.5);
-@include respond-to(handheld) { margin: 1em #{$gutter / 2}px; }
+  font-family: ChevinLightItalic;
+  @include rem-fallback(font-size, 1.25);
+  @include rem-fallback(margin, 0.75, 2.5);
+  @include respond-to(handheld) { margin: 1em #{$gutter / 2}px; }
   & small 
   {
-  color: $dark_grey;
+    color: $dark_grey;
   }
   &.pullquote 
   {
-  position: relative;
-  font-weight: normal;
-  @include green_gradient;
-  @include rounded;
-  @include rem-fallback(font-size, 1.25);
-  @include rem-fallback(padding, 1.5);
-  width: 30%;
-  float: right;
-  color: $white;
-  @include rem-fallback(margin, 0, 0, 1.5, 1.5);
+    position: relative;
+    font-weight: normal;
+    @include green_gradient;
+    @include rounded;
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(padding, 1.5);
+    width: 30%;
+    float: right;
+    color: $white;
+    @include rem-fallback(margin, 0, 0, 1.5, 1.5);
     &.left 
     {
     float: left;

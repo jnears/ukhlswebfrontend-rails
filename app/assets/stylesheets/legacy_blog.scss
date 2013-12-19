@@ -1,26 +1,7 @@
-
-.blog
-{
-  article
-  {
-    @include respond-to(handheld) { 
-      min-height: #{80 + ($gutter )}px; padding: #{$gutter / 2}px 0; 
-
-    header
-    {
-      margin-top: #{$gutter}px;
-      margin-top: 0;
-    }
-    
-    }
-    
-  }
-}
-
 h3.meta_links
 {
   display: inline;
-  @include rem-fallback(font-size, 0.80);
+  @include rem-fallback(font-size, 0.8);
 }
 
 ul.meta_links

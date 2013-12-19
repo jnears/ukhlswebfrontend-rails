@@ -87,7 +87,7 @@ a.btn {
 @mixin btn
 {
   @include mid_grey_gradient;
-  border: 1px solid #cccccc;
+  border: 1px solid $mid_grey;
   // text-shadow: 1px 1px 1px #ccc;
   @include rounded;
   font-family: $chevin_medium;
@@ -127,7 +127,7 @@ html.lt-ie8 button.btn
 select
 {
   @include light_grey_gradient;
-  border: 1px solid #cccccc;
+  border: 1px solid $mid_grey;
   @include font14;
   height: 2em;
 }

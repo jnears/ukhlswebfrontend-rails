@@ -12,6 +12,7 @@ ol.breadcrumb
   @include respond-to(tablet) { width: #{(($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter + 15)) - $gutter}px;}
   @include respond-to(large_desktop) { width: #{(($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter + 15)) - $gutter}px; }
   @include respond-to(handheld) { width: auto; }
+  border-bottom: 2px solid #eeeeee;
   li
   {
     list-style-type: none;

@@ -491,44 +491,6 @@ a.i img
   }
 }
 
-.callout
-{
-  overflow: hidden;
-  @include callout($green);
-  h2:first-of-type
-  {
-    @include font24;
-    margin-top: 0;
-  }
-  h3:first-of-type
-  {
-    margin-top: 0;
-  }
-  p.subheading:first-of-type
-  {
-    margin-top: 0;
-  }
-}
-
-.callout.alert, div.alert
-{
-  @include callout($pink);
-}
-
-.callout.info
-{
-  @include callout($blue);
-}
-
-.callout.note
-{
-  @include callout($grey);
-}
-
-.callout.highlight
-{
-  @include callout($yellow);
-}
 
 a.thumb
 {
