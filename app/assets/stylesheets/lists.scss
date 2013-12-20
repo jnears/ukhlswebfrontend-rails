@@ -77,7 +77,7 @@ list-style-image: none;
 
 ol.people {
   padding: 0;
-  @include rem-fallback(margin, 0.25, 0);
+  @include rem-fallback(margin, 0, 0 ,0.5 ,0);
   li 
   {
   list-style-type: none;

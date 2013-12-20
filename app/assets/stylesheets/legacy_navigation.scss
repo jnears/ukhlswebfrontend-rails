@@ -106,9 +106,14 @@ section.guide
 
 h2.section
 {
-  border-bottom: 4px solid $blue;
-  margin-top: 1em;
-  line-height: 28px;
+  @include rem-fallback(border-bottom, 0.25);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-style: solid;
+  border-color: $blue;
+  @include rem-fallback(margin-bottom, 1);
+  @include rem-fallback(line-height, 1.75);
   span
   {
     color: $grey;

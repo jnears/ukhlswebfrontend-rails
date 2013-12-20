@@ -1,10 +1,10 @@
 article.publication
 {
-  @include rem-fallback(padding, 0.75, 0);
-  @include rem-fallback(padding-bottom, (($baseline - 13) / $base_font_size));
+  @include rem-fallback(padding-top, 1.25);
+  @include rem-fallback(padding-bottom, 1.187);
   p
   {
-    @include rem-fallback(margin, 0.25, 0);
+    @include rem-fallback(margin-bottom, 0.5);
     color: $dark_grey;
     .series
     {
@@ -13,10 +13,10 @@ article.publication
   }
   h4
   {
-    margin: 0 0 0.4em 0;
+    @include rem-fallback(margin-bottom, 0.5);
   }
   &:last-of-type{
-    @include rem-fallback(padding-bottom, 0.75); //set the bottom padding back to 0.75rem as the 1px border does not show
+    @include rem-fallback(padding-bottom, 1.25); //set the bottom padding back to 0.75rem as the 1px border does not show
   }
   &:not(:last-of-type)
   {
