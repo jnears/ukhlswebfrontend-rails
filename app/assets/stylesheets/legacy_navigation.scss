@@ -83,8 +83,6 @@ section.guide
       padding-top: 50px;
       border-bottom: 4px solid $blue;
       line-height: 28px;
-      // @include font36;
-      // padding-left: 1em;
     }
     span
     {
@@ -187,88 +185,6 @@ figure.guide-banner
     }
   }
 }
-
-//right nav for news type, etc
-nav.related {
-  @include light_grey_gradient;
-  @include rounded;
-  border: 1px solid $light_grey;
-  font-family: $chevin_medium;
-  margin-bottom: #{$gutter}px;
-  h4 {
-    border-bottom: 2px solid $light_grey;
-    @include font18;
-    margin: 0 0 0.25em 0;
-    }
-  ul {
-    padding-left: 0;
-    @include font18;
-    margin: 0;
-    ul {
-      margin-left: 1.5em;
-      }
-      li {
-        a {
-          padding: 0.5em 1em;
-          display: block;
-          text-decoration: none;
-          @include respond-to(handheld) {  padding: 0.25em 1em; @include font14; margin: 0; }
-          &:hover {
-            background: $white;
-            text-decoration: underline;
-          }
-          &.active {
-            background: $white;
-          }
-          span {
-            @include font14;
-          }
-        }
-      }
-
-      li:first-of-type {
-        a {
-          &:hover, &.active {
-            -webkit-border-top-left-radius: $radius;
-            -webkit-border-top-right-radius: $radius;
-            -moz-border-radius-topleft: $radius;
-            -moz-border-radius-topright: $radius;
-            border-top-left-radius: $radius;
-            border-top-right-radius: $radius;
-          }
-        }
-      }
-
-      li:last-of-type {
-        a {
-          &:hover, &.active  {
-            -webkit-border-bottom-left-radius: $radius;
-            -webkit-border-bottom-right-radius: $radius;
-            -moz-border-radius-bottomleft: $radius;
-            -moz-border-radius-bottomright: $radius;
-            border-bottom-left-radius: $radius;
-            border-bottom-right-radius: $radius;
-          }
-        }
-      }
-
-      li:not(:last-of-type) {
-        border-bottom: 1px solid $light_grey;
-      }
-  }
-}
-
-.lt-ie9 nav.related {
-  font-family: $default_font;
-  ul {
-    @include font14;
-  }
-}
-
-html.lt-ie8 nav.related {
-  background: none;
-}
-
 
 nav.inline
 {

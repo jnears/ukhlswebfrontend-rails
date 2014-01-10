@@ -83,6 +83,15 @@
   radius-topright: $radius;
 }
 
+@mixin rounded_bottom {
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-radius-bottomleft: $radius;
+  radius-bottomright: $radius;
+}
+
 @mixin not_rounded{
   border-radius: 0;
   -moz-border-radius: 0;
