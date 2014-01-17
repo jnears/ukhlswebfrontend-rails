@@ -19,6 +19,16 @@ ul, ol, dl {
     {
       list-style-type: none;
       display: inline;
+      @include rem-fallback(margin-right, 1);
+    }
+    &.right 
+    {
+      li 
+      {
+        float: right;
+        @include rem-fallback(margin-left, 1);
+        @include respond-to(handheld) { float: none; margin-top: 0; margin-left: 0; }
+      }
     }
   }
   &.comma-separated
@@ -30,6 +40,10 @@ ul, ol, dl {
         content: ", ";
       }
     }
+  }
+  &.small
+  {
+    @include rem-fallback(font-size, 0.875);
   }
 }
 
@@ -73,7 +87,6 @@ list-style: none;
 list-style-image: none;
 }
 
-//legacy
 
 ol.people {
   padding: 0;

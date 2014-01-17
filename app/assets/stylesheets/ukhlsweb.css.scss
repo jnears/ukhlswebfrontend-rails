@@ -54,6 +54,7 @@ body
 @import "buttons.scss";
 @import "elements.scss";
 @import "forms.scss";
+@import "footer.scss";
 @import "handheld.scss";
 @import "header.scss";
 @import "images.scss";
@@ -65,6 +66,7 @@ body
 @import "loader.scss";
 @import "navigation.scss";
 @import "tables.scss";
+@import "tabs.scss";
 @import "patterns";
 
 //legacy
@@ -74,11 +76,9 @@ body
 @import "legacy_audio.scss";
 @import "legacy_blog.scss";
 @import "legacy_documentation.scss";
-@import "legacy_footer.scss";
 @import "legacy_header.scss";
 @import "legacy_main.scss";
 @import "legacy_navigation.scss";
-@import "legacy_tabs.scss";
 @import "legacy_twitter.scss";
 
 //3rd party

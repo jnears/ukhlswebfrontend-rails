@@ -14,7 +14,6 @@
   top: 0;
   padding: 0;
   @include rounded;
-  border: 1px solid $light_grey;
   width:100%;
   @include rem-fallback(margin-bottom, 1.5);
     &.short 
@@ -42,6 +41,35 @@
         width: 100%;
         @include rounded_top;
     }
+  }
+  &.blue, &.green, &.yellow, &.red {
+    color: $white;
+    a:link {
+      text-decoration: underline;
+    }
+    & a:link, &:hover, &:active {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  &.grey {
+    @include grey_gradient;
+  }
+  &.blue {
+    @include blue_gradient;
+    border-bottom: 2px solid $dark_blue;
+  }
+  &.green {
+    @include green_gradient;
+    border-bottom: 2px solid $dark_green;
+  }
+  &.yellow {
+    @include yellow_gradient;
+    border-bottom: 2px solid $dark_yellow;
+  }
+  &.red {
+    @include pink_gradient;
+    border-bottom: 2px solid $pink;
   }
 }
 

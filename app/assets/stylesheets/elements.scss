@@ -106,10 +106,13 @@ div.alert
     margin: 0;
     span
     {
-      display: block;
-      @include rem-fallback(font-size, 1.5);
-      @include rem-fallback(line-height, 1.5);
+      font-size: 0.75em;
+      line-height: 1.2em;
       color: $dark_grey;
+      &.inline
+      {
+        display: inline;
+      }
     }
   }
 }
@@ -118,7 +121,7 @@ h1
 {
 font-weight: normal;
 @include rem-fallback(font-size, 2); //32
-  @include rem-fallback(line-height, 3);
+@include rem-fallback(line-height, 3);
 @include rem-fallback(margin, 0, 0, 1.5);
 //@include respond-to(large_desktop) { @include rem-fallback(font-size, 2.25);  @include rem-fallback(margin, 0, 0, 1.25);}
   &:first-child 
@@ -234,6 +237,12 @@ abbr[title]
 
 
 // links
+
+a:link {
+  -webkit-transition: background .2s ease-out;
+  -webkit-transition: color .2s ease-out;
+}
+
 a:link, a:visited 
 {
   color: $link;
@@ -320,25 +329,7 @@ hr
   border: 0;
   margin: 0;
   border-bottom: 1px solid $light_grey;
-  @include rem-fallback(padding-top, (($baseline - 1) / $base_font_size));
-  @include rem-fallback(margin-bottom, 1.5);
+  @include rem-fallback(padding-top, (($baseline / 2 - 1) / $base_font_size));
+  @include rem-fallback(margin-bottom, 0.75);
   @include rem-fallback(line-height, 1.5);
-}
-
-//legacy
-
-p.esrc 
-{
-  float: left;
-  margin-right: #{$gutter}px;
-    @include respond-to(handheld) { float: none; }
-}
-
-p.iso
-{
-  float: left;
-  text-align: center;
-  font-size: 12px;
-  line-height: normal;
-    @include respond-to(handheld) { float: none; text-align: left }
 }

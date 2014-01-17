@@ -119,81 +119,150 @@
 }
 
 
-//right nav for news type, etc
+//horizontal and vertical menus
+
 nav.menu {
-  @include light_grey_gradient;
-  @include rounded;
-  border: 1px solid $light_grey;
-  font-family: $chevin_medium;
-  @include rem-fallback(margin-bottom, (($baseline - 2) / $base_font_size));
-  h4 {
-    border-bottom: 2px solid $light_grey;
-    @include font18;
-    margin: 0 0 0.25em 0;
-    }
-  &.vertical ul
+  &.vertical 
   {
-    padding-left: 0;
-    margin: 0;
-    @include rem-fallback(font-size, 1.125);
-    li 
+    @include light_grey_gradient;
+    @include rounded;
+    border: 1px solid $light_grey;
+    @include rem-fallback(margin-bottom, (($baseline - 2) / $base_font_size));
+    h4 {
+      border-bottom: 2px solid $light_grey;
+      @include rem-fallback(font-size, 1.125);
+      margin: 0 0 0.25em 0;
+      }    
+    ul
     {
-    @include rem-fallback(line-height, ((($baseline * 2) - 1) / $base_font_size));
-    border-bottom: 1px solid $light_grey;
-      a 
-      {
-        @include rem-fallback(padding-left, 1);
-        display: block;
-        text-decoration: none;
-        @include respond-to(handheld) { margin: 0; @include rem-fallback(font-size, 0.875); }
-        &:hover {
-          background: $white;
-          text-decoration: underline;
-        }
-        &.active {
-          background: $white;
-        }
-        span {
-          @include rem-fallback(font-size, 0.875);
-        }
-      }
-    }
-    li:first-of-type a 
-    {
-      &:hover, &.active 
-      {
-        @include rounded_top;
-      }
-    }
-    li:last-of-type {
-       border-bottom: 0px;
-      @include rem-fallback(line-height, 3);
-      a 
-      {
-        &:hover, &.active  
+      padding-left: 0;
+      margin: 0;
+      li 
+      { 
+      @include rem-fallback(line-height, ((($baseline * 2) - 1) / $base_font_size));
+      border-bottom: 1px solid $light_grey;
+        a 
         {
-          @include rounded_bottom;
+          @include rem-fallback(padding-left, 1);
+          display: block;
+          text-decoration: none;
+          &:hover {
+            background: $white;
+            text-decoration: underline;
+          }
+          &.active {
+            background: $white;
+          }
+          span {
+            @include rem-fallback(font-size, 0.875);
+          }
+        }
+      }
+      li:first-of-type a 
+      {
+        &:hover, &.active 
+        {
+          @include rounded_top;
+        }
+      }
+      li:last-of-type 
+      {
+        border-bottom: 0px;
+        @include rem-fallback(line-height, 3);
+        a 
+        {
+          &:hover, &.active  
+          {
+            @include rounded_bottom;
+          }
+        }
+      }
+    }
+  }
+  &.horizontal {
+    @include blue_gradient;
+    @include rounded;
+    border: 1px solid $grey;
+    overflow: auto;
+    @include rem-fallback(margin-bottom, (($baseline / 4 * 5 ) / $base_font_size));
+    ul
+    {
+      padding: 0;
+      margin: 0;
+      li
+      {
+        margin: 0;
+        float: left;
+        border-right: 1px solid $grey;
+        @include rem-fallback(line-height, 2.5);
+        @include respond-to(handheld) { float: none; }
+        a
+        {
+          color: $white;
+          @include respond-to(tablet) {  padding: 0.25em 0.5em; }
+          text-decoration: none;
+          -webkit-transition: none;
+          -webkit-transition: none;
+          &:hover, &.active
+          {
+            color: $black;
+            @include mid_grey_gradient;
+          }
         }
       }
     }
   }
 }
 
-.lt-ie9 nav.menu {
-  font-family: $default_font;
-  &.vertical ul {
-    font-size: 14px;
+nav.menu {
+  &.horizontal, &.vertical {
+  font-family: $chevin_medium;
+  @include rem-fallback(font-size, 1.125); //18px
+  @include respond-to(tablet) { @include rem-fallback(font-size, 1); } // 16px
+  @include respond-to(handheld) { @include rem-fallback(font-size, 0.875); } // 14px
   }
 }
 
-html.lt-ie8 nav.menu {
+nav.menu.horizontal ul li a, nav.menu.vertical ul li a 
+{
+  @include rem-fallback(padding, 0, 1);
+  display: block;
+  text-decoration: none;
+}
+
+.lt-ie9 nav.menu
+{
+  ul
+  {
+    li
+    {
+      @include rem-fallback(font-size, 1.125);
+      font-family: $default_font;
+      a
+      {
+        padding: 0.25em 1em;
+      }
+    }
+  }
+}
+
+html.lt-ie8 nav.menu 
+{
   background: none;
 }
 
-
-
-
-
-
-
-
+nav.topics
+{
+  ul
+  {
+    @include rem-fallback(padding-left, 0.5);
+    li
+    {
+      font-family: $chevin_light;
+    }
+    p
+    {
+      margin: 0;
+    }
+  }
+}

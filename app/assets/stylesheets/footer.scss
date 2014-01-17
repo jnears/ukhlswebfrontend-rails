@@ -10,6 +10,18 @@ footer[role=contentinfo]
   @include respond-to(handheld) { margin-top: 0; }
   padding: 0;
 
+  ol.footer li  
+  {
+    a
+    {
+      color: $light_black;
+      &:hover
+      {
+        color: $white;
+      }
+    }
+  }
+
   i.icon
   {
     position: absolute;
@@ -23,6 +35,17 @@ footer[role=contentinfo]
     @include respond-to(handheld) { display: none; }
   }
 
+  p.logo 
+  {
+    float: left;
+    @include rem-fallback(margin-right, 0.5);
+    @include rem-fallback(font-size, 0.75);
+    text-align: center;
+    line-height: normal;
+    @include rem-fallback(margin, 1, 0.5, 1, 0);
+    @include respond-to(handheld) { float: none; text-align: left }
+  }
+
   a.esrc-link
   {
     display: block;
@@ -32,31 +55,5 @@ footer[role=contentinfo]
     @include image-2x(asset_path('esrc-logo2x.gif'), 80px, 66px);
     text-indent: -3000em;
     overflow: hidden;
-  }
-
-  nav.utility
-  {
-    ol
-    {
-      float: right;
-      margin-top: 2em;
-      @include respond-to(handheld) { float: none; margin-top: 0em; padding-left: 0; }
-      li
-      {
-        @include font14;
-        list-style-type: none;
-        display: inline;
-        margin: 0 #{$gutter}px;
-        @include respond-to(handheld) { @include font12; margin: 0 #{$gutter / 2}px 0 0; }
-        a
-        {
-          color: $light_black;
-          &:hover
-          {
-            color: $white;
-          }
-        }
-      }
-    }
   }
 }

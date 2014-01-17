@@ -8,41 +8,31 @@ ul.tab-nav
 {
   border-bottom: 1px solid $mid_grey;
   overflow: visible;
-  padding-left: 0;
+  @include rem-fallback(margin, 1.5, 0, ($baseline - 1) / $base_font_size);
+  padding-left: 0px;
   li
   {
-    // float: left;
     display: inline-block;
     list-style-type: none;
-    margin-right: #{$gutter / 2}px;
+    @include rem-fallback(margin-right, 0.5);
+    @include rem-fallback(line-height, (($baseline * 2 - 2) / $base_font_size));
     @include respond-to(handheld) { margin: 0 0px 0 0; };
     a
     {
       display: block;
-      padding: #{$gutter / 2}px;
-      // background: $light_grey;
       @include light_grey_gradient;
-      border-top: 1px solid $mid_grey;
-      border-right: 1px solid $mid_grey;
-      border-left: 1px solid $mid_grey;
-      border-bottom: 1px solid $mid_grey;
+      border: 1px solid $mid_grey;
+      @include rem-fallback(padding, 0, ($baseline / 2) / $base_font_size);
       position: relative;
       top: 1px;
       z-index: 2;
       outline: none;
-      @include respond-to(handheld) { @include font13; padding: 2px 4px; margin: 0; }
-      -webkit-border-top-left-radius: #{$radius};
-      -webkit-border-top-right-radius: #{$radius};
-      -moz-border-radius-topleft: #{$radius};
-      -moz-border-radius-topright: #{$radius};
-      border-top-left-radius: #{$radius};
-      border-top-right-radius: #{$radius};
       text-decoration: none;
-
-      // padding-left: #{$gutter}px;
+      @include rounded_top;
+      @include respond-to(handheld) { @include rem-fallback(font-size, 0.875); }
       span
       {
-        font-size: 0.75em;
+        @include rem-fallback(font-size, 0.75);
         font-style: italic;
         @include respond-to(handheld) { display: none };
       }
