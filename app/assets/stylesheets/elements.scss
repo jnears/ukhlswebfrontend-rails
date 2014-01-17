@@ -42,6 +42,13 @@ font-style: normal;
   }
 }
 
+p { 
+  &.meta
+  {
+    @include rem-fallback(font-size, 0.8125);
+  }
+}
+
 
 html.lt-ie8 p.highlight
 {
@@ -172,6 +179,12 @@ h6
   @include rem-fallback(font-size, 1);
   @include rem-fallback(line-height, 1.5);
   margin:0;
+}
+
+h3.meta_links
+{
+  display: inline;
+  @include rem-fallback(font-size, 0.8);
 }
 
 small 

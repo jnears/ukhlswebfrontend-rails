@@ -118,6 +118,7 @@
   background: -ms-linear-gradient(top,  #f2f2f2 0%,#fafafa 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #f2f2f2 0%,#fafafa 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#fafafa',GradientType=0 ); /* IE6-8 */
+  border-bottom: 2px solid #eeeeee;
 }
 
 @mixin mid_grey_gradient
@@ -153,7 +154,7 @@
 
 @mixin grey_gradient
 {
-  background: #f2f2f2;
+background: #f2f2f2;
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 background: -moz-linear-gradient(top, #f2f2f2 0%, #fafafa 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #fafafa));

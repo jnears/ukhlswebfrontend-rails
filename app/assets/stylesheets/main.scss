@@ -1,0 +1,50 @@
+.grey_gradient
+{
+  @include light_grey_gradient;
+  a:link, a:visited, a:active
+  {
+    &:hover
+    {
+      text-decoration: underline;
+    }
+  }
+}
+
+.blue_gradient
+{
+  @include blue_gradient;
+}
+
+.yellow_gradient
+{
+  @include yellow_gradient;
+}
+
+.green_gradient
+{
+  @include green_gradient;
+}
+
+.pink_gradient
+{
+  @include pink_gradient;
+}
+
+.blue_gradient, .green_gradient, .pink_gradient, .yellow_gradient
+{
+  color: $white;
+  a:link, a:visited, a:active
+  {
+    color: $white;
+    &:hover
+    {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+html.lt-ie8 .blue_gradient, html.lt-ie8 .grey_gradient, html.lt-ie8 .yellow_gradient, html.lt-ie8 .green_gradient, html.lt-ie8 .pink_gradient
+{
+  background: none;
+}

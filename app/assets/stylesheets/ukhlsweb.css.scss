@@ -49,6 +49,7 @@ body
 
 
 //library
+@import "accessibility.scss";
 @import "banners.scss";
 @import "breadcrumb.scss";
 @import "buttons.scss";
@@ -64,6 +65,7 @@ body
 @import "layout.scss";
 @import "lists.scss";
 @import "loader.scss";
+@import "main.scss";
 @import "navigation.scss";
 @import "tables.scss";
 @import "tabs.scss";
@@ -74,7 +76,6 @@ body
 @import "publications_index.scss";
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";
-@import "legacy_blog.scss";
 @import "legacy_documentation.scss";
 @import "legacy_header.scss";
 @import "legacy_main.scss";
