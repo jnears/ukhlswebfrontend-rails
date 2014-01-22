@@ -21,7 +21,7 @@ font-style: normal;
     float: right;
     color: $white;
     @include rem-fallback(margin, 0, 0, 1, 1);
-      @include respond-to(handheld) { width: 35%; @include rem-fallback(font-size, 1.125); }
+      @include respond-to(handheld) { width: 100%; @include rem-fallback(font-size, 1.125); }
       & a 
       {
         color: $white;

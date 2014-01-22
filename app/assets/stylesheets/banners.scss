@@ -170,9 +170,27 @@ figure {
   {
     @include rounded;
   }
-  
-  &.banner
-  { 
+
+  &.banner 
+  {
+    position: relative;
+    @include rem-fallback(margin-bottom, 0.875);
+    height: 250px;
+
+    @include respond-to(large_desktop) { height: 250px; @include rem-fallback(margin-bottom, 0.875); }
+    @include respond-to(tablet) { height: 226px; @include rem-fallback(margin-bottom, 0.75); }
+    @include respond-to(handheld) { height:auto !important; @include rem-fallback(margin-bottom, 1.125); } //reset height to default
+
+    img {
+      height: 250px;
+      @include respond-to(large_desktop) { height: 250px; width: 100%; }
+      @include respond-to(tablet) { height: 226px; }
+      @include respond-to(handheld) { height:auto !important; }
+    }
+  }
+
+  &.banner.full-width
+  {
     position: relative;
     @include rem-fallback(margin-bottom, 2);
     @include rem-fallback( height, 16);
@@ -181,6 +199,13 @@ figure {
     @include respond-to(tablet) { height: 216px; @include rem-fallback(margin-bottom, 1.5); }
     @include respond-to(handheld) { height:auto !important; @include rem-fallback(margin-bottom, 1.125); } //reset height to default
 
+    img {
+      height:auto !important; 
+    }
+  }
+  
+  &.banner, &.banner.full-width
+  { 
     figcaption
     {
       position: absolute;
@@ -216,6 +241,7 @@ figure {
         left: 0px;
         right: 0px;
         @include rem-fallback(padding, 0.25, 0, 0.25, 1);
+        @include respond-to(handheld) { display: none; }; 
       }
       
       &.center 

@@ -14,13 +14,18 @@ div.handheld-menu {
       float: left;
       @include rem-fallback(padding, 0.5);
       list-style:none;
+
+      i.fa-2x 
+      {
+        @include rem-fallback(font-size, 1.8)
+      }
+
       & a 
       {
         background-size: cover;
         color: $grey;
         display: block;
         overflow: hidden;
-        padding-right: 5px;
         &.search
         {
           @include respond-to(tablet) { display: none };
