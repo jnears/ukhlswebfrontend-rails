@@ -12,7 +12,7 @@
   float: left;
   position: relative;
   top: 0;
-  @include rem-fallback(padding, 1);
+  padding: 0;
   @include rounded;
   @include grey_gradient;
   width:100%;
