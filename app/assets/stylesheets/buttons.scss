@@ -123,11 +123,3 @@ html.lt-ie8 button.btn
 {
   background: none;
 }
-
-select
-{
-  @include light_grey_gradient;
-  border: 1px solid $mid_grey;
-  @include font14;
-  height: 2em;
-}

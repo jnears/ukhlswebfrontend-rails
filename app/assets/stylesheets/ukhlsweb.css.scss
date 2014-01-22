@@ -15,8 +15,8 @@ html{
   font-family: $body_font;
   font-weight: normal;
   font-size: $base_font_size;
-  colour: $black;
-  line-height: 1.5em;
+  color: $black;
+  @include rem-fallback(line-height, 1.5);
   padding: 0;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;

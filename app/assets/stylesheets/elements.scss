@@ -113,8 +113,9 @@ div.alert
     margin: 0;
     span
     {
-      font-size: 0.75em;
-      line-height: 1.2em;
+      display: block;
+      @include rem-fallback(font-size, 1.375);
+      @include rem-fallback(line-height, 1.5);
       color: $dark_grey;
       &.inline
       {

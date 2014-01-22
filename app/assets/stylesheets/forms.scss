@@ -79,6 +79,10 @@ width: 75%;
   }
 }
 
+input[type=search] {
+  @include rem-fallback(min-height, 1);
+}
+
 textarea 
 {
 @include rem-fallback(height, 6);
@@ -90,10 +94,30 @@ display: inline-block;
 vertical-align: middle;
 }
 
+input[type=text].inline,
+input[type=number].inline,
+input[type=password].inline,
+input[type=search].inline,
+textarea.inline,
+select.inline {
+  width: auto;
+  float: left;
+  @include rem-fallback(margin-right, 1);
+} 
+
+select
+{
+  @include light_grey_gradient;
+  @include rem-fallback(font-size, 0.875);
+  @include rem-fallback(height, 2.2);
+}
+
 form input:invalid, form textarea:invalid, form select:invalid 
 {
 outline: 3px solid #ce001f;
 }
+
+
 
 //legacy
 
@@ -119,11 +143,9 @@ margin-bottom: 0;
 
 form.documentation-search 
 {
-position: absolute;
-right: 0;
-top: 40px;
-  @include respond-to(handheld) 
-  { 
-  display: none; 
-  }
+  position: absolute;
+  right: 0;
+  @include rem-fallback(top, 3.75);
 }
+
+

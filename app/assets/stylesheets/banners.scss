@@ -162,132 +162,92 @@ figure.participants-banner
   } 
 }
 
-figure.contact-banner
-{
-  width: 235px;
-  width: 225px;
-  display: block;
-  position: relative;
-  @include respond-to(large_desktop) {  width: 285px; }
-  @include respond-to(tablet) {  width: 160px; }
-  @include respond-to(handheld) { display: none; }
-  img
-  {
-    @include rounded;
-  }
-}
 
-figure.about-banner
-{
-  position: relative;
-  margin-bottom: 1em;
-  width: 985px;
-  height: 250px;
-  display: block;
-  @include respond-to(large_desktop) {  width: 1185px; }
-  @include respond-to(tablet) {  width: 685px; }
-  @include respond-to(handheld) { display: none; }
+
+figure {
+  
   img
   {
     @include rounded;
-    height: 250px;
   }
-  figcaption
-  {
-    position: absolute;
-    color: $black;
-    font-family: $chevin_light;
-    @include font20;
-    margin: 0;
-    top: 15px;
-    width: 29em;
-    @include rounded;
-    left: 15px;
-    padding: 0.5em;
-    @include translucent_white;
-    @include respond-to(large_desktop) { @include font22; margin: 0; }
-    @include respond-to(handheld) { @include font18; width: 300px; }
-    a
+
+
+  &.banner
+  { 
+    position: relative;
+    @include rem-fallback(margin-bottom, 1.5);
+    @include rem-fallback(min-height, 15);
+
+    img
     {
-      font-family: $chevin_medium;
-      margin-top: 0.5em;
-      display: block;
+      @include rounded;
     }
-  }
-}
 
-figure.research-banner
-{
-  position: relative;
-  margin-bottom: 1em;
-  width: 685px;
-  width: 657px;
-
-  height: 250px;
-  display: block;
-  @include respond-to(large_desktop) {  width: 825px; }
-  @include respond-to(tablet) {  width: 475px; width: 517px;}
-  @include respond-to(handheld) { display: none; }
-  img
-  {
-    @include rounded;
-    height: 250px;
-  }
-  figcaption
-  {
-    position: absolute;
-    color: $black;
-    font-family: $chevin_light;
-    @include font22;
-    margin: 0;
-    top: 15px;
-    width: 15em;
-    @include rounded;
-    left: 15px;
-    padding: 0.5em;
-    @include translucent_white;
-    @include respond-to(large_desktop) { width: 19em; margin: 0; }
-    @include respond-to(handheld) { @include font18; width: 300px; }
-    span
+    figcaption
     {
+      position: absolute;
+      color: $black;
       font-family: $chevin_light;
-      font-size: 20px;
-      line-height: 30px;
-      display: block;
-    }
-    a
-    {
-      font-family: $chevin_medium;
-      margin-top: 0.5em;
-      display: block;
+      @include rem-fallback(font-size, 1.375);
+      @include rem-fallback(padding, 0.5, 0); 
+      @include translucent_white;
+      margin: 0;
+      
+      &.square 
+      {
+        @include rem-fallback(top, 1);
+        @include rem-fallback(left, 1);
+        @include rem-fallback(width, 20);
+        @include rem-fallback(padding, 0.75);
+        @include rounded;
+
+        &.small 
+        {
+          @include rem-fallback(width, 10);
+        }
+
+        &.large 
+        {
+          @include rem-fallback(width, 30);
+        }
+      }
+
+      &.stripe 
+      {
+        @include rem-fallback(bottom, 3.75);
+        left: 0px;
+        right: 0px;
+        @include rem-fallback(padding, 0.25, 0, 0.25, 1);
+      }
+      
+      &.center 
+        {
+          text-align:center;
+        }
+      
+      span
+      {
+        font-family: $chevin_light;
+        @include rem-fallback(font-size, 1.25);
+        @include rem-fallback(line-height, 1.875);
+      }
+
+      a
+      {
+        font-family: $chevin_medium;
+        margin-top: 0.5em;
+        display: block;
+      }
+
+      &.green 
+      {
+        @include green_gradient;
+        color: $white;
+      }
     }
   }
 }
 
-figure.banner
-{
-  position: relative;
-  margin-bottom: 1em;
-  img
-  {
-    @include rounded;
-  }
-
-  figcaption
-  {
-    position: absolute;
-    color: $white;
-    font-family: $chevin_light;
-    @include font22;
-    margin: 0;
-    bottom: 25px;
-    left: 0px;
-    right: 0px;
-    text-align: center;
-    padding: 0.5em 0;
-    @include green_gradient;
-  }
-}
 
 html.lt-ie8 figure.banner
 {

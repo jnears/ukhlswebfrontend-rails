@@ -16,3 +16,11 @@
 .clearfix {
     *zoom: 1;
 }
+
+.handheld-hide, .tablet-hide  
+{
+  @include respond-to(handheld) 
+  { 
+  display: none; 
+  }
+}
