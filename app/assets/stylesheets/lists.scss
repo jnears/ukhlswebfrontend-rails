@@ -105,24 +105,38 @@ ol.people {
 
 ul.meta_links
 {
-  @include respond-to(handheld) { display: none; }
   padding-left: 0;
   margin: 0;
   display: inline;
-  li {
+  @include respond-to(handheld) { display: none; }
+
+
+  li 
+  {
     color: $grey;
     @include rem-fallback(font-size, 0.80);
     list-style-type: none;
     display: inline;
-    margin: 0 0 0 0.5em;
-    a {
+    @include rem-fallback(margin, 0, 0, 0 , 0.5);
+
+    a 
+    {
       text-decoration: none;
-      &:hover {
+      
+      &:hover 
+      {
         text-decoration: underline;
       }
-      &:before {
+
+      &:before 
+      {
       content: "#";
       }
     }
   }
 }
+
+
+
+
+

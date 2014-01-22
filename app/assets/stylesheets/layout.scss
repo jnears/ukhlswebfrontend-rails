@@ -17,7 +17,7 @@
     *zoom: 1;
 }
 
-.handheld-hide, .tablet-hide  
+.handheld-hide, ul .handheld-hide
 {
   @include respond-to(handheld) 
   { 
