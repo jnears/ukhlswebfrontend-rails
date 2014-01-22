@@ -12,21 +12,29 @@
   float: left;
   position: relative;
   top: 0;
-  padding: 0;
+  @include rem-fallback(padding, 1);
   @include rounded;
+  @include grey_gradient;
   width:100%;
   @include rem-fallback(margin-bottom, 1.5);
     &.short 
     {
-      @include rem-fallback(min-height, 6)
+      @include rem-fallback(min-height, 6);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 4.5) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 4.5) };
     }
     &.medium 
     {
-      @include rem-fallback(min-height, 12)
+      @include rem-fallback(min-height, 12);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 9) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 9) };
     }
     &.large 
     {
-      @include rem-fallback(min-height, 24)
+      @include rem-fallback(min-height, 24);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 18) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 18) };
+
     }
     & .content {
       padding: 0.75rem;
@@ -51,9 +59,6 @@
       color: $white;
       text-decoration: none;
     }
-  }
-  &.grey {
-    @include grey_gradient;
   }
   &.blue {
     @include blue_gradient;
