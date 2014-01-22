@@ -170,18 +170,16 @@ figure {
   {
     @include rounded;
   }
-
-
+  
   &.banner
   { 
     position: relative;
-    @include rem-fallback(margin-bottom, 1.5);
-    @include rem-fallback(min-height, 15);
+    @include rem-fallback(margin-bottom, 2);
+    @include rem-fallback( height, 16);
 
-    img
-    {
-      @include rounded;
-    }
+    @include respond-to(large_desktop) { height: 330px; @include rem-fallback(margin-bottom, 1.875); }
+    @include respond-to(tablet) { height: 216px; @include rem-fallback(margin-bottom, 1.5); }
+    @include respond-to(handheld) { height:auto !important; @include rem-fallback(margin-bottom, 1.125); } //reset height to default
 
     figcaption
     {

@@ -50,17 +50,7 @@ figure.regular
 }
 
 
-.affix
-{
-  position: fixed;
-  @include respond-to(handheld) { position: relative; }
-}
 
-.affix-bottom
-{
-  position: absolute;
-  bottom: 50px;
-}
 
 
 nav.topics_grid
