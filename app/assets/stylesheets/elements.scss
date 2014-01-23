@@ -1,12 +1,14 @@
 p, pre 
 {
-@include rem-fallback(margin, 0, 0, 1.5, 0);
-font-style: normal;
+  @include rem-fallback(margin, 0, 0, 1.5, 0);
+  font-style: normal;
+  
   &.subheading 
   {
     @include rem-fallback(font-size, 1.25);
     font-weight: 200;
   }
+  
   &.highlight 
   {
     position: relative;
@@ -22,6 +24,7 @@ font-style: normal;
     color: $white;
     @include rem-fallback(margin, 0, 0, 1, 1);
       @include respond-to(handheld) { width: 100%; @include rem-fallback(font-size, 1.125); }
+      
       & a 
       {
         color: $white;
@@ -31,32 +34,72 @@ font-style: normal;
         text-decoration: none;
       }
     }
+    
     &.left
     {
       float: left;
       @include rem-fallback(margin, 0, 1, 1, 0);
     }
   }
-  &.lead {
+  
+  &.lead 
+  {
     font-weight: 200;
   }
-}
 
-p { 
+  &.lead-in
+  {
+    color: $pink;
+    @include rem-fallback(font-size, 1.5);
+    font-family: $chevin_light;
+  }
+
+  &.standfirst
+  {
+    @include callout($blue);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(padding, 0.75);
+    font-weight: 200;
+  }
+
+  &.italic 
+  {
+    font-style: italic;
+  }
+
   &.meta
   {
     @include rem-fallback(font-size, 0.8125);
   }
+
+  &.padder
+  {
+    @include rem-fallback(height, 18.75);
+  }
+
+  &.control
+  {
+    clear: both;
+    @include rounded;
+    @include light_grey_gradient;
+    @include rem-fallback(padding, 0.5, 0, (($base_font_size / 2 - 2) / $base_font_size), 0);
+    @include rem-fallback(line-height, 2);
+    text-align: center;
+  }
+
+  &.call-to-action
+  {
+    @include rem-fallback(font-size, 1.25);
+    margin-top: 0;
+    font-weight: 200;
+    font-style: italic;
+    @include rem-fallback(line-height, 1.5);
+  }
 }
 
 
-html.lt-ie8 p.highlight
+.callout 
 {
-  background: none;
-}
-
-
-.callout {
   overflow: hidden;
   @include callout($green);
   zoom: 1;
@@ -64,33 +107,43 @@ html.lt-ie8 p.highlight
   border-left: 6px solid $green;
   @include rounded;
   @include rem-fallback(margin, 0, 0, 1.5, 0);
+  
   h2:first-of-type
   {
     @include font24;
     margin-top: 0;
   }
+  
   h3:first-of-type
   {
     margin-top: 0;
   }
+  
   p.subheading:first-of-type
   {
     margin-top: 0;
   }
+  
   ul 
   {
     @include rem-fallback(margin, 0.75, 0);
   }
-  &.success {
+  
+  &.success 
+  {
     @include callout($green);
   }
-  &.alert {
+  
+  &.alert 
+  {
     @include callout($pink);
   }
+  
   &.info
   {
   @include callout($blue);
   }
+  
   &.note
   {
     @include callout($grey);
@@ -103,7 +156,8 @@ div.alert
 }
 
 //headings
-@for $i from 1 through 6 {
+@for $i from 1 through 6 
+{ 
   h#{$i}
   {
     display: block;
@@ -111,12 +165,14 @@ div.alert
     text-rendering: optimizelegibility;
     font-weight: 100;
     margin: 0;
+    
     span
     {
       display: block;
       @include rem-fallback(font-size, 1.375);
       @include rem-fallback(line-height, 1.5);
       color: $dark_grey;
+      
       &.inline
       {
         display: inline;
@@ -127,14 +183,15 @@ div.alert
 
 h1 
 {
-font-weight: normal;
-@include rem-fallback(font-size, 2); //32
-@include rem-fallback(line-height, 3);
-@include rem-fallback(margin, 0, 0, 1.5);
-//@include respond-to(large_desktop) { @include rem-fallback(font-size, 2.25);  @include rem-fallback(margin, 0, 0, 1.25);}
+  font-weight: normal;
+  @include rem-fallback(font-size, 2); //32
+  @include rem-fallback(line-height, 3);
+  @include rem-fallback(margin, 0, 0, 1.5);
+  //@include respond-to(large_desktop) { @include rem-fallback(font-size, 2.25);  @include rem-fallback(margin, 0, 0, 1.25);}
+  
   &:first-child 
   {
-  @include rem-fallback(margin, 0, 0, 1.5);
+    @include rem-fallback(margin, 0, 0, 1.5);
   }
 }
 
@@ -180,6 +237,74 @@ h6
   @include rem-fallback(font-size, 1);
   @include rem-fallback(line-height, 1.5);
   margin:0;
+}
+
+
+//heading tags for specialised content
+
+section.casestudy,
+section.guide
+{
+  h2
+  {
+    &[id^='part']
+    {
+      clear: both;
+      @include rem-fallback(padding-top, 3.125);
+      border-bottom: 4px solid $blue;
+      @include rem-fallback(line-height, (($base_font_size * 2 - 4) / $base_font_size));
+      @include rem-fallback(margin-bottom, 2.375);
+    }
+    span
+    {
+      color: $grey;
+      display: block;
+      @include rem-fallback(font-size, 1.25);
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &:first-of-type
+    {
+      border-top: none;
+      margin-top: 0;
+      margin-top: -50px;
+    }
+  }
+}
+
+h2.section
+{
+  @include rem-fallback(border-bottom, 0.25);
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-style: solid;
+  border-color: $blue;
+  @include rem-fallback(margin-bottom, 1);
+  @include rem-fallback(line-height, 1.75);
+  
+  span
+  {
+    color: $grey;
+    display: block;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  
+  &:first-of-type
+  {
+    margin-top: 0;
+  }
+}
+
+h3.meta
+{
+  clear: both;
+  border-top: 3px solid $pink;
+  @include rem-fallback(margin-top, 2.5);
+  @include rem-fallback(margin-top, ($base_font_size * 2.5 - 3) / $base_font_size);
+  @include rem-fallback(padding-top, 0.5);
 }
 
 h3.meta_links
@@ -273,6 +398,14 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif]
 {
   text-decoration: none;
   border: 0 none;
+}
+
+a.thumb
+{
+  display: block;
+  float: left;
+  width: 125px;
+  @include rem-fallback( padding-right, 1);
 }
 
 .hidelink a:link, .hidelink a:visited, .hidelink a:active

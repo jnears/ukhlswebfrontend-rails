@@ -1,4 +1,5 @@
-.btn {
+.btn 
+{
   display: inline-block;
   position: relative;
   @include rem-fallback(font-size, 1);
@@ -20,27 +21,39 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,.08) inset;
   @include mid_grey_gradient;
   border-color: $mid_grey;
-  &:hover, &:active {
+  
+  &:hover, &:active 
+  {
     background: $light_grey;
     border-color: $mid_grey;
     color: $dark_grey;
-    }
-  &.fluid {
+  }
+
+  &.fluid 
+  {
     width: 100%;
   }
-  &.circular {
+
+  &.circular 
+  {
     border-radius: 10em;
   }
-  &.icon {
+
+  &.icon 
+  {
     @include rem-fallback(line-height, 0.8);
   }
-  &.small {
+
+  &.small 
+  {
     @include rem-fallback(font-size, 0.75);
     @include rem-fallback(padding, 0.625, 0.75);
     @include rem-fallback(margin, 0.5, 0);
     @include rem-fallback(line-height, 0.75);
   }
-  &.large {
+
+  &.large 
+  {
     @include rem-fallback(font-size, 1.25);
     @include rem-fallback(padding, 0.875, 1.25);
     @include rem-fallback(margin, 0);
@@ -48,35 +61,46 @@
   }
 }
 
-a.btn {
+a.btn 
+{
   text-decoration: none;
+  
   &:hover {
     text-decoration: underline;
   }
 }
 
-.btn-blue {
+.btn-blue 
+{
   @include blue_gradient;
   color: $white;
-  &:hover, &:active {
+  
+  &:hover, &:active 
+  {
     background: $dark_blue;
     color: $white;
   }
 }
 
-.btn-green {
+.btn-green 
+{
   @include green_gradient;
   color: $white;
-  &:hover, &:active {
+  
+  &:hover, &:active 
+  {
     background: $mid_green;
     color: $white;
   }
 }
 
-.btn-yellow {
+.btn-yellow 
+{
   @include yellow_gradient;
   color: $white;
-  &:hover, &:active {
+  
+  &:hover, &:active 
+  {
     background: $mid_yellow;
     color: $white;
   }

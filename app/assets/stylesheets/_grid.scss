@@ -34,6 +34,14 @@ $large_desktop_gutter: 15;
   @include respond-to(handheld) { width: auto; padding: #{$tablet_gutter / 2}px; }
 }
 
+section.body
+{
+  margin-left: #{($column_width * 4) + ($gutter * (4 + 1))}px; }
+  @include respond-to(tablet) { .offset#{4} { margin-left: #{($tablet_column_width * 4) + ($tablet_gutter * (4 + 1))}px; } }
+  @include respond-to(large_desktop) { .offset#{4} { margin-left: #{($large_desktop_column_width * 4) + ($large_desktop_gutter * (4 + 1))}px; } }
+  @include respond-to(handheld) { .offset#{4} { margin-left: 0px; }
+}
+
 body:not(.home) .container[role=main]
 {
   padding-top: #{40 + $gutter}px;
@@ -81,26 +89,15 @@ body.nobreadcrumb .container[role=main]
   }
 }
 
-.lt-ie9 .row
-{
-  &:first-child
-  {
-    margin-top: 0px;
-  }
-}
-
-// .row * .row
-// {
-//   margin-top: 0px;
-// }
-
 .row:before,
-.row:after {
+.row:after 
+{
   display: table;
   content: "";
   line-height: 0;
 }
 
-.row:after {
+.row:after 
+{
   clear: both;
 }

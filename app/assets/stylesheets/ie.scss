@@ -1,0 +1,30 @@
+.lt-ie9 .row
+{
+  &:first-child
+  {
+    margin-top: 0px;
+  }
+}
+
+html.lt-ie8 p.control, 
+html.lt-ie8 p.highlight, 
+html.lt-ie8 p.cookie-notice
+{
+  background: none;
+}
+
+.ie9 p.subheading, 
+.lt-ie9 p.subheading, 
+.ie9 p.call-to-action, 
+.lt-ie9 p.call-to-action
+{
+  @include font16;
+  @include rem-fallback(font-size, 1);
+  font-weight: normal;
+}
+
+.ie9 p.call-to-action, 
+.lt-ie9 p.call-to-action
+{
+  margin-top: 0;
+}

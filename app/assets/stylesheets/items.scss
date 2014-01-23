@@ -36,9 +36,16 @@
       @include respond-to(handheld) { @include rem-fallback(min-height, 18) };
 
     }
-    & .content {
-      padding: 0.75rem;
+    & .content 
+    {
+      @include rem-fallback(padding, 1);
     }
+    h3 
+    {
+      @include rem-fallback(font-size, 1.125);
+      @include rem-fallback(margin-bottom, 0.25);
+    }
+
     &>.image 
     {
       display: block;
