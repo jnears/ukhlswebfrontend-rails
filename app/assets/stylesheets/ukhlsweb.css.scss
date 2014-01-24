@@ -42,11 +42,6 @@ body
   @include respond-to(handheld) {  font-family: $chevin_light; }
 }
 
-.lt-ie9 body
-{
-  font-size: 14px;
-}
-
 
 //library
 @import "accessibility.scss";
@@ -64,13 +59,13 @@ body
 @import "index_posts.scss";
 @import "index_publications.scss";
 @import "index_search.scss";
-@import "items.scss";
 @import "layout.scss";
 @import "lists.scss";
 @import "loader.scss";
 @import "main.scss";
 @import "messages.scss";
 @import "navigation.scss";
+@import "panels.scss";
 @import "tables.scss";
 @import "tabs.scss";
 @import "patterns";
@@ -79,7 +74,6 @@ body
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";
 @import "legacy_documentation.scss";
-@import "legacy_header.scss";
 @import "legacy_main.scss";
 @import "legacy_navigation.scss";
 @import "legacy_twitter.scss";

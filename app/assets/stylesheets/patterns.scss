@@ -1,6 +1,7 @@
 .pagination
 {
-  margin-top: 1.5em;
+  @include rem-fallback(margin, 0.75, 0);
+
   a
   {
     @include btn;
@@ -11,25 +12,18 @@
       background: $mid_grey;
     }
   }
+
   em
   {
     @include btn;
     background: $mid_grey;
     border-color: #bbb;
-    margin-right: 0.5em;
+    @include rem-fallback(margin-right, 0.5);
     font-style: normal;
   }
+  
   span
   {
-    margin-right: 0.25em;
-  }
-}
-
-
-html.lt-ie8 .pagination
-{
-  a
-  {
-    background: none;
+    @include rem-fallback(margin-right, 0.25);
   }
 }

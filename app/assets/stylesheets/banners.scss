@@ -2,7 +2,7 @@ figure.home-banner
 {
   position: relative;
   width: 945px;
-  height: 250px;
+  @include rem-fallback(height, 15);
   display: block;
   background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
   @include respond-to(large_desktop) {
@@ -10,13 +10,13 @@ figure.home-banner
    background-image: url(asset_path('banner-large.jpg')); }
   @include respond-to(tablet) {
     width: 745px;
+    @include rem-fallback(height, 15.5);
     background-image: url(asset_path('banner-small.jpg'));
     @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
   }
   @include respond-to(handheld) {
-    width: auto;
-    margin-bottom: 160px;
-    height: 150px;
+    @include rem-fallback(height, 9);
+    @include rem-fallback(margin-bottom, 9);
     width: auto;
     background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
     background-size: cover;
@@ -30,17 +30,18 @@ figure.home-banner
     position: absolute;
     color: $black;
     font-family: $chevin_light;
-    @include font20;
     margin: 0;
-    top: 15px;
-    width: 27em;
+    @include rem-fallback(left, 1);
+    @include rem-fallback(top, 1);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(width, 27);
+    @include rem-fallback(padding, 0.5);
     @include rounded;
-    left: 15px;
-    padding: 0.5em;
     @include translucent_white;
-    @include respond-to(large_desktop) { width: 29em; @include font22;  }
-    @include respond-to(tablet) { width: 18em; }
-    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include font18; line-height: normal; width: auto; }
+
+    @include respond-to(large_desktop) { @include rem-fallback(width, 29); @include rem-fallback(font-size, 1.375);  }
+    @include respond-to(tablet) { @include rem-fallback(width, 18); }
+    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; @include rem-fallback(min-height, 6); }
 
 
     a
@@ -269,14 +270,5 @@ figure {
         color: $white;
       }
     }
-  }
-}
-
-
-html.lt-ie8 figure.banner
-{
-  figcaption
-  {
-    background: none;
   }
 }

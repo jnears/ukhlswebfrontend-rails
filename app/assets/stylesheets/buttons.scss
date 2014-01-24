@@ -106,26 +106,15 @@ a.btn
   }
 }
 
-//legacy
-
 @mixin btn
 {
   @include mid_grey_gradient;
-  border: 1px solid $mid_grey;
-  // text-shadow: 1px 1px 1px #ccc;
   @include rounded;
+  border: 1px solid $mid_grey; 
   font-family: $chevin_medium;
-  // @include font18;
   color: #333;
-  padding: 0.39em 0.5em;
-  line-height: 2.5em;
-}
-
-
-
-html.lt-ie8 a.btn
-{
-  background: none;
+  @include rem-fallback(padding, 0.4, 0.5);
+  @include rem-fallback(line-height, 2.5);
 }
 
 i.rss
@@ -143,7 +132,4 @@ i.rss
 
 
 
-html.lt-ie8 button.btn
-{
-  background: none;
-}
+

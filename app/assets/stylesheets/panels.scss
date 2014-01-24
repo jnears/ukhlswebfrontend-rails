@@ -1,4 +1,4 @@
-.items 
+.panels 
 {
   width:100%;
   clear: both;
@@ -6,7 +6,7 @@
  
 }
 
-.item 
+.panel 
 {
   display: block;
   float: left;
@@ -17,23 +17,36 @@
   @include grey_gradient;
   width:100%;
   @include rem-fallback(margin-bottom, 1.5);
-    &.short 
+  @include rem-fallback(min-height, 12);
+  @include respond-to(tablet) { @include rem-fallback(min-height, 15) };
+  @include respond-to(handheld) { @include rem-fallback(min-height, 9) };
+
+    &.small 
     {
       @include rem-fallback(min-height, 6);
-      @include respond-to(tablet) { @include rem-fallback(min-height, 4.5) };
+      @include respond-to(tablet) { @include rem-fallback(min-height, 7.5) };
       @include respond-to(handheld) { @include rem-fallback(min-height, 4.5) };
     }
+
     &.medium 
     {
       @include rem-fallback(min-height, 12);
-      @include respond-to(tablet) { @include rem-fallback(min-height, 9) };
+      @include respond-to(tablet) { @include rem-fallback(min-height, 15) };
       @include respond-to(handheld) { @include rem-fallback(min-height, 9) };
     }
+
     &.large 
     {
+      @include rem-fallback(min-height, 18);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 21) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 15) };
+    }
+
+    &.massive 
+    {
       @include rem-fallback(min-height, 24);
-      @include respond-to(tablet) { @include rem-fallback(min-height, 18) };
-      @include respond-to(handheld) { @include rem-fallback(min-height, 18) };
+      @include respond-to(tablet) { @include rem-fallback(min-height, 27) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 21) };
 
     }
     & .content 
@@ -44,6 +57,18 @@
     {
       @include rem-fallback(font-size, 1.125);
       @include rem-fallback(margin-bottom, 0.25);
+    }
+
+    &.right 
+    {
+      float:right;
+      @include rem-fallback(margin-left, 1);
+    }
+
+    &.half 
+    {
+      width: 50%;
+      @include respond-to(handheld) { width: auto; };
     }
 
     &>.image 
@@ -86,36 +111,44 @@
 }
 
 
-.two.items>.item 
+.two.panels>.panel 
 {
   width: 49%;
   margin-left: 1%;
   margin-right: 1%;
 }
 
-.three.items>.item 
+.three.panels>.panel 
 {
   width: 32%;
   margin-left: 1%;
   margin-right: 1%;
 }
 
-.four.items>.item 
+.four.panels>.panel 
 {
   width: 23.5%;
   margin-left: 1%;
   margin-right: 1%;
 }
 
-.two.items>.item, .three.items>.item, .four.items>.item 
+.two.panels>.panel, .three.panels>.panel, .four.panels>.panel 
 {
+
   &:first-child 
   {
     margin-left:0;
   } 
+
   &:last-child 
   {
     margin-right:0;
-  } 
+  }
+
+  p:last-child
+  {
+    margin-bottom: 0;
+  }
+
   @include respond-to(handheld) { width: 100%; margin-left:0px; margin-right:0px; }
 }

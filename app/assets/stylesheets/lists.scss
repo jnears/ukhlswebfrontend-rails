@@ -33,8 +33,11 @@ ul, ol, dl {
   }
   &.comma-separated
   {
+    
     li
-    {
+    { 
+      @include rem-fallback(margin-right, 0.25);
+      
       &:not(:last-of-type):after
       {
         content: ", ";
@@ -85,21 +88,6 @@ nav ul, nav ol
 {
 list-style: none;
 list-style-image: none;
-}
-
-
-ol.people {
-  padding: 0;
-  @include rem-fallback(margin, 0, 0 ,0.5 ,0);
-  li 
-  {
-  list-style-type: none;
-  display: inline;
-    &:not(:last-of-type):after
-    {
-      content: ", ";
-    }
-  }
 }
 
 

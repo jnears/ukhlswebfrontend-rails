@@ -76,7 +76,8 @@ body.nobreadcrumb .container[role=main]
   @include respond-to(handheld) { .offset#{$i} { margin-left: 0px; } }
 }
 
-.row {
+.row 
+{
   margin-top: #{$gutter}px;
   margin-left: #{$gutter * -1}px;
   @include respond-to(tablet) { margin-left: $tablet_gutter * -1px; margin-top: #{$tablet_gutter}px; }
@@ -86,6 +87,15 @@ body.nobreadcrumb .container[role=main]
   &:first-of-type, &.next
   {
     margin-top: 0px;
+  }
+
+  &.three
+  {
+    .span1 { width: 305px; 
+    }
+    @include respond-to(tablet) { .span1 { width: 238px; } }
+    @include respond-to(large_desktop) { .span1 { width: 385px; } }
+    @include respond-to(handheld) { .span1 { width: auto; } }
   }
 }
 

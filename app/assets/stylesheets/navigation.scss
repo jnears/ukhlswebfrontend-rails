@@ -76,6 +76,8 @@
   }
   .key-features, .research, .participants, .data 
   {
+    @include rem-fallback(min-height, 6);
+    
     i.fa-2x 
     {
       @include rem-fallback(font-size, 2)
@@ -122,6 +124,18 @@
 //horizontal and vertical menus
 
 nav.menu {
+  
+  &.affix
+  {
+    top: 54px;
+  }
+  
+  &.affix-bottom
+  {
+    position: absolute;
+    bottom: 0px;
+  }
+
   &.vertical 
   {
     @include light_grey_gradient;
@@ -244,11 +258,6 @@ nav.menu.horizontal ul li a, nav.menu.vertical ul li a
       }
     }
   }
-}
-
-html.lt-ie8 nav.menu 
-{
-  background: none;
 }
 
 nav.topics
