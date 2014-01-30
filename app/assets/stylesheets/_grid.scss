@@ -97,7 +97,16 @@ body.nobreadcrumb .container[role=main]
     @include respond-to(large_desktop) { .span1 { width: 385px; } }
     @include respond-to(handheld) { .span1 { width: auto; } }
   }
-}
+
+  &.four
+  {
+    .span1 { width: 225px; 
+    }
+    @include respond-to(tablet) { .span1 { width: 175px; } }
+    @include respond-to(large_desktop) { .span1 { width: 285px; } }
+    @include respond-to(handheld) { .span1 { width: auto; } }
+    }
+  }
 
 .row:before,
 .row:after 

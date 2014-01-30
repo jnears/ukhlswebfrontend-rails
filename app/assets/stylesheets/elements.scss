@@ -272,6 +272,7 @@ section.guide
   }
 }
 
+
 h2.section
 {
   @include rem-fallback(border-bottom, 0.25);
@@ -296,6 +297,13 @@ h2.section
   {
     margin-top: 0;
   }
+}
+
+.panel h2 
+{
+  @include rem-fallback(font-size, 1.25);
+  @include rem-fallback(line-height, 1.75);
+  @include rem-fallback(margin-bottom, 0.5);
 }
 
 h3.meta

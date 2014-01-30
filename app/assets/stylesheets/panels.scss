@@ -9,7 +9,6 @@
 .panel 
 {
   display: block;
-  float: left;
   position: relative;
   top: 0;
   padding: 0;
@@ -23,8 +22,9 @@
 
     &.small 
     {
-      @include rem-fallback(min-height, 6);
-      @include respond-to(tablet) { @include rem-fallback(min-height, 7.5) };
+      @include rem-fallback(min-height, 9);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 11.5) };
+      @include respond-to(large_desktop) { @include rem-fallback(min-height, 7.5) };
       @include respond-to(handheld) { @include rem-fallback(min-height, 4.5) };
     }
 
@@ -82,14 +82,29 @@
         @include rounded_top;
     }
   }
-  &.blue, &.green, &.yellow, &.red {
+
+  &.blue, 
+  &.green, 
+  &.yellow, 
+  &.red 
+  {
     color: $white;
-    a:link {
+
+    a:link 
+    {
       text-decoration: underline;
     }
-    & a:link, &:hover, &:active {
+
+
+
+
+    & a:link, 
+    &:hover, 
+    &:active, 
+    &:visited 
+    {
       color: $white;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
   &.blue {
@@ -152,3 +167,29 @@
 
   @include respond-to(handheld) { width: 100%; margin-left:0px; margin-right:0px; }
 }
+
+
+#about-nav, #research-nav, #participants-nav, #data-nav 
+  {
+    
+    
+    i.fa-2x 
+    {
+      @include rem-fallback(font-size, 2)
+    }
+    i.icon 
+    {
+      position: absolute;
+      bottom: 5px;
+      right:5px;
+      @include rem-fallback(right, 1);
+      @include rem-fallback(bottom, 1);
+      display: block;
+      @include opacity(0.8);
+    }
+    i.icon2 
+    {
+      position: absolute;
+      right:40px;
+    }
+  }

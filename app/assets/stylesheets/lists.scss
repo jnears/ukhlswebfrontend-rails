@@ -84,10 +84,20 @@ ol.tag-list
   }
 }
 
-nav ul, nav ol 
+nav ul, 
+nav ol, 
+ul.navlist, 
+ol.navlist
 {
 list-style: none;
 list-style-image: none;
+padding: 0;
+}
+
+ol.navlist,
+ul.navlist 
+{
+  margin: 0;
 }
 
 

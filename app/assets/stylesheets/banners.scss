@@ -41,7 +41,7 @@ figure.home-banner
 
     @include respond-to(large_desktop) { @include rem-fallback(width, 29); @include rem-fallback(font-size, 1.375);  }
     @include respond-to(tablet) { @include rem-fallback(width, 18); }
-    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; @include rem-fallback(min-height, 6); }
+    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; }
 
 
     a
