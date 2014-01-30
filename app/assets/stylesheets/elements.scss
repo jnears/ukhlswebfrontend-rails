@@ -169,10 +169,7 @@ div.alert
     span
     {
       display: block;
-      @include rem-fallback(font-size, 1.375);
-      @include rem-fallback(line-height, 1.5);
-      color: $dark_grey;
-      
+
       &.inline
       {
         display: inline;
@@ -193,11 +190,18 @@ h1
   {
     @include rem-fallback(margin, 0, 0, 1.5);
   }
+  span 
+  {
+    @include rem-fallback(font-size, 1.375);
+    @include rem-fallback(line-height, 1.5);
+    color: $dark_grey;
+  }
 }
 
 .lt-ie9 h1
 {
-@include rem-fallback(font-size, 1.75);
+  @include rem-fallback(font-size, 1.75);
+
   span
   {
   @include rem-fallback(font-size, 1.125);
@@ -216,6 +220,13 @@ h3
   @include rem-fallback(font-size, 1.5);
   @include rem-fallback(line-height, 1.5);
   @include rem-fallback(margin, 0, 0, 1.5);
+
+  span 
+  {
+    @include rem-fallback(font-size, 1.2);
+    @include rem-fallback(line-height, 1.5);
+    color: $dark_grey;
+  }
 }
 
 h4 
@@ -302,6 +313,7 @@ h2.section
 .panel h2 
 {
   @include rem-fallback(font-size, 1.25);
+  @include respond-to(large_desktop) { @include rem-fallback(font-size, 1.375); }
   @include rem-fallback(line-height, 1.75);
   @include rem-fallback(margin-bottom, 0.5);
 }

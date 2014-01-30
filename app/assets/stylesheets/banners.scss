@@ -34,13 +34,12 @@ figure.home-banner
     @include rem-fallback(left, 1);
     @include rem-fallback(top, 1);
     @include rem-fallback(font-size, 1.25);
-    @include rem-fallback(width, 27);
-    @include rem-fallback(padding, 0.5);
+    @include rem-fallback(width, 34);
+    @include rem-fallback(padding, 1);
     @include rounded;
     @include translucent_white;
-
-    @include respond-to(large_desktop) { @include rem-fallback(width, 29); @include rem-fallback(font-size, 1.375);  }
-    @include respond-to(tablet) { @include rem-fallback(width, 18); }
+    @include respond-to(large_desktop) { @include rem-fallback(width, 37); @include rem-fallback(font-size, 1.375);  }
+    @include respond-to(tablet) { @include rem-fallback(width, 22); }
     @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; }
 
 

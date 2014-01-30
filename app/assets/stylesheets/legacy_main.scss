@@ -46,12 +46,6 @@ figure.regular
 
 
 
-nav.topics_grid
-{
-  font-family: $chevin_light;
-  @include font22;
-}
-
 nav.features
 {
   [class*="span"] {
@@ -105,43 +99,23 @@ nav.features
 
 .pad
 {
-  padding: #{$gutter / 2}px;
-  padding: 1em;
+  @include rem-fallback(padding, 1);
+}
+
+.pad-small
+{
+  @include rem-fallback(padding, 0.5);
 }
 
 .space
 {
-  margin-bottom: #{$gutter}px;
+  @include rem-fallback(margin-bottom, 1.5);
 }
 
 
 
 .box
 {
-  overflow: auto;
-  @include rounded;
-  @include respond-to(large_desktop) {  }
-  h1,h2,h3,h4,h5
-  {
-    margin-top: 0;
-  }
-  h3
-  {
-    @include font20;
-    margin-top: 0;
-    margin-bottom: 0.25em;
-  }
-  h2
-  {
-    margin-bottom: 0em;
-  }
-  p.call-to-action
-  {
-    font-family: $chevin_light;
-    font-style: normal;
-    @include font18;
-    margin-bottom: 0px;
-  }
   ul
   {
     margin-top: 0em;
@@ -175,19 +149,3 @@ nav.features
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

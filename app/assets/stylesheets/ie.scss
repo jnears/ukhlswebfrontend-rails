@@ -57,3 +57,11 @@ html.lt-ie8 .pagination
     background: none;
   }
 }
+
+html.lt-ie8 .panel.red, 
+html.lt-ie8 .panel.yellow,
+html.lt-ie8 .panel.green,
+html.lt-ie8 .panel.blue 
+{
+  background: none;
+}
