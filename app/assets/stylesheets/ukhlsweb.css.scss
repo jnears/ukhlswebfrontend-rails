@@ -55,6 +55,7 @@ body
 @import "header.scss";
 @import "ie";
 @import "images.scss";
+@import "index_documentation.scss";
 @import "index_event.scss";
 @import "index_posts.scss";
 @import "index_publications.scss";
@@ -73,7 +74,6 @@ body
 //legacy
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";
-@import "legacy_documentation.scss";
 @import "legacy_main.scss";
 @import "legacy_navigation.scss";
 @import "legacy_twitter.scss";

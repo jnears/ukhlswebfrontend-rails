@@ -1,31 +1,31 @@
 
 div.locator
 {
-  padding-top: #{36 + $gutter}px;
+  @include rem-fallback(padding-top, 3);
 }
 
 article.question
 {
   @include rounded;
   border: 1px solid $mid_grey;
-  padding: #{$gutter}px;
-  margin-bottom: #{$gutter}px;
+  @include rem-fallback(padding, 1.5);
+  @include rem-fallback(margin-bottom, 1.5);
+  @include rem-fallback( margin-bottom, (($baseline - 2) / $base_font_size));
   position: relative;
   overflow: auto;
-
 
   a.top-right
   {
     position: absolute;
-    right: #{$gutter}px;
-    top: #{$gutter}px;
+    @include rem-fallback(right, 1);
+    @include rem-fallback(top, 1);
   }
 
   dl
   {
     display: block;
     overflow: auto;
-    margin-bottom: 1.5em;
+    @include rem-fallback(margin-bottom, 1.5);
     display: table;
     dt
     {
@@ -45,36 +45,16 @@ article.question
 
   }
 
+  h3
+  {
+    @include respond-to(handheld) { @include rem-fallback(margin-top, 2); }
+  }
+
   h5
   {
-    @include font16;
+    @include rem-fallback(font-size, 1);
     font-weight: bold;
     font-family: $default_font;
   }
 
-}
-
-td.r
-{
-  text-align: right;
-}
-
-table.frequency
-{
-  $background: $white;
-  tr
-  {
-    border-bottom: 1px solid $white;
-  }
-  th
-  {
-    background: $light_grey;
-    padding: 10px 4px;
-  }
-  td
-  {
-    background: $light_grey;
-    padding: 4px;
-    border-top: none;
-  }
 }

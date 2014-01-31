@@ -7,6 +7,8 @@ table {
   {
     @include rem-fallback(line-height, 1.5);
     @include rem-fallback(padding, 0.75);
+    @include respond-to(handheld) {  @include rem-fallback(padding, 0.5); @include rem-fallback(font-size, 0.875); }
+
     vertical-align: middle;
   }
   &>tbody>tr>td 
@@ -14,7 +16,7 @@ table {
     border-top: 1px solid $mid_grey;
     @include rem-fallback(line-height, (($baseline - 1) / $base_font_size));
   }
-  &.numeric
+  &.right
   {
     tr
     {
@@ -32,6 +34,11 @@ th {
 
 td, th {
   display: table-cell;
+}
+
+td.r
+{
+  text-align: right;
 }
 
 caption {
@@ -57,5 +64,12 @@ caption {
   }
   &.zebra>tbody>tr:nth-child(odd) {
       background-color: $light_grey;
+      border-color: white;
+  }
+  &.grey
+  {
+    background-color: $light_grey;
+    &>tbody>tr>td, &>tfoot>tr>td {
+    border-bottom: 1px solid $white;}
   }
 }
