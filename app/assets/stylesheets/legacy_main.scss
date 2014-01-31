@@ -114,38 +114,3 @@ nav.features
 
 
 
-.box
-{
-  ul
-  {
-    margin-top: 0em;
-    padding-left: 2em;
-    li
-    {
-      @include font18;
-      margin: 0;
-      font-family: $chevin_light;
-      list-style-type: none;
-    }
-  }
-}
-
-.box.feature
-{
-  @include transparent($blue, 0.2);
-  ul
-  {
-    padding-left: 0em;
-    li
-    {
-
-      margin-bottom: #{$gutter}px;
-      span
-      {
-        font-family: $default_font;
-        @include font16;
-        display: block;
-      }
-    }
-  }
-}

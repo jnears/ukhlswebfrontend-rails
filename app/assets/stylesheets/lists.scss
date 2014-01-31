@@ -98,6 +98,20 @@ ol.navlist,
 ul.navlist 
 {
   margin: 0;
+  
+  li
+  {
+    @include rem-fallback(margin-bottom, 1);
+    font-family: $chevin_light;
+    @include rem-fallback(font-size, 1.125);
+    
+    span
+    {
+      font-family: $default_font;
+      @include rem-fallback(font-size, 1);
+      display: block;
+    }
+  }
 }
 
 

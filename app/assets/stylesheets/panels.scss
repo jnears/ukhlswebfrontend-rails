@@ -64,6 +64,11 @@
     {
       @include rem-fallback(font-size, 1.25);
       @include rem-fallback(margin-bottom, 0.25);
+
+      span 
+      {
+        @include rem-fallback(font-size, 1);
+      }
     }
 
     p.call-to-action
@@ -122,6 +127,13 @@
   {
     @include blue_gradient;
     border-bottom: 2px solid $dark_blue;
+  }
+
+  &.lightblue 
+  {
+    background: $white;
+    @include transparent($blue, 0.2);
+    border: 0px;
   }
 
   &.green 
