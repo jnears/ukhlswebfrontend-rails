@@ -95,6 +95,14 @@ p, pre
     font-style: italic;
     @include rem-fallback(line-height, 1.5);
   }
+  
+  &.edit-link 
+  {
+    position: fixed;
+    right: 10px;
+    top: 15px;
+    z-index: 1111;
+  }
 }
 
 
@@ -283,6 +291,11 @@ section.guide
   }
 }
 
+h1.guide
+{
+  @include rem-fallback(padding, 1.5, 0, 0, 0);
+}
+
 
 h2.section
 {
@@ -438,7 +451,7 @@ time
 {
   @include rem-fallback(font-size, 0.875);
   margin: 0;
-  color: $grey;
+  color: $dark_grey;
   line-height: normal;
 }
 

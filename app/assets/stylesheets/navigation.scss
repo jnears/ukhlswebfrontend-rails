@@ -1,17 +1,6 @@
 nav.menu 
 {
   
-  &.affix
-  {
-    top: 54px;
-  }
-  
-  &.affix-bottom
-  {
-    position: absolute;
-    bottom: 0px;
-  }
-
   &.vertical 
   {
     @include light_grey_gradient;
@@ -141,6 +130,73 @@ nav.menu.horizontal ul li a, nav.menu.vertical ul li a
   display: block;
   text-decoration: none;
 }
+
+nav.guide
+{
+  width: #{($column_width * 5) + ($gutter * (5 - 1))}px;
+  @include respond-to(tablet) { width: #{($tablet_column_width * 5) + ($gutter * (5 - 1))}px; }
+  @include respond-to(large_desktop) { width: #{($large_desktop_column_width * 5) + ($gutter * (5 - 1))}px; }
+
+  ul
+  {
+    
+    li
+    { 
+      border-bottom: 1px solid $mid_grey;
+      
+      &.active
+      {
+        background: $light_grey;
+      }
+      
+      a
+      {
+        font-family: $chevin_medium;
+        text-decoration: none;
+        display: block;
+        @include rem-fallback(font-size, 1.25);
+        @include rem-fallback(padding, 1.5, 0.5);
+        margin: 0;
+        
+        span
+        {
+          font-family: $default_font;
+          color: $grey;
+          @include rem-fallback(font-size, 0.875);
+          display: block;
+          text-transform: uppercase;
+        }
+
+        &:hover
+        {
+          background: $light_grey;
+        }
+      }
+    }
+  }
+}
+
+
+nav 
+{
+  &.guide, &.menu
+  {
+    
+    &.affix
+    {
+      top: 54px;
+    }
+  
+    &.affix-bottom
+    {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+
+
+
 
 .lt-ie9 nav.menu
 {

@@ -7,65 +7,10 @@ div#guide-top
   left:0;
 }
 
-h1.guide
-{
-  padding: 0.5em 0 0 0 ;
-}
-
 aside.g
 {
   @include respond-to(handheld) { display: none; }
 }
-nav.guide
-{
-  width: #{($column_width * 5) + ($gutter * (5 - 1))}px;
-  @include respond-to(tablet) { width: #{($tablet_column_width * 5) + ($gutter * (5 - 1))}px; }
-  @include respond-to(large_desktop) { width: #{($large_desktop_column_width * 5) + ($gutter * (5 - 1))}px; }
-  &.affix
-  {
-    top: 54px;
-  }
-  &.affix-bottom
-  {
-    position: absolute;
-    bottom: 0px;
-  }
-  ul
-  {
-    padding-left: 0;
-    margin: 0;
-    li
-    {
-      list-style-type: none;
-      background: $white;
-      border-bottom: 1px solid $mid_grey;
-      &.active
-      {
-        background: $light_grey;
-      }
-      a
-      {
-        font-family: $chevin_medium;
-        text-decoration: none;
-        display: block;
-        @include font20;
-        padding: 1em 0.5em;
-        margin: 0;
-        span
-        {
-          font-family: $default_font;
-          color: $grey;
-          font-size: 14px;
-          display: block;
-          text-transform: uppercase;
-        }
-        &:hover
-        {
-          background: $light_grey;
-        }
-      }
-    }
-  }
-}
+
 
 

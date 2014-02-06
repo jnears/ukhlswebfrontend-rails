@@ -164,8 +164,37 @@ figure.participants-banner
 
 
 
-figure {
+figure 
+{
   
+  &.featured, &.regular 
+  {
+    font-style: italic;
+    max-width: 300px;
+  }
+
+  &.featured
+  { 
+    float: left;
+    @include rem-fallback(padding, 0, 2, 1, 0);
+
+    figcaption
+    {
+      @include rem-fallback(font-size, 0.875);
+
+      p
+      {
+        margin: 0;
+      }
+    }
+  }
+
+  &.pull-left
+  {
+    margin-left: -#{($column_width * 4) + ($gutter * (4 + 1))}px;
+    @include rem-fallback(padding, 0, 1, 0, 0);
+  }
+
   img
   {
     @include rounded;
