@@ -2,6 +2,7 @@ article.publication
 {
   @include rem-fallback(padding-top, 1.25);
   @include rem-fallback(padding-bottom, 1.187);
+  
   p
   {
     @include rem-fallback(margin-bottom, 0.5);
@@ -11,13 +12,16 @@ article.publication
       font-style: italic;
     }
   }
+
   h4
   {
     @include rem-fallback(margin-bottom, 0.5);
   }
+
   &:last-of-type{
     @include rem-fallback(padding-bottom, 1.25); //set the bottom padding back to 0.75rem as the 1px border does not show
   }
+
   &:not(:last-of-type)
   {
     border-bottom: 1px solid $light_grey;

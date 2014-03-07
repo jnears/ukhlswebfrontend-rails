@@ -61,7 +61,7 @@ h1 {
     height: 120px;
     @include respond-to(handheld) {
       width: 192px;
-      height: 80px;
+      height: 86px;
       margin: 0 auto;
       background: $white url(asset_path('ukhls-logo-handheld.gif')) no-repeat 0 0;
       @include image-2x(asset_path('ukhls-logo-handheld2x.gif'), 192px, 80px);

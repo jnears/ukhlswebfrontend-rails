@@ -20,7 +20,7 @@
       @include rem-fallback(min-height, 7.5);
       @include respond-to(tablet) { @include rem-fallback(min-height, 10.5) };
       @include respond-to(large_desktop) { @include rem-fallback(min-height, 7.5) };
-      @include respond-to(handheld) { @include rem-fallback(min-height, 4.5) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 4.5); @include rem-fallback(margin-bottom, 1.5) };
     }
 
     &.medium 

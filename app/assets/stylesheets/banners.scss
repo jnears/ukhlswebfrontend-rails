@@ -10,13 +10,13 @@ figure.home-banner
    background-image: url(asset_path('banner-large.jpg')); }
   @include respond-to(tablet) {
     width: 745px;
-    @include rem-fallback(height, 15.5);
+    @include rem-fallback(height, 15);
     background-image: url(asset_path('banner-small.jpg'));
     @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
   }
   @include respond-to(handheld) {
     @include rem-fallback(height, 9);
-    @include rem-fallback(margin-bottom, 9);
+    @include rem-fallback(margin-bottom, 9.71875);
     width: auto;
     background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
     background-size: cover;
@@ -207,14 +207,14 @@ figure
     height: 250px;
 
     @include respond-to(large_desktop) { height: 250px; @include rem-fallback(margin-bottom, 0.875); }
-    @include respond-to(tablet) { height: 226px; @include rem-fallback(margin-bottom, 0.75); }
-    @include respond-to(handheld) { height:auto !important; @include rem-fallback(margin-bottom, 1.125); } //reset height to default
+    @include respond-to(tablet) { @include rem-fallback(height, 14.25); @include rem-fallback(margin-bottom, 0.75); }
+    @include respond-to(handheld) { height: 10.5rem; @include rem-fallback(margin-bottom, 0.5); } 
 
     img {
       height: 250px;
       @include respond-to(large_desktop) { height: 250px; width: 100%; }
-      @include respond-to(tablet) { height: 226px; }
-      @include respond-to(handheld) { height:auto !important; }
+      @include respond-to(tablet) { @include rem-fallback(height, 14.25); } 
+      @include respond-to(handheld) { @include rem-fallback(height, 10.5); width: 100%; }
     }
   }
 
@@ -243,6 +243,7 @@ figure
       @include rem-fallback(font-size, 1.375);
       @include rem-fallback(padding, 0.5, 0); 
       @include translucent_white;
+      @include respond-to(handheld) { @include rem-fallback(font-size, 1.125); }
       margin: 0;
       
       &.square 
