@@ -1,0 +1,35 @@
+.circular 
+{
+  @include circular;
+}
+
+.circle-dashed {
+  border: 2px dashed $green;
+  height: 225px;
+  width: 225px;
+  border-radius: 225px;
+  position: absolute;
+  margin-top: 19px;
+  margin-left: 42px;
+  z-index: 100;
+    @include respond-to(large_desktop) 
+    {
+    margin-left: 82px;
+    }
+    @include respond-to(tablet) 
+    {
+    height: 225px;
+    width: 225px;
+    border-radius:225px;
+    margin-top: 18px;
+    margin-left: 8px;
+    }
+    @include respond-to(handheld) 
+    {    
+    display:none;
+    }
+}
+
+html.lt-ie9 .circle-dashed {
+  display: none;
+}

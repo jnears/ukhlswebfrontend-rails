@@ -48,6 +48,11 @@ body:not(.home) .container[role=main]
   @include respond-to(handheld) { padding-top: 0px };
 }
 
+.container[role=main] 
+{
+  @include respond-to(handheld) { padding-top: 0px };
+}
+
 body.nobreadcrumb .container[role=main]
 {
   padding-top: 0px;

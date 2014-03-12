@@ -79,7 +79,7 @@ nav.menu
     @include rounded;
     border: 1px solid $grey;
     overflow: auto;
-    @include rem-fallback(margin-bottom, (($baseline / 4 * 5 ) / $base_font_size));
+    @include rem-fallback(margin-bottom, (($baseline - 2) / $base_font_size));
     
     ul
     {
@@ -91,7 +91,7 @@ nav.menu
         margin: 0;
         float: left;
         border-right: 1px solid $grey;
-        @include rem-fallback(line-height, 2.5);
+        @include rem-fallback(line-height, 3);
         @include respond-to(handheld) { float: none; }
         
         a
@@ -129,6 +129,44 @@ nav.menu.horizontal ul li a, nav.menu.vertical ul li a
   @include rem-fallback(padding, 0, 1);
   display: block;
   text-decoration: none;
+}
+
+div.handheld-menu {
+  display: none;
+  @include mid_grey_gradient;
+  border-bottom: 1px solid $mid_grey;
+  @include respond-to(tablet) { display: block;}
+  & ul 
+  {
+    margin: 0;
+    overflow: auto;
+    padding-left: 0;
+    @include rem-fallback(height, 3); 
+    & li 
+    {
+      float: left;
+      @include rem-fallback(padding, 0.5);
+      list-style:none;
+
+      i.fa-2x 
+      {
+        @include rem-fallback(font-size, 1.8)
+      }
+
+      & a 
+      {
+        background-size: cover;
+        color: $grey;
+        display: block;
+        overflow: hidden;
+        &.search
+        {
+          @include respond-to(tablet) { display: none };
+          @include respond-to(handheld) { display: block };
+        }
+      }
+    }
+  }
 }
 
 nav.guide

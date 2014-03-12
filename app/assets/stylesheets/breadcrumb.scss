@@ -9,9 +9,9 @@ ol.breadcrumb
   @include respond-to(handheld) { @include rem-fallback(font-size, 0.875); padding-left: #{$gutter / 2}px; margin: 0 0 #{$gutter / 2}px 0; }
   z-index: 1000;
   width: #{(($columns * $column_width) + (($columns - 1) * $gutter + 15)) - $gutter}px;
-  @include respond-to(tablet) { width: #{(($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter + 15)) - $gutter}px;}
-  @include respond-to(large_desktop) { width: #{(($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter + 15)) - $gutter}px; }
-  @include respond-to(handheld) { width: auto;  @include rem-fallback(height, 2.5);}
+    @include respond-to(tablet) { width: #{(($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter + 15)) - $gutter}px;}
+    @include respond-to(large_desktop) { width: #{(($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter + 15)) - $gutter}px; }
+    @include respond-to(handheld) { width: auto;  @include rem-fallback(height, 2.5);}
   border-bottom: 2px solid #eeeeee;
   li
   {
@@ -26,18 +26,21 @@ ol.breadcrumb
       content: " \2192";
     }
   }
+  
   &.affix
   {
     margin: 0;
     top: 0;
+    @include rem-fallback(margin-bottom, 0)
   }
+
   &.affix-top
   {
     position: relative;
     margin-bottom: -40px;
     top: -55px;
     overflow: hidden;
-    @include respond-to(handheld) { position: relative; top: 0; margin-bottom: 0px; }
+    @include respond-to(handheld) { position: relative; top: 0; margin-bottom: 0px; @include rem-fallback(margin-bottom, 0) }
   }
 }
 

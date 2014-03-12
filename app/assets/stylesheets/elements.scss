@@ -221,6 +221,7 @@ h2
   @include rem-fallback(font-size, 1.75);
   @include rem-fallback(line-height, 3);
   @include rem-fallback(margin, 0, 0, 1.5);
+  @include respond-to(handheld) { @include rem-fallback(font-size, 1.25);}
 }
 
 h3 
@@ -228,6 +229,7 @@ h3
   @include rem-fallback(font-size, 1.5);
   @include rem-fallback(line-height, 1.5);
   @include rem-fallback(margin, 0, 0, 1.5);
+  @include respond-to(handheld) { @include rem-fallback(font-size, 1.2);}
 
   span 
   {

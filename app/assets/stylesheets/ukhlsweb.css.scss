@@ -51,7 +51,6 @@ body
 @import "elements.scss";
 @import "forms.scss";
 @import "footer.scss";
-@import "handheld.scss";
 @import "header.scss";
 @import "ie";
 @import "images.scss";
@@ -61,17 +60,21 @@ body
 @import "index_publications.scss";
 @import "index_search.scss";
 @import "layout.scss";
+@import "legacy.scss";
 @import "lists.scss";
 @import "loader.scss";
 @import "main.scss";
 @import "messages.scss";
 @import "navigation.scss";
 @import "panels.scss";
+@import "panels.scss";
+@import "print.scss";
 @import "tables.scss";
 @import "tabs.scss";
 @import "patterns";
 
 //legacy
+@import "legacy_accordian.scss";
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";
 @import "legacy_main.scss";

@@ -98,6 +98,12 @@
   -webkit-border-radius: 0;
 }
 
+@mixin circular{
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;

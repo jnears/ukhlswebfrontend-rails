@@ -23,7 +23,7 @@
       @include rem-fallback(margin, 1, 0, 0.5, 0);
       @include rem-fallback(line-height, 1.5);
       @include respond-to(tablet) { padding-left: 120px; }
-      @include respond-to(handheld) { padding-left: 90px; margin: 0; }
+      @include respond-to(handheld) { padding-left: 90px; margin: 0; @include rem-fallback(font-size, 1.25);}
     }
 
     div.meta, p, time

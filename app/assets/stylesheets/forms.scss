@@ -37,7 +37,7 @@ form
 
   legend 
   {
-  @include rem-fallback(font-size, 1.2);
+  @include rem-fallback(font-size, 1.5);
   @include rem-fallback(line-height, 1.5);
   font-family: $chevin_light;
   }
@@ -69,7 +69,7 @@ select
 {
 border: 1px solid $mid_grey;
 border-radius: $radius;
-width: 75%;
+width: 100%;
 @include rem-fallback(padding, 0.5);
 @include rem-fallback(margin-bottom, 0.75);
 @include rem-fallback(min-height, 2.2);
