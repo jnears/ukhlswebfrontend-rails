@@ -11,6 +11,10 @@ ul, ol {
   }
  }
 
+nav.guide ul {
+  margin-top: 0;
+}
+
 ul, ol, dl {
   @include rem-fallback(margin, 1.5, 0);
   &.inline

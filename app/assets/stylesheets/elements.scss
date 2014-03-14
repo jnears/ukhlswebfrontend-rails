@@ -7,6 +7,7 @@ p, pre
   {
     @include rem-fallback(font-size, 1.25);
     font-weight: 200;
+    @include respond-to(handheld) { @include rem-fallback(font-size, 1.1); }
   }
   
   &.highlight 
@@ -22,8 +23,8 @@ p, pre
     width: 30%;
     float: right;
     color: $white;
-    @include rem-fallback(margin, 0, 0, 1, 1);
-      @include respond-to(handheld) { width: 100%; @include rem-fallback(font-size, 1.125); }
+    @include rem-fallback(margin, 0, 0, 1.5, 1);
+    @include respond-to(handheld) { width: 100%; @include rem-fallback(font-size, 1.125); }
       
       & a 
       {
@@ -161,6 +162,8 @@ p, pre
 div.alert
 {
   @include callout($pink);
+  @include rem-fallback(padding, 0.75);
+
 }
 
 //headings
@@ -192,7 +195,7 @@ h1
   @include rem-fallback(font-size, 2); //32
   @include rem-fallback(line-height, 3);
   @include rem-fallback(margin, 0, 0, 1.5);
-  //@include respond-to(large_desktop) { @include rem-fallback(font-size, 2.25);  @include rem-fallback(margin, 0, 0, 1.25);}
+  @include respond-to(handheld) { @include rem-fallback(font-size, 1.375);}
   
   &:first-child 
   {
@@ -201,6 +204,7 @@ h1
   span 
   {
     @include rem-fallback(font-size, 1.375);
+    @include respond-to(handheld) { @include rem-fallback(font-size, 1);}
     @include rem-fallback(line-height, 1.5);
     color: $dark_grey;
   }
@@ -229,7 +233,7 @@ h3
   @include rem-fallback(font-size, 1.5);
   @include rem-fallback(line-height, 1.5);
   @include rem-fallback(margin, 0, 0, 1.5);
-  @include respond-to(handheld) { @include rem-fallback(font-size, 1.2);}
+  @include respond-to(handheld) { @include rem-fallback(font-size, 1.25);}
 
   span 
   {

@@ -11,7 +11,7 @@ ol.breadcrumb
   width: #{(($columns * $column_width) + (($columns - 1) * $gutter + 15)) - $gutter}px;
     @include respond-to(tablet) { width: #{(($columns * $tablet_column_width) + (($columns - 1) * $tablet_gutter + 15)) - $gutter}px;}
     @include respond-to(large_desktop) { width: #{(($columns * $large_desktop_column_width) + (($columns - 1) * $large_desktop_gutter + 15)) - $gutter}px; }
-    @include respond-to(handheld) { width: auto;  @include rem-fallback(height, 2.5);}
+    @include respond-to(handheld) { width: auto;  @include rem-fallback(min-height, 2.5);}
   border-bottom: 2px solid #eeeeee;
   li
   {

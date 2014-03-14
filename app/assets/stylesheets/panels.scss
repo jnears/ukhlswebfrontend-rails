@@ -8,8 +8,9 @@
   @include rounded;
   @include grey_gradient;
   width:100%;
-  @include rem-fallback(margin-bottom, 0);
-    &.tiny 
+  @include rem-fallback(margin-bottom, ($baseline - 2) / $base_font_size);
+  
+  &.tiny 
     {
       @include rem-fallback(min-height, 6);
       @include respond-to(large_desktop) { @include rem-fallback(min-height, 4.5) };
@@ -83,6 +84,7 @@
     {
       float:right;
       @include rem-fallback(margin-left, 1);
+      @include respond-to(handheld) { @include rem-fallback(margin-left, 0); };
     }
 
     &.half 

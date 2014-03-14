@@ -1,3 +1,72 @@
+.innovation-banner-wrapper
+{
+  figure.innovation-banner
+  {
+    position: relative;
+    width: 945px;
+    height: 235px;
+    display: block;
+    background: transparent url(asset_path('banner-innovation-desktop.jpg')) no-repeat 0 0;
+    @include respond-to(large_desktop) { width: 1185px; background-image: url(asset_path('banner-innovation-desktop-large.jpg')); }
+    @include respond-to(tablet) { width: 745px; margin-bottom:7.5px; background-image: url(asset_path('banner-innovation-tablet.jpg')); 
+    }
+
+    @include respond-to(handheld) 
+    {
+      width: auto;
+      min-height: 150px;
+      height: auto;
+      background-size: cover;
+      background-image: url(asset_path('banner-innovation-mobile.jpg'));
+      @include image-2x(asset_path('banner-innovation-mobile-retina.jpg'), 350px, 150px);  
+    }
+
+    @include rounded;
+
+    figcaption
+    { 
+      position: absolute;
+      color: $black;
+      font-family: $chevin_light;
+      font-size: 48px;
+      line-height: normal; 
+      margin: 0;
+      top: 10px;
+      left: 15px;
+      width: 100%;
+      @include rounded;
+
+      @include respond-to(tablet) { font-size: 44px; top: 15px;}
+      @include respond-to(handheld) { position: relative; @include font28; width: auto;  }
+
+      span {
+        font-size: 40px;
+        display: block;
+        font-family: $chevin_light;
+        color: $black;
+        @include respond-to(tablet) { @include font36;  }
+        @include respond-to(handheld) { @include font22; }
+        & .small 
+        {
+          @include font24;
+          margin-top: 20px;
+          @include respond-to(handheld) { @include font16; margin-top: 10px; }
+        }
+      }
+
+      a, hover
+      {
+        font-family: $chevin_light;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        display: block;
+        text-decoration: none;
+      }
+    }
+  } 
+}
+
+
 figure.home-banner
 {
   position: relative;
@@ -270,7 +339,7 @@ figure
         left: 0px;
         right: 0px;
         @include rem-fallback(padding, 0.25, 0, 0.25, 1);
-        @include respond-to(handheld) { display: none; }; 
+
       }
       
       &.center 
@@ -283,6 +352,7 @@ figure
         font-family: $chevin_light;
         @include rem-fallback(font-size, 1.25);
         @include rem-fallback(line-height, 1.875);
+        @include respond-to(handheld) { @include rem-fallback(font-size, 1); }
       }
 
       a

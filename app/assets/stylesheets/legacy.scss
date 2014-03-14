@@ -4,13 +4,13 @@
 }
 
 .circle-dashed {
-  border: 2px dashed $green;
+  border: 2px dashed #60c659;
   height: 225px;
   width: 225px;
   border-radius: 225px;
   position: absolute;
-  margin-top: 19px;
-  margin-left: 42px;
+  margin-top: 5px;
+  margin-left: 45px;
   z-index: 100;
     @include respond-to(large_desktop) 
     {

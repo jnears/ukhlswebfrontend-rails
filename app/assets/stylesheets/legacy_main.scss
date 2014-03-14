@@ -52,7 +52,7 @@ nav.features
 
 .pad
 {
-  @include rem-fallback(padding, 1);
+  @include rem-fallback(padding, 0.75);
 }
 
 .pad-small
