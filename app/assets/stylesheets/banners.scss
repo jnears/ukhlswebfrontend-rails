@@ -313,6 +313,10 @@ figure
       @include translucent_white;
       @include respond-to(handheld) { @include rem-fallback(font-size, 1.125); }
       margin: 0;
+      @include rem-fallback(bottom, 3.75);
+        left: 0px;
+        right: 0px;
+        @include rem-fallback(padding, 0.25, 0, 0.25, 1);
       
       &.square 
       {
@@ -333,14 +337,14 @@ figure
         }
       }
 
-      &.stripe 
-      {
-        @include rem-fallback(bottom, 3.75);
-        left: 0px;
-        right: 0px;
-        @include rem-fallback(padding, 0.25, 0, 0.25, 1);
+     // &.stripe 
+     // {
+      //  @include rem-fallback(bottom, 3.75);
+      //  left: 0px;
+      //  right: 0px;
+      //  @include rem-fallback(padding, 0.25, 0, 0.25, 1);
 
-      }
+    //  }
       
       &.center 
         {
