@@ -9,6 +9,26 @@
   @include grey_gradient;
   width:100%;
   @include rem-fallback(margin-bottom, ($baseline - 2) / $base_font_size);
+  & p:last-of-type {
+    margin-bottom:0px;
+  }
+
+  .fa 
+  {
+    @include rem-fallback(font-size, 1.5);
+  }
+
+  .fa-2x 
+  {
+    @include rem-fallback(font-size, 2);
+  }
+
+  .fa, .fa-2x
+  {
+    &.opaque {
+    @include opacity(0.8);
+    }
+  }
   
   &.tiny 
     {
@@ -183,4 +203,8 @@
     position: absolute;
     right:40px;
   }
+}
+
+.span1 .panel img {
+   @include respond-to(handheld) { width:740px; }
 }
