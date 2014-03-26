@@ -92,7 +92,7 @@ html.lt-ie9 .circle-dashed {
   .fa 
   {
   color: $mid_grey;
-  padding-right: 5px;
+  @include rem-fallback(padding-right, 0.3125);
   }
 }
 
@@ -101,15 +101,16 @@ html.lt-ie9 .circle-dashed {
   @include rem-fallback(padding, 0.75);
   border-top: 1px solid #e5e5e5;
   .panel-toggle 
-  {
-    padding-left: 20px;
-    padding-bottom: 10px;
+  { 
+    @include rem-fallback(padding, 0, 0, 0.625, 1.25);
+    p:last-child 
+    {
+      margin-bottom:0;
+    }
   }
   .toggler 
-  {
-    padding: 0;
-    padding-top:5px;
-    padding-bottom: 5px;  
+  { 
+    @include rem-fallback(padding, 0.3125, 0, 0.3125, 0);
   }
 }
 
@@ -118,8 +119,8 @@ html.lt-ie9 .circle-dashed {
   display: block;
   color: #005b9c;
   cursor: pointer;
-  padding: 10px;
-  margin-bottom: 0px;
+  @include rem-fallback(padding, 0.625);
+  margin-bottom: 0;
   &.grey 
   {
   background: #fafafa;
