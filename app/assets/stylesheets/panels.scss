@@ -76,6 +76,11 @@
       @include rem-fallback(padding, 0.5);
     }
 
+    blockquote 
+    {
+      @include rem-fallback(margin, 0, 0, 0.5)
+    }
+
     h1,h2,h3,h4,h5
     {
       margin-top: 0;

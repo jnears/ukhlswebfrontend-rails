@@ -39,10 +39,7 @@ html.lt-ie9 .circle-dashed {
   figure.featured 
   {
     position: relative;
-    @include rem-fallback(margin-bottom, 0.7);
-    @include respond-to(tablet) { @include rem-fallback( margin-bottom, 0.8) };
-    @include respond-to(large_desktop) { @include rem-fallback( margin-bottom, 1.4375) };
-    @include respond-to(handheld) { @include rem-fallback( margin-bottom, 1.5) };
+    @include rem-fallback(margin-bottom, 0);
     padding: 0px;
     line-height: 0px;
     width: 100%;
