@@ -21,6 +21,7 @@ form
         }
       }
     }
+  
   label 
   {
   font-weight: normal;
@@ -41,24 +42,71 @@ form
   @include rem-fallback(line-height, 1.5);
   font-family: $chevin_light;
   }
+
+  .help-block 
+  {
+  @include rem-fallback(font-size, 0.875);
+  color: $dark_grey;
+  }
+
+  .field 
+  {
+  @include rem-fallback(min-height, ($baseline * 2) / $base_font_size);
+  @include rem-fallback(margin-bottom, 0);
+  @include rem-fallback(min-height, 4.5);
+    &.inline
+    {
+    @include rem-fallback(margin-bottom, 1.5);
+    @include rem-fallback(min-height, 4.5);
+    }
+    &.large 
+    {
+    @include rem-fallback(min-height, 6);
+    @include rem-fallback(height, 9);
+    }
+  }
+  
+  .two.fields>.field 
+  {
+    width: 50%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .three.fields>.field 
+  {
+    width: 33.333%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .four.fields>.field 
+  {
+    width: 25%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .fields 
+  {
+    @include rem-fallback(min-height, 3);
+    @include rem-fallback(margin-bottom, 1.5);
+    clear: both;
+    .field 
+    {
+      clear: none;
+      float: left;
+      min-height:0;
+      &:first-of-type {
+      padding-left:0;
+      }
+      &:last-of-type {
+      padding-right:0;
+      }
+    }
+  }
 }
 
-div.field 
-{
-@include rem-fallback(min-height, ($baseline * 2) / $base_font_size);
-@include rem-fallback(margin-bottom, 0);
-@include rem-fallback(min-height, 4.5);
-  &.inline
-  {
-  @include rem-fallback(margin-bottom, 1.5);
-  @include rem-fallback(min-height, 4.5);
-  }
-  &.large 
-  {
-  @include rem-fallback(min-height, 6);
-  @include rem-fallback(height, 9);
-  }
-}
 
 input[type="text"],
 input[type="password"],
@@ -204,31 +252,26 @@ form.documentation-search
   }
 }
 
-span.error-message
+span.help-inline, span.error-message 
 {
   display: block;
-  color: $pink;
-  @include font14;
-  font-weight: bold;
-  margin-top: -0.5em;
+  @include rem-fallback(font-size, 0.875);
+  margin-top: -9px;
 }
 
-form div.field
+span.help-inline
 {
-  margin-bottom: 1em;
+  font-style: italic;
+  color: $grey;
+}
+
+span.error-message
+{
+  font-weight: bold;
+  color: $pink;
 }
 
 .required label:after
 {
   content: " *"
 }
-
-span.help-inline
-{
-  display: block;
-  @include rem-fallback(font-size, 0.875);
-  margin-top: -9px;
-  font-style: italic;
-  color: $grey;
-}
-

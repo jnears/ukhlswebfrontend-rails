@@ -86,7 +86,188 @@ consequat. <a href="#">Duis aute irure dolor</a> in reprehenderit.</p>
 
 <!-- <p class="debug">lead in - All responses to the consultation will be discussed by the Understanding Society Scientific Advisory Committee at their April 2013 meeting and recommendations for any changes agreed.</p> -->
 
+<h2>Forms</h2>
 
+</form>
+
+      <form>
+       <fieldset>
+          <legend>Legend Name</legend>
+             <p>Sed do eiusmod tempor incididunt ut <a href="#"><em>labore et dolore</em></a> magna aliqua. Ut enim ad minim veniam</p>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="at least 3 characters" />
+          </div>
+
+          <div class="field">
+            <label for="name">Search</label>
+            <input type="search" name="name" placeholder="Search" />
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <input type="text" name="age"/>
+          </div>
+
+          <div class="field">
+            <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+            <input type="text" name="shoe" required />
+          </div>
+
+          <div class="field large">
+            <label for="comment">Comments</label>
+            <textarea></textarea>
+          </div>
+
+
+
+          <div class="field">
+            <label for="nights">Nights</label>
+            <input type="number" name="nights" value="1" min="1" max="30" required>
+          </div>
+
+          <div class="field">
+            <label for="country">Country</label>
+            <select name="country">
+              <option value="" selected="selected">Select Country</option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antarctica">Antarctica</option>
+            </select>
+          </div>
+
+          <fieldset class="options">
+          <legend>Checkbox <abbr title="Required">*</abbr></legend>
+              <p>Default checkbox</p>
+              <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
+              <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
+              <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
+              <p>Inline checkbox</p>
+              <label for="inlinecheckbox1" class="checkbox inline"><input id="inlinecheckbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
+              <label for="inlinecheckbox2" class="checkbox inline"><input id="inlinecheckbox2" name="checkbox" type="checkbox"> Choice B</label>
+              <label for="inlinecheckbox3" class="checkbox inline"><input id="inlinecheckbox3" name="checkbox" type="checkbox"> Choice C</label>
+
+          </fieldset>
+
+          <fieldset class="options">
+            <legend>Radios <abbr title="Required">*</abbr></legend>
+              <p>Default radios</p>
+              <label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked"> Choice A</label>
+              <label for="radio2"><input id="radio2" name="radio" type="radio"> Choice B</label>
+              <label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label>
+              <p>Inline radios</p>
+              <label for="inlineradio1" class="radio inline"><input id="inlineradio1" name="radio" type="radio" checked="checked"> Choice A</label>
+              <label for="inlineradio2" class="radio inline"><input id="inlineradio2" name="radio" type="radio"> Choice B</label>
+              <label for="inlineradio3" class="radio inline"><input id="inlineradio3" name="radio" type="radio"> Choice C</label>
+          </fieldset>
+
+          <div class="field control">
+            <input type="submit" value="Save" class="btn btn-blue" /><a href="#">cancel</a>
+          </div>
+       </fieldset>
+
+
+
+       <fieldset>
+          <legend>Inline fields</legend>
+
+          <div class="control-group">
+            <label class="control-label" for="mover_date_of_move">Date of move</label>
+            <div class="three fields">
+              <div class="field">
+                <select id="mover_date_of_move_3i" name="mover[date_of_move(3i)]">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <select id="mover_date_of_move_2i" name="mover[date_of_move(2i)]">
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option selected="selected" value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                </select>
+              </div>
+          
+              <div class="field">
+                <select id="mover_date_of_move_1i" name="mover[date_of_move(1i)]">
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                </select>
+              </div>  
+              <span class="help-block">Don’t worry if you don’t know the exact date - you can always update this later.</span>             
+            </div>
+
+          </div>
+
+
+
+          <div class="control-group">
+            <div class="two fields">
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+              <span class="help-block">Don’t worry if you don’t know the exact date - you can always update this later.</span>      
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="four fields">
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+              <div class="field">
+                <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
+                <input type="text" name="shoe" />
+              </div>
+              <span class="help-block">Don’t worry if you don’t know the exact date - you can always update this later.</span>      
+            </div>
+          </div>
+
+          <fieldset>
+<legend>Your details</legend>
+<div class="field">
+<span class="help-block">Providing your personal details will enable us to keep you informed about the progress of your application. "Proposer" is the person responsible for your entry and may not necessarily be the author/s.</span>
+</div>
+<div class="control-group error required"><label class="control-label" for="innovation_comp8_proposer_first_name">Proposer first name</label><div class="controls"><span class="help-inline error-message">Proposer first name can't be blank</span><input id="innovation_comp8_proposer_first_name" name="innovation_comp8[proposer_first_name]" type="text" value=""></div></div>
+<div class="control-group error required"><label class="control-label" for="innovation_comp8_proposer_last_name">Proposer last name</label><div class="controls"><span class="help-inline error-message">Proposer last name can't be blank</span><input id="innovation_comp8_proposer_last_name" name="innovation_comp8[proposer_last_name]" type="text" value=""></div></div>
+<div class="control-group"><label class="control-label" for="innovation_comp8_proposer_affiliation">Proposer affiliation</label><div class="controls"><input id="innovation_comp8_proposer_affiliation" name="innovation_comp8[proposer_affiliation]" type="text" value=""></div></div>
+<div class="control-group"><label class="control-label" for="innovation_comp8_proposer_email">Proposer email</label><div class="controls"><span class="help-inline error-message">Proposer email can't be blank, Proposer email is not valid</span><input id="innovation_comp8_proposer_email" name="innovation_comp8[proposer_email]" type="text" value=""></div></div>
+<div class="control-group"><label class="control-label" for="innovation_comp8_proposer_email_confirmation">Proposer email confirmation</label><div class="controls"><input id="innovation_comp8_proposer_email_confirmation" name="innovation_comp8[proposer_email_confirmation]" type="text" value=""></div></div>
+</fieldset>
+
+
+        </fieldset>
+
+
+
+      </form>
+
+<p>Some test text here</p><p>Some test text here</p><p>Some test text here</p>
 <hr>
 
 <h2>Emphasis</h2>
@@ -226,75 +407,7 @@ cillum dolore eu fugiat nulla pariatur.”</p>
 </div>
 
 
-<hr>
 
-<h2> Working Papers</h2>
-
-<h2 class="section"> 2013</h2>
-<div class="year">
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2013-08</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2013-08"> 
-Britishness and Identity Assimilation among the UK’s Minority and Majority Ethnic&nbsp;Groups
-</a></h4>
-<ol class="people"><li> Alita Nandi</li><li> Lucinda Platt</li></ol><p>Published: 18 December 2013</p>
-</article>
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2012-01</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2012-01"> 
-UKHLS Innovation Panel household wealth questions: preliminary&nbsp;analysis
-</a></h4>
-<ol class="people"><li> S.C. Noah Uhrig</li><li> Mark L. Bryan</li><li> Sarah Budd</li></ol><p>Published: 25 January 2012</p>
-</article>
-
-
-</div>
-<h2 class="section"> 2011</h2>
-<div class="year">
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2011-06</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2011-06"> 
-The effect of a mixed mode wave on subsequent attrition in a panel survey: evidence from the Understanding Society Innovation&nbsp;Panel
-</a></h4>
-<ol class="people"><li> Peter Lynn</li></ol><p>Published: 05 December 2011</p>
-</article>
-
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2011-01</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2011-01"> 
-Geographical identifiers in Understanding Society Version&nbsp;1
-</a></h4>
-<ol class="people"><li> Birgitta Rabe</li></ol><p>Published: 09 March 2011</p>
-</article>
-
-
-</div>
-<h2 class="section"> 2010</h2>
-<div class="year">
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2010-05</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2010-05"> 
-Weighting strategy for Understanding&nbsp;Society
-</a></h4>
-<ol class="people"><li> Peter Lynn</li><li> Olena Kaminska</li></ol><p>Published: 18 November 2010</p>
-</article>
-
-
-<article class="publication">
-<p class="series">Understanding Society Working Paper Series: <strong>2010-02</strong></p>
-<h4><a href="/research/publications/working-paper/understanding-society/2010-02"> 
-Continuity and innovation in the design of Understanding Society: the UK Household Longitudinal&nbsp;Study
-</a></h4>
-<ol class="people"><li> Heather Laurie</li></ol><p>Published: 23 July 2010</p>
-</article>
-
-
-</div>
 
 <hr>
 
@@ -401,94 +514,76 @@ Continuity and innovation in the design of Understanding Society: the UK Househo
 
 
 <hr>
-<h2>Forms</h2>
 
-</form>
+<hr>
 
-      <form>
-       <fieldset>
-          <legend>Legend Name</legend>
-             <p>Sed do eiusmod tempor incididunt ut <a href="#"><em>labore et dolore</em></a> magna aliqua. Ut enim ad minim veniam</p>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" placeholder="at least 3 characters" />
-          </div>
+<h2> Working Papers</h2>
 
-          <div class="field">
-            <label for="name">Search</label>
-            <input type="search" name="name" placeholder="Search" />
-          </div>
+<h2 class="section"> 2013</h2>
+<div class="year">
 
-          <div class="field">
-            <label for="age">Age</label>
-            <input type="text" name="age"/>
-          </div>
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2013-08</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2013-08"> 
+Britishness and Identity Assimilation among the UK’s Minority and Majority Ethnic&nbsp;Groups
+</a></h4>
+<ol class="people"><li> Alita Nandi</li><li> Lucinda Platt</li></ol><p>Published: 18 December 2013</p>
+</article>
 
-          <div class="field">
-            <label for="shoe">Shoe size <abbr title="Required">*</abbr></label>
-            <input type="text" name="shoe" required />
-          </div>
-
-          <div class="field large">
-            <label for="comment">Comments</label>
-            <textarea></textarea>
-          </div>
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2012-01</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2012-01"> 
+UKHLS Innovation Panel household wealth questions: preliminary&nbsp;analysis
+</a></h4>
+<ol class="people"><li> S.C. Noah Uhrig</li><li> Mark L. Bryan</li><li> Sarah Budd</li></ol><p>Published: 25 January 2012</p>
+</article>
 
 
+</div>
+<h2 class="section"> 2011</h2>
+<div class="year">
 
-    <div class="field">
-            <label for="nights">Nights</label>
-            <input type="number" name="nights" value="1" min="1" max="30" required>
-          </div>
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2011-06</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2011-06"> 
+The effect of a mixed mode wave on subsequent attrition in a panel survey: evidence from the Understanding Society Innovation&nbsp;Panel
+</a></h4>
+<ol class="people"><li> Peter Lynn</li></ol><p>Published: 05 December 2011</p>
+</article>
 
-          <div class="field">
-            <label for="country">Country</label>
-            <select name="country">
-              <option value="" selected="selected">Select Country</option>
-              <option value="United States">United States</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="Afghanistan">Afghanistan</option>
-              <option value="Albania">Albania</option>
-              <option value="Algeria">Algeria</option>
-              <option value="American Samoa">American Samoa</option>
-              <option value="Andorra">Andorra</option>
-              <option value="Angola">Angola</option>
-              <option value="Anguilla">Anguilla</option>
-              <option value="Antarctica">Antarctica</option>
-            </select>
-          </div>
 
-          <fieldset class="options">
-          <legend>Checkbox <abbr title="Required">*</abbr></legend>
-              <p>Default checkbox</p>
-              <label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
-              <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
-              <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
-              <p>Inline checkbox</p>
-              <label for="inlinecheckbox1" class="checkbox inline"><input id="inlinecheckbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
-              <label for="inlinecheckbox2" class="checkbox inline"><input id="inlinecheckbox2" name="checkbox" type="checkbox"> Choice B</label>
-              <label for="inlinecheckbox3" class="checkbox inline"><input id="inlinecheckbox3" name="checkbox" type="checkbox"> Choice C</label>
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2011-01</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2011-01"> 
+Geographical identifiers in Understanding Society Version&nbsp;1
+</a></h4>
+<ol class="people"><li> Birgitta Rabe</li></ol><p>Published: 09 March 2011</p>
+</article>
 
-          </fieldset>
 
-          <fieldset class="options">
-            <legend>Radios <abbr title="Required">*</abbr></legend>
-              <p>Default radios</p>
-              <label for="radio1"><input id="radio1" name="radio" type="radio" checked="checked"> Choice A</label>
-              <label for="radio2"><input id="radio2" name="radio" type="radio"> Choice B</label>
-              <label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label>
-              <p>Inline radios</p>
-              <label for="inlineradio1" class="radio inline"><input id="inlineradio1" name="radio" type="radio" checked="checked"> Choice A</label>
-              <label for="inlineradio2" class="radio inline"><input id="inlineradio2" name="radio" type="radio"> Choice B</label>
-              <label for="inlineradio3" class="radio inline"><input id="inlineradio3" name="radio" type="radio"> Choice C</label>
-          </fieldset>
+</div>
+<h2 class="section"> 2010</h2>
+<div class="year">
 
-          <div class="field control">
-            <input type="submit" value="Save" class="btn btn-blue" /><a href="#">cancel</a>
-          </div>
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2010-05</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2010-05"> 
+Weighting strategy for Understanding&nbsp;Society
+</a></h4>
+<ol class="people"><li> Peter Lynn</li><li> Olena Kaminska</li></ol><p>Published: 18 November 2010</p>
+</article>
 
-       </fieldset>
-      </form>
+
+<article class="publication">
+<p class="series">Understanding Society Working Paper Series: <strong>2010-02</strong></p>
+<h4><a href="/research/publications/working-paper/understanding-society/2010-02"> 
+Continuity and innovation in the design of Understanding Society: the UK Household Longitudinal&nbsp;Study
+</a></h4>
+<ol class="people"><li> Heather Laurie</li></ol><p>Published: 23 July 2010</p>
+</article>
+
+
+</div>
 
 <hr>
 
