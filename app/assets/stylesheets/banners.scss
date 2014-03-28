@@ -71,7 +71,7 @@ figure.home-banner
 {
   position: relative;
   width: 945px;
-  @include rem-fallback(height, 15);
+  @include rem-fallback(height, 14.875);
   display: block;
   background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
   @include respond-to(large_desktop) {
@@ -79,7 +79,7 @@ figure.home-banner
    background-image: url(asset_path('banner-large.jpg')); }
   @include respond-to(tablet) {
     width: 745px;
-    @include rem-fallback(height, 15);
+    @include rem-fallback(height, 14.875);
     background-image: url(asset_path('banner-small.jpg'));
     @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
   }
