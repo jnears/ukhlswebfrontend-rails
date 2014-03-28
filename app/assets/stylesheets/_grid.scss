@@ -83,10 +83,10 @@ body.nobreadcrumb .container[role=main]
 
 .row 
 {
-  margin-top: #{$gutter}px;
+  margin-top: #{$base_font_size};
   margin-left: #{$gutter * -1}px;
-  @include respond-to(tablet) { margin-left: $tablet_gutter * -1px; margin-top: #{$tablet_gutter}px; }
-  @include respond-to(large_desktop) { margin-left: $large_desktop_gutter * -1px; margin-top: #{$large_desktop_gutter}px; }
+  @include respond-to(tablet) { margin-left: $tablet_gutter * -1px; }
+  @include respond-to(large_desktop) { margin-left: $large_desktop_gutter * -1px;  }
   @include respond-to(handheld) { margin-left: 0px; margin-top: 0px; }
   *zoom: 1;
   &:first-of-type, &.next

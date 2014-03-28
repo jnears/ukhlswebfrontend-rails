@@ -185,7 +185,11 @@
 
 #about-nav, #research-nav, #participants-nav, #data-nav 
 {
-    
+  
+  .panel {
+   @include respond-to(handheld) { @include rem-fallback(margin-bottom, 0.75); }
+  }
+  
   i.fa-2x 
   {
     @include rem-fallback(font-size, 1.75);
