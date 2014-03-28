@@ -42,8 +42,6 @@ body
   @include respond-to(handheld) {  font-family: $chevin_light; }
 }
 
-
-//library
 @import "accessibility.scss";
 @import "banners.scss";
 @import "breadcrumb.scss";
@@ -56,11 +54,11 @@ body
 @import "images.scss";
 @import "index_documentation.scss";
 @import "index_event.scss";
+@import "index_featured_three.scss";
 @import "index_posts.scss";
 @import "index_publications.scss";
 @import "index_search.scss";
 @import "layout.scss";
-@import "legacy.scss";
 @import "lists.scss";
 @import "loader.scss";
 @import "main.scss";
@@ -74,6 +72,7 @@ body
 @import "patterns";
 
 //legacy
+@import "legacy.scss";
 @import "legacy_accordian.scss";
 @import "legacy_accordian.scss";
 @import "legacy_audio.scss";

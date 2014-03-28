@@ -1,0 +1,42 @@
+.row.three .span1
+{
+  figure.featured 
+  {
+    position: relative;
+    @include rem-fallback(margin-bottom, 0);
+    padding: 0px;
+    line-height: 0px;
+    width: 100%;
+    max-width: 100%;
+    img 
+    {
+    width:100%; 
+    }
+    figcaption 
+    {
+      position: absolute;
+      color: $black;
+      @include rem-fallback(font-size, 1);
+      @include rem-fallback(line-height, 1.5);
+      @include respond-to(tablet) { @include rem-fallback(line-height, 1.2) };
+      @include rem-fallback(padding, 0.5, 0); 
+      @include translucent_white;
+      margin: 0;
+      bottom: 60px;
+      @include rem-fallback(bottom, 0.5);
+      left: 0px;
+      right: 0px;
+      @include rem-fallback(padding, 0.35);
+      @include respond-to(tablet) { @include rem-fallback(min-height, 3) };
+      .fa 
+      {
+        color: $red;
+      }
+      .content
+      {
+        @include rem-fallback(padding-right, 1.25);
+        font-style: normal;
+      }      
+    }
+  }
+}
