@@ -130,14 +130,11 @@
     }
   }
 
-  &.blue, 
-  &.green, 
-  &.yellow, 
-  &.red 
+  &.green, &.blue, &.yellow, &.red 
   {
     color: $white;
 
-    a:link, a:visited 
+    a:link, a:visited
     {
       text-decoration: none;
       color: $white;
@@ -145,8 +142,8 @@
 
     a:hover
     {
-      text-decoration: underline;
       color: $white;
+      text-decoration: none;
     }
   }
 

@@ -434,6 +434,10 @@ a:hover
   text-decoration: underline;
 }
 
+a.no-underline:hover {
+  text-decoration: none;
+}
+
 a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif]
 {
   text-decoration: none;
