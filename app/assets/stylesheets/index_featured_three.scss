@@ -8,6 +8,7 @@
     line-height: 0px;
     width: 100%;
     max-width: 100%;
+    @include respond-to(handheld) { @include rem-fallback(margin-bottom, 1.5) };
     img 
     {
     width:100%; 
