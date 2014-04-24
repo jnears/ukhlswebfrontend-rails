@@ -136,6 +136,12 @@ width: 100%;
   {
   @include rem-fallback(min-height, ($baseline * 5) / $base_font_size);
   }
+  &.half 
+  {
+    width: 50%;
+    margin-right: 1%;
+    @include respond-to(handheld) { width: 100%; margin-right: 0;}
+  }
   // Focus state
   &:focus {
 
