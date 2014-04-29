@@ -49,30 +49,16 @@ html.lt-ie9 .circle-dashed {
   color: $mid_grey;
   @include rem-fallback(padding-right, 0.3125);
   }
-}
-
-.faq-inner 
-{
-  @include rem-fallback(padding, 0.75);
-  border-top: 1px solid #e5e5e5;
-  .panel-toggle 
-  { 
-    @include rem-fallback(padding, 0, 0, 0.625, 1.25);
-    p:last-child 
-    {
-      margin-bottom:0;
-    }
-  }
-  .toggler 
-  { 
-    @include rem-fallback(padding, 0.3125, 0, 0.3125, 0);
+  p:last-child 
+  {
+    margin-bottom:0;
   }
 }
 
 .toggler
 {
   display: block;
-  color: #005b9c;
+  color: $link;
   cursor: pointer;
   @include rem-fallback(padding, 0.625);
   margin-bottom: 0;
