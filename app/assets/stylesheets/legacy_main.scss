@@ -69,3 +69,8 @@ nav.features
 {
   @include rem-fallback(margin-bottom, 1.5);
 }
+
+.no-space
+{
+  @include rem-fallback(margin-bottom, 0);
+}

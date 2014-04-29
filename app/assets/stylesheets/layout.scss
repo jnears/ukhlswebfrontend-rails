@@ -25,16 +25,45 @@
   }
 }
 
+.pad
+{
+  @include rem-fallback(padding, 0.75, 0.75);
+}
+
+.no-pad
+{
+  @include rem-fallback(padding, 0);
+}
+
+.pad-small
+{
+  @include rem-fallback(padding, 0.5);
+}
+
+.space
+{
+  @include rem-fallback(margin-bottom, 1.5);
+}
+
+.no-space
+{
+  @include rem-fallback(margin-bottom, 0);
+}
+
+.left 
+{
+  float:left;
+}
+
 .center 
 {
   text-align: center;
 }
 
-.left, .right 
+.right 
 {
   float:right;
 }
-
 
 .affix
 {
@@ -47,6 +76,3 @@
   position: absolute;
   bottom: 50px;
 }
-
-
-
