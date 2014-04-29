@@ -48,29 +48,3 @@ nav.features
     background: $white;
   }
 }
-
-
-.pad
-{
-  @include rem-fallback(padding, 0.75, 0.75);
-}
-
-.no-pad
-{
-  @include rem-fallback(padding, 0);
-}
-
-.pad-small
-{
-  @include rem-fallback(padding, 0.5);
-}
-
-.space
-{
-  @include rem-fallback(margin-bottom, 1.5);
-}
-
-.no-space
-{
-  @include rem-fallback(margin-bottom, 0);
-}
