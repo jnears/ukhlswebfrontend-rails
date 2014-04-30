@@ -40,7 +40,6 @@ footer[role=contentinfo]
     float: left;
     @include rem-fallback(margin-right, 0.5);
     @include rem-fallback(font-size, 0.75);
-    text-align: center;
     line-height: normal;
     @include rem-fallback(margin, 1, 0.5, 1, 0);
     @include respond-to(handheld) { float: none; text-align: left }
