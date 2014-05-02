@@ -8,28 +8,28 @@
     display: block;
     background: transparent url(asset_path('banner-innovation-desktop.jpg')) no-repeat 0 0;
     @include respond-to(large_desktop) { width: 1185px; background-image: url(asset_path('banner-innovation-desktop-large.jpg')); }
-    @include respond-to(tablet) { width: 745px; margin-bottom:7.5px; background-image: url(asset_path('banner-innovation-tablet.jpg')); 
+    @include respond-to(tablet) { width: 745px; margin-bottom:7.5px; background-image: url(asset_path('banner-innovation-tablet.jpg'));
     }
 
-    @include respond-to(handheld) 
+    @include respond-to(handheld)
     {
       width: auto;
       min-height: 150px;
       height: auto;
       background-size: cover;
       background-image: url(asset_path('banner-innovation-mobile.jpg'));
-      @include image-2x(asset_path('banner-innovation-mobile-retina.jpg'), 350px, 150px);  
+      @include image-2x(asset_path('banner-innovation-mobile-retina.jpg'), 350px, 150px);
     }
 
     @include rounded;
 
     figcaption
-    { 
+    {
       position: absolute;
       color: $black;
       font-family: $chevin_light;
       font-size: 48px;
-      line-height: normal; 
+      line-height: normal;
       margin: 0;
       top: 10px;
       left: 15px;
@@ -46,7 +46,7 @@
         color: $black;
         @include respond-to(tablet) { @include font36;  }
         @include respond-to(handheld) { @include font22; }
-        & .small 
+        & .small
         {
           @include font24;
           margin-top: 20px;
@@ -63,7 +63,7 @@
         text-decoration: none;
       }
     }
-  } 
+  }
 }
 
 
@@ -122,6 +122,69 @@ figure.home-banner
   }
 }
 
+
+
+
+
+figure.policy-banner
+{
+  position: relative;
+  width: 945px;
+  @include rem-fallback(height, 14.875);
+  display: block;
+  background: transparent url(asset_path('policy-banner-medium.jpg')) no-repeat 0 0;
+  @include respond-to(large_desktop) {
+   width: 1185px;
+   background-image: url(asset_path('policy-banner-large.jpg')); }
+  @include respond-to(tablet) {
+    width: 745px;
+    @include rem-fallback(height, 14.875);
+    background-image: url(asset_path('policy-banner-small.jpg'));
+    @include image-2x(asset_path('policy-banner-small-retina.jpg'), 745px, 250px);
+  }
+  @include respond-to(handheld) {
+    @include rem-fallback(height, 9);
+    @include rem-fallback(margin-bottom, 9.71875);
+    width: auto;
+    background: transparent url(asset_path('policy-banner-large.jpg', image)) no-repeat top center;
+    background-size: cover;
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    margin: 0;
+    @include rem-fallback(left, 1);
+    @include rem-fallback(top, 1);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(width, 34);
+    @include rem-fallback(padding, 0, 1, 1, 1);
+    @include rounded;
+    @include translucent_white;
+    @include respond-to(large_desktop) { @include rem-fallback(width, 37); @include rem-fallback(font-size, 1.375);  }
+    @include respond-to(tablet) { @include rem-fallback(width, 22); }
+    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; }
+
+
+    span
+    {
+      // font-family: $chevin_medium;
+      @include rem-fallback(font-size, 2.5);
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+}
+
+
+
+
 .participants-banner-wrapper{
 
 background: $light_grey;
@@ -157,7 +220,7 @@ figure.participants-banner
     color: $black;
     font-family: $chevin_light;
     @include font20;
-    line-height: normal; 
+    line-height: normal;
     margin: 0;
     top: 250px;
     width: 100%;
@@ -197,13 +260,13 @@ figure.participants-banner
   background: none;
   }
 
-  img 
+  img
   {
     @include rounded_top;
     width:100%;
   }
 
-  .call-to-action  
+  .call-to-action
   {
     color: $blue;
     font-family: $chevin_medium;
@@ -228,20 +291,20 @@ figure.participants-banner
       margin-bottom: 0.5em;
       display: block;
     }
-  } 
+  }
 }
 
-figure 
+figure
 {
-  
-  &.featured, &.regular 
+
+  &.featured, &.regular
   {
     font-style: italic;
     max-width: 300px;
   }
 
   &.featured
-  { 
+  {
     float: left;
     @include rem-fallback(padding, 0, 2, 0, 0);
     @include rem-fallback(margin-bottom, 1.5);
@@ -268,20 +331,20 @@ figure
     @include rounded;
   }
 
-  &.banner 
+  &.banner
   {
     position: relative;
     @include rem-fallback(margin-bottom, 0.875);
     height: 250px;
     @include respond-to(large_desktop) { @include rem-fallback(height, 18.125); @include rem-fallback(margin-bottom, 1.375); }
     @include respond-to(tablet) { @include rem-fallback(height, 14.25); @include rem-fallback(margin-bottom, 0.75); }
-    @include respond-to(handheld) { height: 10.5rem; @include rem-fallback(margin-top, 0.75); @include rem-fallback(margin-bottom, 0.75);} 
+    @include respond-to(handheld) { height: 10.5rem; @include rem-fallback(margin-top, 0.75); @include rem-fallback(margin-bottom, 0.75);}
 
-    img 
+    img
     {
       height: 250px;
       @include respond-to(large_desktop) { @include rem-fallback(height, 18.125); width: 100%; }
-      @include respond-to(tablet) { @include rem-fallback(height, 14.25); } 
+      @include respond-to(tablet) { @include rem-fallback(height, 14.25); }
       @include respond-to(handheld) { @include rem-fallback(height, 10.5); width: 100%; }
     }
   }
@@ -295,21 +358,21 @@ figure
     @include respond-to(tablet) { height: 216px; @include rem-fallback(margin-bottom, 1.5); }
     @include respond-to(handheld) { height:auto !important; @include rem-fallback(margin-bottom, 1.125); } //reset height to default
 
-    img 
+    img
     {
-      height:auto !important; 
+      height:auto !important;
     }
   }
-  
+
   &.banner, &.banner.full-width
-  { 
+  {
     figcaption
     {
       position: absolute;
       color: $black;
       font-family: $chevin_light;
       @include rem-fallback(font-size, 1.375);
-      @include rem-fallback(padding, 0.5, 0); 
+      @include rem-fallback(padding, 0.5, 0);
       @include translucent_white;
       margin: 0;
       left: 0px;
@@ -317,8 +380,8 @@ figure
       @include rem-fallback(padding, 0.5, 1, 0.5, 1);
       @include rem-fallback(bottom, 1.5);
       @include respond-to(handheld) { @include rem-fallback(font-size, 1.125); @include rem-fallback(bottom, 0.5); @include rem-fallback(padding, 0.25, 1, 0.25, 1);}
-      
-      &.square 
+
+      &.square
       {
         @include rem-fallback(top, 1);
         @include rem-fallback(left, 1);
@@ -326,22 +389,22 @@ figure
         @include rem-fallback(padding, 0.75);
         @include rounded;
 
-        &.small 
+        &.small
         {
           @include rem-fallback(width, 10);
         }
 
-        &.large 
+        &.large
         {
           @include rem-fallback(width, 30);
         }
       }
-      
-      &.center 
+
+      &.center
         {
           text-align:center;
         }
-      
+
       span
       {
         font-family: $chevin_light;
@@ -357,7 +420,7 @@ figure
         display: block;
       }
 
-      &.green 
+      &.green
       {
         @include green_gradient;
         color: $white;
