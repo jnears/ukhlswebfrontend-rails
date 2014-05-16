@@ -1,0 +1,9 @@
+.hidden-handheld
+{
+  @include respond-to(handheld) { display: none !important; }
+}
+
+.hidden-tablet
+{
+  @include respond-to(tablet) { display: none !important; }
+}

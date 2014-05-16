@@ -29,7 +29,7 @@ html,
 button,
 input,
 select,
-textarea 
+textarea
 {
   color: $black;
 }
@@ -69,6 +69,7 @@ body
 @import "print.scss";
 @import "tables.scss";
 @import "tabs.scss";
+@import "responsive_utilities.scss";
 @import "patterns";
 
 //legacy
