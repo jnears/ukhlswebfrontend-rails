@@ -12,7 +12,7 @@ article.event
     position: absolute;
     left: 0;
     @include rem-fallback(top, 1);
-    background: $dark_blue;
+    background: $blue;
     color: $white;
     @include rounded;
     @include rem-fallback(font-size, 1.125);
