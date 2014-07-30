@@ -1,0 +1,16 @@
+.event-detail
+{
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 29%;
+  @include rem-fallback(padding, 0.75);
+  overflow: auto;
+  @include rounded;
+  @include grey_gradient;
+  @include rem-fallback(margin-bottom, ($baseline - 2) / $base_font_size);
+  @include respond-to(handheld) { 
+    position: relative;
+    width: 100%;
+    }
+}
