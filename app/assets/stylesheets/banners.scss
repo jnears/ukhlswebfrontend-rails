@@ -73,21 +73,27 @@ figure.home-banner
   width: 945px;
   @include rem-fallback(height, 14.875);
   display: block;
-  background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
-  @include respond-to(large_desktop) {
+  background: transparent url(asset_path('banner-insights-medium.jpg')) no-repeat 0 0;
+  
+  @include respond-to(large_desktop) 
+  {
    width: 1185px;
-   background-image: url(asset_path('banner-large.jpg')); }
-  @include respond-to(tablet) {
+   background-image: url(asset_path('banner-insights-large.jpg')); 
+  @include rem-fallback(height, 14.875);
+  }
+  
+  @include respond-to(tablet) 
+  {
     width: 745px;
     @include rem-fallback(height, 14.875);
-    background-image: url(asset_path('banner-small.jpg'));
-    @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
+    background-image: url(asset_path('banner-insights-small.jpg'));
   }
+  
   @include respond-to(handheld) {
-    @include rem-fallback(height, 9);
     @include rem-fallback(margin-bottom, 9.71875);
+    @include rem-fallback(margin-bottom, 0.75);
     width: auto;
-    background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
+    background: transparent url(asset_path('banner-insights-mobile.jpg', image)) no-repeat top center;
     background-size: cover;
   }
 
@@ -103,22 +109,56 @@ figure.home-banner
     @include rem-fallback(left, 1);
     @include rem-fallback(top, 1);
     @include rem-fallback(font-size, 1.25);
-    @include rem-fallback(width, 34);
+    @include rem-fallback(width, 36);
     @include rem-fallback(padding, 1);
     @include rounded;
     @include translucent_white;
-    @include respond-to(large_desktop) { @include rem-fallback(width, 37); @include rem-fallback(font-size, 1.375);  }
-    @include respond-to(tablet) { @include rem-fallback(width, 22); }
-    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include rem-fallback(font-size, 1.125); line-height: normal; width: auto; }
+
+    h2 {
+      color: $red;
+      @include rem-fallback(font-size, 3);
+      @include rem-fallback(margin-bottom, 1);
+      @include rem-fallback(line-height, 3);
+    }
+    
+    @include respond-to(large_desktop) 
+    { 
+      @include rem-fallback(width, 46); 
+      @include rem-fallback(font-size, 1.375);  
+      h2 {
+        @include rem-fallback(font-size, 3);
+      }
+    }
+    
+    @include respond-to(tablet) 
+    { 
+      @include rem-fallback(width, 28.5); 
+      h2 {
+        @include rem-fallback(font-size, 3);
+      }
+    }
+
+    @include respond-to(handheld) 
+    { 
+      text-align: center; 
+      @include rem-fallback(font-size, 1.125);
+      @include rem-fallback(right, 1);
+      line-height: normal; 
+      width: auto;
+       h2 {
+        @include rem-fallback(font-size, 2);
+      }
+    }
+
+    
 
 
     a
     {
-      font-family: $chevin_medium;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
       display: block;
+      color: $red;
     }
+
   }
 }
 
