@@ -27,3 +27,38 @@
     @include rem-fallback(margin-right, 0.25);
   }
 }
+
+
+.event-widget {
+  article {
+    position: relative;
+    border-bottom: 1px solid $light_grey;
+    @include rem-fallback(padding, (($base_font_size - 1) / $base_font_size), 0, 1, (40 / $base_font_size));
+    min-height: 80px;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    @include respond-to(tablet) {
+      @include rem-fallback(padding-left, (32 / $base_font_size));
+    }
+    time {
+      position: absolute;
+      @include rem-fallback(top, 1);
+      left: 0;
+      @include rem-fallback(padding, 0);
+      text-align:center;
+      border-radius:5px;
+      p.day {
+        @include rem-fallback(font-size, (20 / $base_font_size));
+      }      
+      p.month {
+        @include rem-fallback(font-size, (14 / $base_font_size));
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+

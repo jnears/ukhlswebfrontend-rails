@@ -1,0 +1,33 @@
+.feed
+{
+  article {
+    position: relative;
+    border-bottom: 1px solid $light_grey;
+    @include rem-fallback(padding, (($baseline - 1) / $base_font_size), 0, 1.5, 7);
+    @include respond-to(tablet) {
+      @include rem-fallback(padding, (($baseline - 1) / $base_font_size), 0, 1.5, 0);
+    }
+    & p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  time {
+    @include rem-fallback(top, 1.5);
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    @include respond-to(tablet) {
+      top: auto;
+    }
+    
+  }
+
+  .left-margin {
+    position: absolute;
+    left: 0;
+    @include respond-to(tablet) {
+      position: relative;
+      top: 0;
+    }
+  }
+}
