@@ -8,10 +8,15 @@
   @include rounded;
   @include grey_gradient;
   width:100%;
-  @include rem-fallback(margin-bottom, ($baseline - 2) / $base_font_size);
   & p:last-of-type {
     margin-bottom:0px;
   }
+
+  & img
+    {  
+      display: block;
+      @include rounded_top;
+    }
 
   .fa 
   {
@@ -61,8 +66,8 @@
     &.massive 
     {
       @include rem-fallback(min-height, 22);
-      @include respond-to(tablet) { @include rem-fallback(min-height, 25) };
-      @include respond-to(handheld) { @include rem-fallback(min-height, 20.5) };
+      @include respond-to(large_desktop) { @include rem-fallback(min-height, 23) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 0) };
 
     }
 
@@ -84,6 +89,13 @@
     h1,h2,h3,h4,h5
     {
       margin-top: 0;
+    }
+
+    h2 
+    {
+      @include rem-fallback(font-size, (20 / $base_font_size));
+      @include rem-fallback(line-height, 1.75);
+      @include rem-fallback(margin-bottom, 1);
     }
 
     h3 
