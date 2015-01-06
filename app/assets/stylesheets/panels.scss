@@ -142,21 +142,14 @@
     }
   }
 
-  &.green, &.blue, &.yellow, &.red 
+  &.bordered
   {
-    color: $white;
+    border: 1px solid $light_grey;
+  }
 
-    a:link, a:visited
-    {
-      text-decoration: none;
-      color: $white;
-    } 
-
-    a:hover
-    {
-      color: $white;
-      text-decoration: none;
-    }
+  &.grey
+  {
+    @include grey_gradient;
   }
 
   &.blue 
@@ -188,6 +181,24 @@
   {
     @include pink_gradient;
     border-bottom: 2px solid $dark_pink;
+  }
+
+
+  &.green, &.blue, &.yellow, &.red 
+  {
+    color: $white;
+
+    a:link, a:visited
+    {
+      text-decoration: none;
+      color: $white;
+    } 
+
+    a:hover
+    {
+      color: $white;
+      text-decoration: none;
+    }
   }
 }
 

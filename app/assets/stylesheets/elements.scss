@@ -231,6 +231,15 @@ h2
   @include rem-fallback(line-height, 3);
   @include rem-fallback(margin, 0, 0, 1.5);
   @include respond-to(handheld) { @include rem-fallback(font-size, 1.25); @include rem-fallback(line-height, 1.5);}
+  &.large {
+    @include rem-fallback(font-size, (36 / $base_font_size));
+      @include rem-fallback(line-height, 2.25);
+    }
+  span {
+    font-size: 75%;
+    display:block;
+    color: $dark_grey;
+  }
 }
 
 h3 
