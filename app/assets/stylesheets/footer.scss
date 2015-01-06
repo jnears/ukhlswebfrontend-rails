@@ -47,11 +47,22 @@ footer[role=contentinfo]
 
   a.esrc-link
   {
-    display: block;
+    display: inline-block;
     height: 66px;
     width: 80px;
+    margin-right: 20px;
     background: transparent url(asset_path('esrc-logo.gif')) no-repeat 0 0;
     @include image-2x(asset_path('esrc-logo2x.gif'), 80px, 66px);
+    text-indent: -3000em;
+    overflow: hidden;
+  }
+    a.esrc-50-link
+  {
+    display: inline-block;
+    height: 66px;
+    width: 66px;
+    background: transparent url(asset_path('esrc-logo-50.png')) no-repeat 0 0;
+    @include image-2x(asset_path('esrc-logo-50-2x.png'), 66px, 66px);
     text-indent: -3000em;
     overflow: hidden;
   }
