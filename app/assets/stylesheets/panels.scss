@@ -71,6 +71,14 @@
 
     }
 
+    &.massive-photo 
+    {
+      @include rem-fallback(min-height, 32);
+      @include respond-to(large_desktop) { @include rem-fallback(min-height, 32) };
+      @include respond-to(handheld) { @include rem-fallback(min-height, 0) };
+
+    }
+
     & .content 
     {
       @include rem-fallback(padding, 1);
@@ -145,6 +153,7 @@
   &.bordered
   {
     border: 1px solid $light_grey;
+    background: none;
   }
 
   &.grey
