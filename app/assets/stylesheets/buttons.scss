@@ -96,14 +96,14 @@ a.btn
   &:hover, &:active 
   {
     background: $dark_blue;
-    color: $white;
+    color: $white  !important;
   }
 }
 
 .btn-green 
 {
   @include green_gradient;
-  color: $white;
+  color: $white  !important;
   
   &:hover, &:active 
   {
