@@ -69,32 +69,34 @@
 
 figure.home-banner
 {
+  border: 1px solid #dcdcdc;
   position: relative;
-  width: 945px;
-  @include rem-fallback(height, 14.875);
+  width: 943px;
+  @include rem-fallback(height, 16.875);
   display: block;
-  background: transparent url(asset_path('banner-insights-medium.jpg')) no-repeat 0 0;
+  background: transparent url(asset_path('banner-conference-medium.jpg')) no-repeat 0 0;
   
   @include respond-to(large_desktop) 
   {
-   width: 1185px;
-   background-image: url(asset_path('banner-insights-large.jpg')); 
-  @include rem-fallback(height, 14.875);
+   width: 1183px;
+
+   background-image: url(asset_path('banner-conference-large.jpg')); 
+  @include rem-fallback(height, 16.875);
   }
   
   @include respond-to(tablet) 
   {
     width: 745px;
-    @include rem-fallback(height, 14.875);
-    background-image: url(asset_path('banner-insights-small.jpg'));
+    @include rem-fallback(height, 16.875);
+    background-image: url(asset_path('banner-conference-small.jpg'));
   }
   
   @include respond-to(handheld) {
     @include rem-fallback(margin-bottom, 9.71875);
     @include rem-fallback(margin-bottom, 0.75);
     width: auto;
-    background: transparent url(asset_path('banner-insights-mobile.jpg', image)) no-repeat top center;
-    background-size: cover;
+    background: transparent url(asset_path('banner-conference-mobile.jpg', image)) no-repeat bottom right;
+    @include rem-fallback(height, 19.375);
   }
 
   // @include respond-to(handheld) { background-image: none; }
@@ -110,15 +112,22 @@ figure.home-banner
     @include rem-fallback(top, 1);
     @include rem-fallback(font-size, 1.25);
     @include rem-fallback(width, 36);
-    @include rem-fallback(padding, 1);
+    @include rem-fallback(padding, 0.75);
     @include rounded;
-    @include translucent_white;
 
     h2 {
-      color: $red;
-      @include rem-fallback(font-size, 3);
+      @include rem-fallback(font-size, 2.35);
       @include rem-fallback(margin-bottom, 1);
       @include rem-fallback(line-height, 3);
+      span {
+        font-size: 65%;
+        display: block;
+        line-height: 60px;
+        @include respond-to(tablet) {
+          @include rem-fallback(line-height, 2.5);
+          }
+        color: $black;
+      }
     }
     
     @include respond-to(large_desktop) 
@@ -126,7 +135,7 @@ figure.home-banner
       @include rem-fallback(width, 46); 
       @include rem-fallback(font-size, 1.375);  
       h2 {
-        @include rem-fallback(font-size, 3);
+        @include rem-fallback(font-size, 2.5);
       }
     }
     
@@ -134,7 +143,7 @@ figure.home-banner
     { 
       @include rem-fallback(width, 28.5); 
       h2 {
-        @include rem-fallback(font-size, 3);
+        @include rem-fallback(font-size, 2);
       }
     }
 
@@ -146,19 +155,9 @@ figure.home-banner
       line-height: normal; 
       width: auto;
        h2 {
-        @include rem-fallback(font-size, 2);
+        @include rem-fallback(font-size, 1.7);
       }
     }
-
-    
-
-
-    a
-    {
-      display: block;
-      color: $red;
-    }
-
   }
 }
 
