@@ -1,5 +1,7 @@
-.innovation-banner-wrapper
+.innovation-banner-wrapper 
 {
+  background: #d6e7f8;
+  @include rounded;
   figure.innovation-banner
   {
     position: relative;
@@ -16,43 +18,47 @@
       width: auto;
       min-height: 150px;
       height: auto;
-      background-size: cover;
-      background-image: url(asset_path('banner-innovation-mobile.jpg'));
-      @include image-2x(asset_path('banner-innovation-mobile-retina.jpg'), 350px, 150px);
+      background: transparent url(asset_path('banner-innovation-mobile.jpg')) no-repeat top right;
     }
 
     @include rounded;
 
-    figcaption
-    {
-      position: absolute;
-      color: $black;
-      font-family: $chevin_light;
-      font-size: 48px;
-      line-height: normal;
-      margin: 0;
-      top: 10px;
-      left: 15px;
-      width: 100%;
-      @include rounded;
+      figcaption
+  {
+    position: absolute;
+    font-family: $chevin_light;
+    margin: 0;
+    @include rem-fallback(left, 1);
+    @include rem-fallback(top, 1);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(padding, 0.75);
+    @include rounded;
+    @include respond-to(handheld)
+    { padding:0; width: 50%; }
 
-      @include respond-to(tablet) { font-size: 44px; top: 15px;}
-      @include respond-to(handheld) { position: relative; @include font28; width: auto;  }
-
-      span {
-        font-size: 40px;
-        display: block;
-        font-family: $chevin_light;
-        color: $black;
-        @include respond-to(tablet) { @include font36;  }
-        @include respond-to(handheld) { @include font22; }
-        & .small
-        {
-          @include font24;
-          margin-top: 20px;
-          @include respond-to(handheld) { @include font16; margin-top: 10px; }
+    h2 {
+      @include rem-fallback(font-size, 2.75);
+      @include rem-fallback(margin-bottom, 1);
+      @include rem-fallback(line-height, 3);
+      @include respond-to(large_desktop) {
+        @include rem-fallback(font-size, 3.25);
+        @include rem-fallback(line-height, 4);
         }
+      @include respond-to(handheld) {
+        @include rem-fallback(font-size, 1.8);
+        @include rem-fallback(line-height, 2);
+        }
+      span {
+        font-size: 70%;
+        display: block;
+        color: $link;
       }
+    }
+    p {
+      display: block;
+      @include respond-to(handheld) { display: none;}
+      }
+
 
       a, hover
       {
