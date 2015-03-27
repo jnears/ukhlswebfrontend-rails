@@ -268,6 +268,60 @@ nav.topics
   }
 }
 
+
+nav.facets {
+  background: $grey6;
+  @include rem-fallback(margin-top, 0.5);
+  ol {
+    padding-left: 0;
+    margin-top: 0;
+    li {
+      @include rem-fallback(font-size, (16 / $base_font_size));
+      margin: 0;
+      position: relative;
+      a:link, a:visited {
+        display: block;
+        @include rem-fallback(padding, ((($baseline - 1) / $base_font_size) / 4), 1, 0.25, 1);
+        border-bottom: 1px solid $grey5;
+        padding-right: 15%;
+        &:hover {
+          background: $grey5;
+        }
+        &.active {
+          background: $grey5;
+          padding-right: 30%;
+          &+.close {
+            display: block;
+            &+.badge {
+              background: $light_grey;
+            }
+          }
+        }
+        &.close {
+          display: none;
+          padding: 0;
+          border: 0;
+          position: absolute;
+          @include rem-fallback(right, 2.5);
+          top: 17%;
+        }
+      }
+      small.badge {
+        position: absolute;
+        @include rem-fallback(right, 1);
+        top: 20%;
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
 a#going-up
 {
   display: block;

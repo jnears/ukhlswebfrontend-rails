@@ -107,6 +107,64 @@ form
   }
 }
 
+form[role=search] {
+  @include rem-fallback(margin, 1, 0, 0, 0);
+  input[type=search] {
+    position: relative;
+    border: 1px solid $grey5;
+    @include respond-to(handheld) {
+      border: 0;
+      outline: $grey5 solid 1px;
+    }
+  }
+  input[type=submit] {
+    -webkit-appearance: none;
+    position: relative;
+    vertical-align: top;
+    @include rem-fallback(min-height, 2);
+    @include respond-to(handheld) {
+      @include rem-fallback(margin, 0);
+      margin-left: 1%;
+      width: 25%;
+    }
+  }
+  &.inbody {
+    display: block;
+    @include rem-fallback(margin, 1, 0, 1.5, 0);
+    fieldset {
+      text-align: left;
+      background: $grey6;
+      border: 1px solid $grey5; 
+      input[type=search] {
+        width: 70%;
+        @include rem-fallback(min-height, 1.5);
+        margin-bottom: 0;
+
+        @include respond-to(tablet) {
+          width: 50%;
+        }
+      }
+    }
+    label {
+      float: none;
+      width: auto;
+      padding: 0;
+      display: inline;
+      @include rem-fallback(font-size, (14 / $base_font_size));
+      color: $grey2;
+    }
+
+    .controls {
+      float: right;
+      @include respond-to(handheld) {
+        float: none;
+      }
+    }     
+  }
+}
+
+
+
 
 input[type="text"],
 input[type="password"],
