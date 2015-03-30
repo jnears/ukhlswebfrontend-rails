@@ -16,3 +16,23 @@ article.search-result
     margin: 0;
   }
 }
+
+
+.search-results {
+  article {
+    border-bottom: 1px solid $grey5;
+    @include rem-fallback(padding, 1.5, 0);
+    overflow: auto;
+    &:first-of-type{
+      @include rem-fallback(padding-top, 0);
+    }
+    &:last-of-type{
+      @include rem-fallback(padding-bottom, 0);
+    }
+    time {
+      color: $grey2;
+      font-style: italic;
+    }
+
+  }
+}

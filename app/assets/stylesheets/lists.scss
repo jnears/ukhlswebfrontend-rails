@@ -156,7 +156,7 @@ ol.tags {
   padding-left: 0;
   @include rem-fallback(margin, 0, 0, 1.5, 0);
   li {
-    @include rem-fallback(font-size, (16 / $base_font_size));
+    @include rem-fallback(font-size, (14 / $base_font_size));
     float: left;
     list-style-type: none;
     font-style: italic;
@@ -176,7 +176,7 @@ ol.tags {
       font-style: normal;
       font-weight: normal;
       text-decoration: inherit;
-      color: $dark_grey;
+      color: $grey4;
       @include rem-fallback(font-size, (14 / $base_font_size));
       @include rem-fallback(line-height, ((16 * 1.5) / $base_font_size));
       @include rem-fallback(padding-right, 0.5);
