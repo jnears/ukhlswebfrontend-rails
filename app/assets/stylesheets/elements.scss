@@ -252,6 +252,9 @@ h3
   @include rem-fallback(line-height, 1.75);
   @include rem-fallback(margin, 0, 0, 1.5);
   @include respond-to(handheld) { @include rem-fallback(font-size, 1.25);}
+  &.search {
+    @include rem-fallback(margin-bottom, 0.5);
+  }
 
   span 
   {

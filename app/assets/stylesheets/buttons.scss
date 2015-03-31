@@ -88,6 +88,11 @@ a.btn
   }
 }
 
+a:link.btn, a:visited.btn {
+  color: $white !important;
+  text-decoration: none !important;
+}
+
 .btn-blue 
 {
   @include blue_gradient;

@@ -25,6 +25,11 @@
   }
 }
 
+main {
+  @include rem-fallback(max-width, 35);
+  margin: 0 auto;
+}
+
 .left 
 {
   float:left;
