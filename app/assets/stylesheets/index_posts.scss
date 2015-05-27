@@ -56,9 +56,13 @@
         width: 120px;
         height: 120px;
         left: 5px;
+        @include respond-to(tablet) { width: 105px; height: 105px; }
+        @include respond-to(handheld) { width: 75px; height: 75px; }
       }
       h2, p, div.meta {
         padding-left: 145px;
+        @include respond-to(tablet) { padding-left: 120px; }
+        @include respond-to(handheld) { padding-left: 90px; }
       }
     }
   }
