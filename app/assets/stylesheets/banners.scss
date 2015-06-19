@@ -182,6 +182,83 @@ figure.about-banner
 }
 
 
+figure.research-banner
+{
+  border: 1px solid $light_grey;
+  position: relative;
+  width: 943px;
+  @include rem-fallback(height, 16.875);
+  display: block;
+  background: transparent url(asset_path('banner-research-medium.jpg')) no-repeat -10px 0;
+  
+  @include respond-to(large_desktop) 
+  {
+   width: 1183px;
+  @include rem-fallback(height, 16.875);
+  }
+  
+  @include respond-to(tablet) 
+  {
+    width: 745px;
+    background: transparent url(asset_path('banner-research-tablet.jpg')) no-repeat -30px 0;
+  }
+  
+  @include respond-to(handheld) {
+    @include rem-fallback(margin-bottom, 9.71875);
+    @include rem-fallback(margin-bottom, 0.75);
+    width: 100%;
+    background: transparent url(asset_path('banner-research-mobile.jpg', image)) no-repeat 10px 190px;
+    background-size: cover;
+    @include rem-fallback(height, 19.375);
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    margin: 0;
+    @include rem-fallback(right, 1);
+    @include rem-fallback(top, 1);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(width, 30);
+    @include rem-fallback(padding, 0.75);
+    @include rounded;
+
+    
+    
+    @include respond-to(large_desktop) 
+    { 
+      @include rem-fallback(width, 46); 
+      @include rem-fallback(font-size, 1.375);  
+
+    }
+    
+    @include respond-to(tablet) 
+    { 
+      @include rem-fallback(width, 24); 
+    }
+
+    @include respond-to(handheld) 
+    { 
+      text-align: center; 
+      @include rem-fallback(font-size, 1.125);
+      @include rem-fallback(right, 0);
+      line-height: normal; 
+      width: auto;
+       h2 {
+        @include rem-fallback(font-size, 1.7);
+      }
+    }
+  }
+}
+
+
+
+
 figure.conference-banner
 {
   border: 1px solid #dcdcdc;
