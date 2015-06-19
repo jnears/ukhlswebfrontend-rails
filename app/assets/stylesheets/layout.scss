@@ -56,3 +56,8 @@ main {
   position: absolute;
   bottom: 50px;
 }
+
+.bordered {
+  border: 1px solid $light_grey;
+  @include rounded;
+}
