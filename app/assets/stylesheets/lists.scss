@@ -48,6 +48,18 @@ ul, ol, dl {
       }
     }
   }
+  &.compact
+  {
+    @include rem-fallback(margin-bottom, 0);
+  }
+
+  &.disc li
+  {
+    
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+
   &.small
   {
     @include rem-fallback(font-size, 0.875);
@@ -91,11 +103,26 @@ ol.tag-list
 nav ul, 
 nav ol, 
 ul.navlist, 
-ol.navlist
+ol.navlist,
+ol.compact,
+ul.compact
+{
+padding: 0;
+}
+
+nav ul, 
+nav ol, 
+ul.navlist, 
+ol.navlist,
 {
 list-style: none;
 list-style-image: none;
-padding: 0;
+}
+
+ol.compact,
+ul.compact {
+  @include rem-fallback(margin-top, 0.75);
+  @include rem-fallback(margin-bottom, 0.75);
 }
 
 ol.navlist,
