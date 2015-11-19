@@ -78,23 +78,29 @@ figure.home-banner
   width: 945px;
   height: 250px;
   display: block;
-  background: transparent url(asset_path('banner-medium.jpg')) no-repeat 0 0;
-  @include respond-to(large_desktop) {
+  background: transparent url(asset_path('banner-insights-medium.jpg')) no-repeat 0 0;  
+  @include respond-to(large_desktop) 
+  {
    width: 1185px;
-   background-image: url(asset_path('banner-large.jpg')); }
-  @include respond-to(tablet) {
+   background-image: url(asset_path('banner-insights-large.jpg')); 
+   @include rem-fallback(height, 14.875);
+   }
+   
+   @include respond-to(tablet) 
+   {
     width: 745px;
-    background-image: url(asset_path('banner-small.jpg'));
-    @include image-2x(asset_path('banner-small-retina.jpg'), 745px, 250px);
+    @include rem-fallback(height, 15.4);
+    background-image: url(asset_path('banner-insights-small.jpg'));
   }
   @include respond-to(handheld) {
-    width: auto;
-    margin-bottom: 160px;
-    height: 150px;
-    width: auto;
-    background: transparent url(asset_path('home-banner-large.jpg', image)) no-repeat top center;
-    background-size: cover;
-  }
+    height: 270px;
+    @include rem-fallback(margin-bottom, 9.71875);
+    @include rem-fallback(margin-bottom, 0.75);
+     width: auto;
+    background: transparent url(asset_path('banner-insights-mobile.jpg', image)) no-repeat top center;
+     background-size: cover;
+   }
+
 
   // @include respond-to(handheld) { background-image: none; }
   @include rounded;
@@ -104,25 +110,58 @@ figure.home-banner
     position: absolute;
     color: $black;
     font-family: $chevin_light;
-    @include font20;
+    @include font18;
     margin: 0;
     top: 15px;
-    width: 27em;
+    width: 33em;
     @include rounded;
     left: 15px;
     padding: 0.5em;
     @include translucent_white;
-    @include respond-to(large_desktop) { width: 29em; @include font22;  }
-    @include respond-to(tablet) { width: 18em; }
-    @include respond-to(handheld) { position: relative; text-align: center; padding: 0em; bottom: 5px; top: 155px; left: 5px; right: 5px; @include font18; line-height: normal; width: auto; }
+    h2 {
+        color: #916507;
+        @include rem-fallback(font-size, 2.4);
+        @include rem-fallback(margin-bottom, 1);
+        @include rem-fallback(line-height, 3);
+      }
+      
+      @include respond-to(large_desktop) 
+      { 
+        @include rem-fallback(width, 46); 
+        @include rem-fallback(font-size, 1.375);  
+        h2 {
+          @include rem-fallback(font-size, 2.4);
+        }
+      }
+      
+      @include respond-to(tablet) 
+      { 
+        @include rem-fallback(width, 28.5); 
+        h2 {
+          @include rem-fallback(font-size, 2.2);
+        }
+      }
+
+      @include respond-to(handheld) 
+      { 
+        text-align: center; 
+        @include rem-fallback(font-size, 1.125);
+        @include rem-fallback(right, 1);
+        line-height: normal; 
+        width: auto;
+         h2 {
+          @include rem-fallback(font-size, 2);
+        }
+      }
+    p {
+      @include rem-fallback(margin-bottom, 1);
+    }
+
 
 
     a
     {
-      font-family: $chevin_medium;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      display: block;
+      color: #916507;
     }
   }
 }
