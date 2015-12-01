@@ -75,4 +75,49 @@
   border-radius: 30%;
 }
 
+#map-container {
+  position: relative;
+  .legend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    margin-right: 10px;
+    margin-top: 10px;
+    @include rem-fallback(padding, (20 / $base_font_size));
+    background: white;
+    @include respond-to(handheld) { position: relative; }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+    label {
+      cursor: pointer;
+    }
+    .fa-map-marker {
+      @include rem-fallback(font-size, (24 / $base_font_size));
+      padding-right: 10px;
+    }
+    .red-marker {
+      color: #FC6355;
+    }
+    .green-marker {
+      color: #00DF3C;
+    }
+    .blue-marker {
+      color: #4270F8;
+    }
+    .yellow-marker {
+      color: #F6F053;
+    }
+    .purple-marker {
+      color: #7C55FC;
+    }
+  }
+
+}
+
 
