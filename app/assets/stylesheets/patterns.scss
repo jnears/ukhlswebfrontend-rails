@@ -86,7 +86,14 @@
     margin-top: 10px;
     @include rem-fallback(padding, (20 / $base_font_size));
     background: white;
-    @include respond-to(handheld) { position: relative; }
+    @include respond-to(handheld) { 
+      bottom: 0;
+      left: 0;
+      width: 96%;
+      top: auto !important;
+      margin: 2%;
+      overflow: visible;
+    }
     ul {
       margin: 0;
       padding: 0;
