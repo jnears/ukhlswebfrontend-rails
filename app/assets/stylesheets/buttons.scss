@@ -92,7 +92,7 @@ a.btn
 .btn-blue 
 {
   @include blue_gradient;
-  color: $white;
+  color: $white  !important;
   
   &:hover, &:active 
   {
