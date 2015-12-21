@@ -459,51 +459,6 @@ figure.policy-banner
 
 
 
-figure.map-banner
-{
-  position: relative;
-  width: 945px;
-  @include rem-fallback(padding, 1);
-  display: block;
-  border: 1px solid $light_grey;
-  background: #F3F3F3 url(asset_path('banner-map.jpg')) no-repeat 295px -140px;
-  @include respond-to(large_desktop) {
-    width: 1183px;
-    background: #F3F3F3 url(asset_path('banner-map.jpg')) no-repeat 450px -140px;
-  }
-  @include respond-to(tablet) 
-  {
-    width: 745px;
-  }
-  @include respond-to(handheld) 
-  {
-    width: 100%;
-    text-align: center;
-    @include rem-fallback(font-size, 1.125);
-    @include rem-fallback(margin-bottom, 1.5);
-    background: none;
-  }
-  
-  @include rounded;
-
-  figcaption
-  {
-    
-    @include respond-to(handheld) 
-    {
-      width: 100%;
-    }
-
-    span
-    {
-      // font-family: $chevin_medium;
-      @include rem-fallback(font-size, 2.5);
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      display: block;
-    }
-  }
-}
 
 
 
