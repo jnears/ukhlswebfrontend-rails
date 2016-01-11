@@ -127,4 +127,47 @@
 
 }
 
+.social-toolbar {
+  position: relative;
+  @include rem-fallback(margin-bottom, 0);
+  @include rem-fallback(margin-top, 0);
+  @include rem-fallback(min-height, (32 / $base_font_size));
+
+  ul {
+    list-style-type: none;
+    padding: 0em;
+    margin: 0;
+    float: right;
+    li {
+      float: left;
+      @include rem-fallback(margin, 0, 0.5, 0, 0);
+      @include rem-fallback(font-size, 1);
+
+        a:link {
+          &.twitter-share {
+            color: #03b3ee;
+          }
+          &.facebook-share {
+            color: #005689;
+          }
+          &.email-share {
+            color: #767676;
+          }
+        }
+        a:hover {
+          &.twitter-share {
+            color: #64D7FD;
+          }
+          &.facebook-share {
+            color: #047CC4;
+          }
+          &.email-share {
+            color: #B1AEAE;
+          }
+        }
+     
+      
+    }
+  }
+}
 
