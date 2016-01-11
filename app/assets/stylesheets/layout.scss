@@ -30,6 +30,11 @@ main {
   margin: 0 auto;
 }
 
+main.feed {
+  @include rem-fallback(max-width, 45);
+  margin: 0 auto;
+}
+
 .left 
 {
   float:left;
