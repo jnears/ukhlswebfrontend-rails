@@ -171,3 +171,31 @@
   }
 }
 
+
+.pager {
+  padding-left: 0;
+  @include rem-fallback(margin, 1.5, 0);
+  text-align: center;
+  list-style: none;
+  li {
+    display: inline;
+  }
+  li > a {
+  display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid $mid_grey;
+    border-radius: 15px;
+    &:focus, &:hover {
+      text-decoration: none;
+      background-color: $light_grey;
+    }
+  }
+  .previous > a {
+    float: left;
+  }
+  .next > a {
+    float: right;
+  }
+
+}
+
