@@ -28,6 +28,7 @@
       left: 0px;
       right: 0px;
       @include rem-fallback(padding, 0.35);
+      @include rem-fallback(min-height, 4);
       @include respond-to(tablet) { @include rem-fallback(min-height, 3) };
       .fa 
       {
