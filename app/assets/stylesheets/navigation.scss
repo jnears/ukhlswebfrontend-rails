@@ -124,7 +124,14 @@ nav.menu
   }
 }
 
-nav.menu.horizontal ul li a, nav.menu.vertical ul li a 
+nav.menu.horizontal ul li a
+{
+  @include rem-fallback(padding, 0, 0.75);
+  display: block;
+  text-decoration: none;
+}
+
+nav.menu.vertical ul li a 
 {
   @include rem-fallback(padding, 0, 1);
   display: block;
