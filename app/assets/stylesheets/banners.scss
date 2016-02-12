@@ -119,7 +119,6 @@ figure.home-banner
     padding: 0.5em;
     @include translucent_white;
     h2 {
-        color: #916507;
         @include rem-fallback(font-size, 2);
         @include rem-fallback(margin-bottom, 1);
         @include rem-fallback(line-height, 2.4);
@@ -160,12 +159,104 @@ figure.home-banner
     p {
       @include rem-fallback(margin-bottom, 1);
     }
+  }
+}
+
+figure.home-banner-innovation
+{
+  position: relative;
+  width: 945px;
+  height: 250px;
+  display: block;
+  background: $grey6 url(asset_path('banner-innovation.jpg')) no-repeat 540px -20px;  
+  @include respond-to(large_desktop) 
+  {
+   width: 1185px;
+   background: $grey6 url(asset_path('banner-innovation.jpg')) no-repeat 780px -20px;
+      }
+   
+   @include respond-to(tablet) 
+   {
+    width: 745px;
+    background: $grey6 url(asset_path('banner-innovation-tablet.jpg')) no-repeat 445px -5px;
+  }
+  @include respond-to(handheld) {
+    height: auto;
+    @include rem-fallback(margin-bottom, 9.71875);
+    @include rem-fallback(margin-bottom, 0.75);
+    @include rem-fallback(padding-bottom, 8);
+    width: auto;
+    background: $grey6 url(asset_path('banner-innovation-handheld.jpg')) no-repeat bottom center;
+   }
+
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    @include font18;
+    margin: 0;
+    top: 15px;
+    width: 28em;
+    @include rounded;
+    left: 15px;
+    padding: 0.5em;
+    h1, h2 {
+        @include rem-fallback(font-size, 2);
+        @include rem-fallback(margin-bottom, 1);
+        @include rem-fallback(line-height, 2.4);
+      }
+      
+      @include respond-to(large_desktop) 
+      { 
+        @include rem-fallback(width, 42);  
+        h2 {
+          @include rem-fallback(font-size, 2);
+        }
+      }
+      
+      @include respond-to(tablet) 
+      { 
+        @include rem-fallback(width, 28); 
+        h2 {
+          @include rem-fallback(font-size, 1.6);
+          @include rem-fallback(line-height, 2.2);
+        }
+      }
+
+      @include respond-to(handheld) 
+      { 
+        @include rem-fallback(font-size, 1.125);
+        left: 0;
+        line-height: normal; 
+        width: auto;
+        text-align: center;
+        position: relative;
+         h2 {
+          @include rem-fallback(font-size, 1.4);
+          @include rem-fallback(line-height, 2);
+        }
+        p {
+          @include rem-fallback(font-size, 0.9);
+        }
+      }
+    p {
+      @include rem-fallback(margin-bottom, 1);
+    }
 
 
 
     a
     {
-      color: #916507;
+      color: $black;
+
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }
