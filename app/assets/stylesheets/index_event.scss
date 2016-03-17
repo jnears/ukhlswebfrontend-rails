@@ -5,7 +5,7 @@ article.event
   position: relative;
   &:first-of-type
   { 
-    @include rem-fallback(padding-top, 0);
+    @include rem-fallback(margin-top, -1.5);
   }
   &:last-of-type
   { 
@@ -25,9 +25,5 @@ article.event
     text-align: center;
     width: 120px;
     min-height: 90px;
-  }
-  &:first-of-type
-  { 
-    @include rem-fallback(top, 0.35);
   }
 }
