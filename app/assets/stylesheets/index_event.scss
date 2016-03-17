@@ -1,8 +1,12 @@
 article.event
 {
-  @include rem-fallback(padding, 1.5, 0, (($baseline - 1) / $base_font_size), 8);
+  @include rem-fallback(padding, 1.5, 0, (($baseline - 1) / $base_font_size), 9);
   border-bottom: 1px solid $light_grey;
   position: relative;
+  &:first-of-type
+  { 
+    @include rem-fallback(padding-top, 0);
+  }
   &:last-of-type
   { 
     @include rem-fallback(margin-bottom, 1.5);
@@ -21,5 +25,9 @@ article.event
     text-align: center;
     width: 120px;
     min-height: 90px;
+  }
+  &:first-of-type
+  { 
+    @include rem-fallback(top, 0.35);
   }
 }
