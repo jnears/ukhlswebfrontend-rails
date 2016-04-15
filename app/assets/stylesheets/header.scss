@@ -3,10 +3,10 @@ body header[role=banner]  {
   form#search {
     position: absolute;
     right: 0px;
-    top: 58px;
+    top: 30px;
 
     @include respond-to(tablet) { 
-      top: -38px;
+      top: -42px;
       margin: 0;
     }
 
@@ -70,102 +70,7 @@ h1 {
   }
 }
   
-  nav[role=navigation] {
-    margin-top: 0px;
-    z-index: 3;
-
-    @include respond-to(tablet) {
-      @include mid_grey_gradient;
-      top: 0;
-      left: 0;
-      right: 0;
-      position: relative;
-      z-index: 999999;
-    }
-
-    &.container {
-      @include respond-to(tablet) { 
-        display: none; width: 100%;
-      }
-    }
-
-    @include respond-to(handheld) {
-      padding: 0px;
-    }
-
-    ol {
-      position: absolute;
-      overflow: auto;
-      z-index:3;
-      @include rem-fallback(margin, 0.25, 0, 0, 0); //4px
-      list-style-type: none;
-      right: 0;
-      @include respond-to(tablet) {
-        position: relative;
-        @include mid_grey_gradient;
-        padding: 0px;
-        left: 0;
-        right: 0;
-        margin-top: 0px;
-      };
-      @include respond-to(handheld) { 
-        padding: 0px 
-      };
-
-      li {
-        float: left;
-        font-weight:normal;
-        margin:0;
-        list-style-type: none;
-        @include rem-fallback(font-size, 0.8);
-        @include respond-to(tablet) { 
-          float: none;
-          @include rem-fallback(font-size, 1);
-          margin: 0; 
-        }
-        &:first-of-type {
-          margin-left: 0;
-        }
-        &:last-of-type a {
-          margin-right: 0;
-          @include respond-to(tablet) { 
-            border-bottom: none; 
-          }
-          @include respond-to(handheld) { 
-            border-bottom: none; 
-          }
-        }
-
-        a{
-          text-decoration:none;
-          display:block;
-          @include rounded;
-          @include rem-fallback(padding, 0, 0.5);
-          @include rem-fallback(margin, 0, 0.25); 
-          border-radius: $radius;
-          @include respond-to(tablet) { 
-            border-right: none; 
-            border-bottom: 1px solid $mid_grey;
-            @include rem-fallback(padding, 0.5, 1.25);
-          }
-          @include respond-to(tablet) {  
-            @include not_rounded; 
-          }
-          @include respond-to(handheld) { 
-            margin: 0px;
-          }
-          &:hover {
-            background: $light_grey;
-          }
-          &.active {
-            background: $blue;
-            color: $white;
-            text-shadow: none;
-          }
-        }
-      }
-    }
-  }
+  
 }
 
 body header[role=banner]
@@ -185,6 +90,108 @@ body header[role=banner]
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+body header[role=banner] {
+  >.container {
+    @include rem-fallback(min-height, 10);
+    @include respond-to(handheld) { 
+      @include rem-fallback(min-height, 5);
+    }
+  }
+  nav[role=navigation] {
+    float: right;
+    z-index: 1001;
+    list-style: none;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    ol {
+      list-style: none;
+      list-style-image: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        float: left;
+        margin-right: 0;
+        position: relative;
+
+        a {
+          display: block;
+          @include rem-fallback(padding, 0.35, 0.45);
+          color: #0c6dcc;
+          text-decoration: none;
+          font-size: 14px;
+          
+          &.active {
+            background: $blue;
+            color: $white;
+            text-shadow: none;
+          }
+        }          
+        &:hover a { 
+          background: $light_grey;
+          color: #0c6dcc;
+        }
+      }
+    }
+    > ol > li {
+      @include rem-fallback(margin-right, 0.15);
+    }
+
+    #menu ol {
+      background: #fff;
+      background: rgba(255,255,255,0);
+      list-style: none;
+      position: absolute;
+      left: -9999px;
+      min-width: 150px;
+      z-index: 1001;
+      a {
+        white-space:nowrap; 
+      }
+      li {
+        float: none;
+        border-bottom: 1px solid #ddd;
+        &:last-of-type {
+              border-bottom: 0px;
+            }
+      }
+    }
+    #menu li:hover ol { 
+        left:0;
+        border: 1px solid #ddd;
+          li a:hover {
+            background: #f2f2f2;
+
+          }
+        a {
+          text-decoration: none;
+          background: #fff;
+          color: #0c6dcc;
+        }
+      }
+  }
+}
+
+
+
+
+
+
+
 
 
      

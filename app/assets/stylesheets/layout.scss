@@ -25,6 +25,19 @@
   }
 }
 
+.tablet-hide
+{
+  @include respond-to(tablet) 
+  { 
+  display: none; 
+  }
+}
+
+#page-wrap {
+  position: relative;
+  width: 100%;
+}
+
 main {
   @include rem-fallback(max-width, 35);
   margin: 0 auto;

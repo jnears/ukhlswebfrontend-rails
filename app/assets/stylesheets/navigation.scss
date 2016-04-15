@@ -333,7 +333,57 @@ aside.facets {
   }
 }
 
-
+nav.handheld-menu-list {
+  left: -70%;
+  position: absolute;
+  width: 70%;
+  top: 0;
+  padding-top: 18px;
+  padding-top: 1rem;
+  background: #2c2c2c;
+  height: 100%;
+  ol {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  li {
+    list-style-type: none;
+    float: none;
+    border-bottom: 1px solid $grey2;
+    @include rem-fallback(line-height, (54 - 1) / $base_font_size);
+    text-align: left;
+    margin-bottom: 0;
+    a {
+      @include rem-fallback(padding, 13 / $base_font_size);
+      @include rem-fallback(line-height, 1);
+      font-weight: bold;
+      color: $white;
+      display: block;
+      &:hover {
+        background: $grey2;
+        color: $white;
+        text-decoration: none;
+      }
+    } 
+    ol {
+      @include rem-fallback(padding-left, 1);
+      li {
+        a {
+          font-weight: normal;
+          @include rem-fallback(padding, 8 / $base_font_size);
+          @include rem-fallback(line-height, 1);
+        }
+        a:before {
+          content: "- ";
+        }
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+}
 
 
 
