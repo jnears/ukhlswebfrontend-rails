@@ -1,8 +1,191 @@
-
-#single-image {
+#homepage-carousel {
+  @include respond-to(handheld) {
+    border: 1px solid $grey4;
+    @include rounded;
+    @include rem-fallback(margin-bottom, 1);
+  }
   .item img{
     display: block;
-    width: 100%;
     height: auto;
+    @include respond-to(handheld) {
+      @include rounded-top;
+    }
+    
+  }
+    figcaption
+  {
+    position: absolute;
+    color: $white;
+    font-family: $chevin_light;
+    @include font20;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include rem-fallback(padding, 5, 1, 1.5, 1);
+    @include rounded;
+    @include translucent_black;
+    h2 {
+      @include rem-fallback(font-size, 2);
+      @include rem-fallback(margin-bottom, 0.5);
+      line-height: 2rem;
+    }
+    @include respond-to(large_desktop) {
+      @include rem-fallback(font-size, 1.5);
+      h2 {
+        @include rem-fallback(font-size, 1.75);
+        @include rem-fallback(line-height, 2.25);
+      }
+
+    }
+    @include respond-to(tablet) {
+      @include font16;
+      h2 {
+        @include rem-fallback(font-size, 1.35);
+        @include rem-fallback(line-height, 1.5);
+      }
+    }
+    @include respond-to(handheld) {
+      @include rem-fallback(font-size, 1);
+      position: relative;
+      width: 100%;
+      color: $black;
+      background: transparent;
+      @include rem-fallback(padding, 0.5);
+      h2 {
+        @include rem-fallback(font-size, 1.15);
+        @include rem-fallback(margin-bottom, 0);
+      }
+    }
+
+    
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#participant-carousel {
+  @include respond-to(handheld) {
+    border: 1px solid $grey4;
+    @include rounded;
+    @include rem-fallback(margin-bottom, 1);
+  }
+  .item img{
+    display: block;
+    height: auto;  
+  }
+    figcaption
+    {
+    position: absolute;
+    color: $black;
+    @include rem-fallback(font-size, (24 / $base_font_size));
+    margin: 0;
+    top: 15px;
+    width: 42%;
+    @include rounded;
+    left: 15px;
+    @include rem-fallback(padding, 0.5);
+    @include translucent_white;
+    span
+    {
+      @include rem-fallback(font-size, 1.25);
+      @include rem-fallback(line-height, 1.75);
+      @include rem-fallback(margin-top, 0.5);
+      @include rem-fallback(margin-bottom, 0.5);
+      display: block;
+      font-family: $chevin_light;
+      small {
+       @include rem-fallback(font-size, 1);
+       display: block;
+       @include rem-fallback(line-height, 1.25);
+      }
+      @include respond-to(tablet) 
+      {
+      @include rem-fallback(font-size, 1.2);
+      @include rem-fallback(line-height, 1.5);
+      } 
+    }
+    @include respond-to(handheld) {
+      @include rem-fallback(font-size, 1);
+      position: relative;
+      width: 100%;
+      color: $black;
+      background: transparent;
+      @include rem-fallback(padding, 0.5);
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.owl-theme .owl-controls {
+  bottom: 15px;
+  right: 15px;
+  @include rounded;
+  @include respond-to(handheld) {
+    background: transparent;
+    right: 0;
+    bottom: 0;
+    margin-top: 0 !important;
+  }
+
+  .owl-page span {
+    background: $grey7 !important;
+  }
+  .owl-buttons div {
+
+    &.owl-prev, &.owl-next {
+      position: absolute;
+      top: 120px;
+      z-index: 1000;
+      background: transparent;
+      @include opacity(0.8);
+      @include rem-fallback(font-size, (36 / $base_font_size));
+      @include respond-to(large_desktop) {
+        top: 150px;
+      }
+      @include respond-to(tablet) {
+        top: 90px;
+        @include rem-fallback(font-size, (26 / $base_font_size));
+  
+      }
+      @include respond-to(handheld) {
+        display: none;
+      }
+    }
+
+    &.owl-prev {
+      left: 5px;
+    }
+
+    &.owl-next {
+      right: 5px;
+    }
+  }
+  .owl-pagination {
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(0, 0, 35, 0.49);
+    @include rounded;
+    @include respond-to(handheld) {
+      top: 5px;
+      bottom: auto;
+    }
+  }
+}
+
+

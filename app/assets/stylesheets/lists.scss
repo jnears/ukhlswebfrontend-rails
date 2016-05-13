@@ -256,9 +256,71 @@ ul.numbered_list {
      }
   }
 
-  
-
 }
+
+ol.posts, ol.publications, ol.events {
+padding-left: 0;
+  &>li {
+    list-style-type: none;
+    @include rem-fallback(margin-bottom, 1.5);
+    padding: 0;
+  }
+}
+
+
+ol.posts {
+  li {
+    position: relative;
+    padding-left: 100px;
+    @include rem-fallback(min-height, (80 / $base_font_size));
+    img {
+      width: 80px;
+      position: absolute;
+      @include rem-fallback(top, (5 / $base_font_size));
+      left: 0;
+      @include rounded;
+      @include respond-to(handheld) { 
+        width: 80px !important;
+       }
+    }
+  }
+}
+
+
+ol.events {
+  li {
+    position: relative;
+    padding-left: 60px;
+    time {
+      position: absolute;
+      @include rem-fallback(top, (5 / $base_font_size));
+      left: 0;
+      @include rem-fallback(padding, (8 / $base_font_size));
+      text-align:center;
+      background: $grey6;
+      border-radius:5px;
+      p.day {
+        @include rem-fallback(font-size, (20 / $base_font_size));
+      }      
+      p.month {
+        @include rem-fallback(font-size, (14 / $base_font_size));
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

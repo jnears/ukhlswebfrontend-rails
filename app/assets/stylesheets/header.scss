@@ -1,13 +1,40 @@
 body header[role=banner]  {
+
+  #search-container {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    float: right;
+    @include rem-fallback(margin-top, (50 / $base_font_size));
+    @include respond-to(large_desktop) { 
+     width: 450px;
+    }
+    @include respond-to(handheld) { 
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      float: left;
+      width: 100%;
+    }
+    .social-toolbar {
+      @include respond-to(tablet) {
+        position: absolute;
+        top: -90px;
+      }
+      @include respond-to(handheld) {
+        display: none;
+      }
+    }
+  }
  
   form#search {
     position: absolute;
     right: 0px;
-    top: 30px;
+    top: 0px;
 
     @include respond-to(tablet) { 
-      top: -42px;
-      margin: 0;
+      top: -93px;
     }
 
     @include respond-to(handheld) { 
@@ -18,7 +45,7 @@ body header[role=banner]  {
 
     input[type="search"] {
       @include rem-fallback(min-height, 1);
-      padding-left: 28px;
+      margin: 0;
       
       @include respond-to(handheld) { 
         width: 85%; 
@@ -29,7 +56,7 @@ body header[role=banner]  {
     {
       position: absolute;
       top: 10px;
-      left: 8px;
+      right: 8px;
       @include rem-fallback(width, 1);
       @include rem-fallback(height, 1);
       background: transparent url(asset_path('search-icon.png')) no-repeat 0 0 ;
@@ -40,14 +67,17 @@ body header[role=banner]  {
       overflow: hidden;
       @include respond-to(handheld) { 
         top: 17px; 
-        left: 14px;
+        right: 10%;
       }
     } 
   }
 
+
+
 h1 {
   margin: 0;
   @include rem-fallback(padding, 0.75, 0);
+  display: inline-block;
   @include respond-to(handheld) { 
     padding: 0; 
   }
@@ -78,15 +108,19 @@ body header[role=banner]
   form#search
   {
     @include respond-to(handheld) { 
-      padding: #{$gutter / 2}px 0 0 #{$gutter / 2}px; 
+      padding: #{$gutter / 2}px 0 #{$gutter / 2}px #{$gutter / 2}px;
     }
 
     input[type="search"]
     {
-      width: #{(($column_width * 6) + ($gutter * 5)) - 37}px;
+      width: 215px;
       @include respond-to(large_desktop) { 
         width: #{(($large_desktop_column_width * 6) + ($large_desktop_gutter * 5)) - 37}px; 
       }
+            @include respond-to(handheld) { 
+      width: 90%;
+    }
+
     }
   }
 }
@@ -136,9 +170,9 @@ body header[role=banner] {
           font-size: 14px;
           
           &.active {
-            background: $blue;
-            color: $white;
+            @include rounded;
             text-shadow: none;
+            background: $light_grey;
           }
         }          
         &:hover a { 

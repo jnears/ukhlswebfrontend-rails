@@ -102,7 +102,66 @@ body.nobreadcrumb .container[role=main]
     @include respond-to(large_desktop) { .span1 { width: 385px; } }
     @include respond-to(handheld) { .span1 { width: auto; @include rem-fallback(margin-bottom, 1.5); } }
   }
+
+  &.three.padded
+  {
+    .span1 { 
+    width: 305px;
+    &:not(:last-child){
+    padding-right: 15px; 
+    border-right: 1px solid $grey3;
+    @include respond-to(handheld) { border-right: 0; }
+    }
+
+    }
+    @include respond-to(tablet) { .span1 { width: 238px; } }
+    @include respond-to(large_desktop) { .span1 { width: 385px; } }
+    @include respond-to(handheld) { .span1 { width: auto; } }
+  }
+
+
+  &.three_span14
+  {
+    .span1 { width: 209px; 
+    }
+    @include respond-to(tablet) { .span1 { width: 162px; } }
+    @include respond-to(large_desktop) { .span1 { width: 265px; } }
+    @include respond-to(handheld) { .span1 { width: auto; @include rem-fallback(margin-bottom, 1.5); } }
+  }
 }
+
+
+
+.col-2 {
+width: 47%;
+
+}
+
+.col-3 {
+  width: 30.33333333%;
+  @include respond-to(tablet) { width: 100%; }
+}
+
+.col-4 {
+  width: 22%; 
+  @include respond-to(tablet) { width: 47%; }
+  @include respond-to(handheld) { width: 100%; }
+}
+
+.col-2, .col-3, .col-4 {
+  position: relative;
+  min-height: 1px;
+  margin-left: 3%;
+  @include rem-fallback(margin-bottom, 1.5);
+  @include respond-to(handheld) { width: 100%; margin-left: 0;}
+  @include respond-to(tablet) { width: 100%; margin-left: 0; }
+  @include respond-to(desktop) { float: left; }
+  @include respond-to(large_desktop) { float: left; }
+  .inner {
+    @include rem-fallback(margin-bottom, 1.5)
+  }
+}
+
 
 .row:before,
 .row:after 

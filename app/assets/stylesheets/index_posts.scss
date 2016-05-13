@@ -1,4 +1,15 @@
 .blog {
+  &.home article {
+    @include rem-fallback(min-height, 95 / $base_font_size);
+    @include rem-fallback(margin-bottom, 1.5);
+    padding-left: 95px;
+    div.meta, p, time {
+    padding-left: 0;
+}
+    img {
+      width: 80px; height: 80px;
+    } 
+  }
   article 
   {
     @include rem-fallback(min-height, 10.5);
@@ -53,8 +64,6 @@
       @include rem-fallback(margin-bottom, 1.5);
       padding: 5px;
       img {
-        width: 120px;
-        height: 120px;
         left: 5px;
         @include respond-to(tablet) { width: 105px; height: 105px; }
         @include respond-to(handheld) { width: 75px; height: 75px; }

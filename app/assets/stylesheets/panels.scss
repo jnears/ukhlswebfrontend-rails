@@ -4,7 +4,7 @@
   position: relative;
   top: 0;
   @include rem-fallback(padding, 0.75);
-  overflow: auto;
+  overflow: hidden;
   @include rounded;
   @include grey_gradient;
   width:100%;
