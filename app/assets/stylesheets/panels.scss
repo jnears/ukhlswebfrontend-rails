@@ -18,6 +18,15 @@
       @include rounded_top;
     }
 
+  .more { 
+    position: absolute;
+    @include rem-fallback(bottom, 0.75);
+    @include rem-fallback(right, 0.75);
+    .fa {
+      @include rem-fallback(font-size, 0.5);
+    }
+  }
+
   .fa 
   {
     @include rem-fallback(font-size, 1.5);
