@@ -359,7 +359,7 @@ nav.handheld-menu-list {
       font-weight: bold;
       color: $white;
       display: block;
-      &:hover {
+      &:hover, &.active {
         background: $grey2;
         color: $white;
         text-decoration: none;
