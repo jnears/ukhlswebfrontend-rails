@@ -6,18 +6,19 @@ p, pre
   &.home {
     font-family: $chevin_light;
     font-weight: normal;
-    @include rem-fallback(font-size, (22 / $base_font_size));
-    @include rem-fallback(line-height, 2.2);
+    @include rem-fallback(font-size, (18 / $base_font_size));
+    @include rem-fallback(line-height, 1.75);
     text-align: center;
     color: $grey1;
     border: 1px solid $grey3;
-    @include rem-fallback(padding-top, (20 / $base_font_size));
-    @include rem-fallback(padding-bottom, (20 / $base_font_size));
+    @include rem-fallback(padding-top, (9 / $base_font_size));
+    @include rem-fallback(padding-bottom, (9 / $base_font_size));
     padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 0;
     @include rounded;
     background: $grey6;
+    @include respond-to(handheld) { @include rem-fallback(margin-bottom, 0.75); }
   }
   
   &.subheading 

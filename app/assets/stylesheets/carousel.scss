@@ -2,7 +2,7 @@
   @include respond-to(handheld) {
     border: 1px solid $grey4;
     @include rounded;
-    @include rem-fallback(margin-bottom, 1);
+    @include rem-fallback(margin-bottom, 0.75);
   }
   .item img{
     display: block;
@@ -133,6 +133,7 @@
 .owl-theme .owl-controls {
   bottom: 15px;
   right: 15px;
+  margin-top: 0 !important;
   @include rounded;
   @include respond-to(handheld) {
     background: transparent;
@@ -148,7 +149,7 @@
 
     &.owl-prev, &.owl-next {
       position: absolute;
-      top: 120px;
+      top: 100px;
       z-index: 1000;
       background: transparent;
       @include opacity(0.8);

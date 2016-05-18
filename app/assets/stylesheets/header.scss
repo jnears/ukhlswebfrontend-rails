@@ -139,7 +139,7 @@ body header[role=banner]
 
 body header[role=banner] {
   >.container {
-    @include rem-fallback(min-height, 10);
+    @include rem-fallback(min-height, 9);
     @include respond-to(handheld) { 
       @include rem-fallback(min-height, 5);
     }
