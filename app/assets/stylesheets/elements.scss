@@ -11,10 +11,7 @@ p, pre
     text-align: center;
     color: $grey1;
     border: 1px solid $grey3;
-    @include rem-fallback(padding-top, (9 / $base_font_size));
-    @include rem-fallback(padding-bottom, (9 / $base_font_size));
-    padding-left: 10%;
-    padding-right: 10%;
+    @include rem-fallback(padding, (16 / $base_font_size));
     margin-bottom: 0;
     @include rounded;
     background: $grey6;

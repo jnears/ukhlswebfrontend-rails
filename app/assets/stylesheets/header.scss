@@ -126,17 +126,6 @@ body header[role=banner]
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 body header[role=banner] {
   >.container {
     @include rem-fallback(min-height, 9);
