@@ -657,7 +657,10 @@ figure
       }
     }
   }
-
+  figcaption
+    {
+      @include rem-fallback(font-size, 0.875);
+    }
   &.pull-left
   {
     margin-left: -#{($column_width * 4) + ($gutter * (4 + 1))}px;

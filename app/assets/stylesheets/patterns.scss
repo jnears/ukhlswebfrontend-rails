@@ -97,7 +97,7 @@
 
 .social-toolbar {
   position: relative;
-  @include rem-fallback(margin-bottom, 0);
+  @include rem-fallback(margin-bottom, 1.5);
   @include rem-fallback(margin-top, 0);
   @include rem-fallback(min-height, (32 / $base_font_size));
 
