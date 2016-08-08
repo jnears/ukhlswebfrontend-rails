@@ -639,12 +639,14 @@ figure
   {
     font-style: italic;
     max-width: 300px;
+    
   }
 
   &.featured
   {
     float: left;
     @include rem-fallback(padding, 0, 2, 0, 0);
+    @include respond-to(handheld) { max-width: 100%; width: 100%; padding: 0;}
     @include rem-fallback(margin-bottom, 1.5);
 
     figcaption
@@ -670,6 +672,7 @@ figure
   img
   {
     @include rounded;
+    @include respond-to(handheld) { width: 100%;}
   }
 
   &.banner
