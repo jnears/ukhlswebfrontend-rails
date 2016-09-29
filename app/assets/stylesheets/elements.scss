@@ -503,6 +503,19 @@ a#show-grid
   z-index: 1000;
 }
 
+span.label {
+    display: block;
+    clear: both;
+    margin-bottom: 0;
+    color: $grey2;
+    background: rgba(236, 236, 236, 0.63);
+    float: right;
+    padding: 1px;
+    border-radius: 5px;
+    @include rem-fallback(font-size, 0.85);
+    margin-left: 5px;
+}
+
 blockquote 
 {
   font-family: ChevinLightItalic;
