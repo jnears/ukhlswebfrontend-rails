@@ -11,10 +11,16 @@ a.i img
 .avatar {
   text-align: center;
   figure {
-    @include rem-fallback(padding, 0, 1.25);
+    @include rem-fallback(padding, 0, 1.5);
     margin: 0;
+    @include respond-to(large-desktop) { 
+      @include rem-fallback(padding, 0, 2.25);
+    }
+    @include respond-to(tablet) { 
+      @include rem-fallback(padding, 0, 1);
+    }
     @include respond-to(handheld) { 
-      @include rem-fallback(padding, 0, 2.5);
+      @include rem-fallback(padding, 0, 1.5);
       @include rem-fallback(margin-bottom, 2.5);
     }
     img {
