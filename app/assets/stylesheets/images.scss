@@ -13,7 +13,7 @@ a.i img
   figure {
     @include rem-fallback(padding, 0, 1.5);
     margin: 0;
-    @include respond-to(large-desktop) { 
+    @include respond-to(large_desktop) { 
       @include rem-fallback(padding, 0, 2.25);
     }
     @include respond-to(tablet) { 
