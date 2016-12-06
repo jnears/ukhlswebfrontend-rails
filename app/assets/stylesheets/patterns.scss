@@ -172,3 +172,18 @@
 
 }
 
+
+.champion {
+  @include rem-fallback(margin, 1.5, 0);
+  img {
+  width: 50px;
+  position: absolute;
+  }
+  p {
+    position: relative;
+    padding-left: 60px;
+    @include rem-fallback(min-height, 3);
+  }
+}
+
+
