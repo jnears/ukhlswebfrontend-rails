@@ -1,5 +1,5 @@
 module Ukhlswebfrontend
   module Rails
-    VERSION = "0.0.79"
+    VERSION = "0.0.80"
   end
 end
