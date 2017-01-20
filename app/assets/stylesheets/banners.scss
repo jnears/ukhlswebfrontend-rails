@@ -517,7 +517,63 @@ figure.policy-banner
 }
 
 
+figure.mol2-banner
+{
+  position: relative;
+  width: 945px;
+  @include rem-fallback(height, 14.875);
+  display: block;
+  background: lightgray url(asset_path('mol2-banner-medium.jpg')) no-repeat 0 0;
+  @include respond-to(large_desktop) {
+   width: 1185px;
+   background-image: url(asset_path('mol2-banner-large.jpg')); }
+  @include respond-to(tablet) {
+    width: 745px;
+    @include rem-fallback(height, 14.875);
+    background-image: url(asset_path('mol2-banner-medium.jpg'));
 
+  }
+  @include respond-to(handheld) {
+    @include rem-fallback(height, 9);
+    width: auto;
+    background: transparent url(asset_path('mol2-banner-large.jpg', image)) no-repeat top center;
+    background-size: cover;
+    @include rem-fallback(margin-top, 0.5);
+    @include rem-fallback(margin-bottom, 0.5);
+  }
+
+  // @include respond-to(handheld) { background-image: none; }
+  @include rounded;
+
+  figcaption
+  {
+    position: absolute;
+    color: $black;
+    font-family: $chevin_light;
+    margin: 0;
+    @include rem-fallback(left, 1);
+    @include rem-fallback(top, 1);
+    @include rem-fallback(font-size, 1.25);
+    @include rem-fallback(width, 36);
+    @include rem-fallback(padding, 0, 1, 1, 1);
+    @include rounded;
+    @include translucent_white;
+    @include respond-to(large_desktop) { @include rem-fallback(width, 37); @include rem-fallback(font-size, 1.375);  }
+    @include respond-to(tablet) { @include rem-fallback(width, 22); }
+    @include respond-to(handheld) {left:0;position:relative;margin: auto;text-align: center;padding:5px;@include rem-fallback(font-size, 1); }
+
+
+    span
+    {
+      // font-family: $chevin_medium;
+      @include rem-fallback(font-size, 2);
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      display: block;
+      @include respond-to(handheld) {@include rem-fallback(font-size, 1.5); }
+    }
+  }
+}
 
 
 
